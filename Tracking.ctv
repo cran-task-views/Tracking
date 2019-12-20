@@ -42,7 +42,6 @@
       
       <li>
         <strong>GLS data pre-processing:</strong> Several methodologies have been developed to reduce errors in geographic locations generated from the light data, which is reflected by the large number of packages for pre-processing GLS data. We classified these methods in three categories: threshold, curve-fitting and twilight-free.
-      </li>
       
       <ul>
         
@@ -53,9 +52,9 @@
         <li>
           <strong>Curve-fitting methods:</strong> The observed light irradiance levels for each twilight are modeled as a function of theoretical light levels (i.e. the template). Then, parameters from the model (e.g. a slope in a linear regression) are used to estimate the locations. The formulation of the model and the parameters used for location estimation vary from method to method. The packages that use curve-fitting methods are <pkg>FLightR</pkg>, <pkg>tripEstimation</pkg> and <github>SWotherspoon/SGAT</github>.
         </li>
-        
-        
+                
       </ul>
+      </li>
       
       <li>
         <strong>Dead-reckoning using accelerometry and magnetometry data:</strong> The combined use of magnetometer and accelerometer data, and optionally gyroscopes and speed sensors, allows to reconstruct sub-second fine scale movement paths using the dead-reckoning (DR) technique. <pkg>animalTrack</pkg> and <pkg>TrackReconstruction</pkg> implement DR to obtain tracks, based on different methods.
