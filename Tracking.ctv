@@ -4,7 +4,6 @@
   <topic>Processing and Analysis of Tracking Data</topic>
   <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael Sumner and Mathieu Basille </maintainer>
   <version>2019-12-20</version>
-  <url>https://CRAN.R-project.org/view=TrackingData</url>
   
   <info>
     
