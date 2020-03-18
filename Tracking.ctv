@@ -3,7 +3,7 @@
   <name>Tracking</name>
   <topic>Processing and Analysis of Tracking Data</topic>
   <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael Sumner and Mathieu Basille </maintainer>
-  <version>2019-12-20</version>
+  <version>2020-03-18</version>
   
   <info>
     
@@ -74,10 +74,10 @@
       </li>
 
       <li>
-        <strong>Data compression:</strong> Rediscretization or getting data to equal step lengths can be achieved with <pkg>adehabitatLT</pkg>, <pkg>trajectories</pkg> or <pkg>trajr</pkg>. Regular time-step interpolation can be performed using <pkg>adehabitatLT</pkg>, <pkg>amt</pkg> or <pkg>trajectories</pkg>. Other compression methods include Douglas-Peucker (<pkg>TrajDataMining</pkg> and <pkg>trajectories</pkg>), opening window (<pkg>TrajDataMining</pkg>) or Savitzky-Golay (<pkg>trajr</pkg>). <pkg>rsMove</pkg> provides functions to explore and transform tracking data for a posterior linkage with remote sensing data.
+        <strong>Data compression:</strong> Rediscretization or getting data to equal step lengths can be achieved with <pkg>adehabitatLT</pkg>, <pkg>trajectories</pkg> or <pkg>trajr</pkg>. Regular time-step interpolation can be performed using <pkg>adehabitatLT</pkg> or <pkg>trajectories</pkg>. Other compression methods include Douglas-Peucker (<pkg>TrajDataMining</pkg> and <pkg>trajectories</pkg>), opening window (<pkg>TrajDataMining</pkg>) or Savitzky-Golay (<pkg>trajr</pkg>). <pkg>rsMove</pkg> provides functions to explore and transform tracking data for a posterior linkage with remote sensing data.
       </li>
       <li>
-        <strong>Computation of metrics:</strong> Some packages automatically derive second or third order movement variables (e.g. distance and angles between consecutive fixes) when transforming the tracking data into the package's data class. These packages are <pkg>adehabitatLT</pkg>, <pkg>momentuHMM</pkg>, <pkg>moveHMM</pkg> and <pkg>trajectories</pkg>. <pkg>bcpa</pkg> has a function to compute speeds, step lengths, orientations and other attributes from a track. <pkg>amt</pkg>, <pkg>move</pkg>, <pkg>segclust2d</pkg>, <pkg>trajr</pkg> and <pkg>trip</pkg> also contain functions for computing those metrics, but the user needs to specify which ones they need to compute. <pkg>VTrack</pkg> is specifically for acoustic telemetry data, and compute statistics from those data.
+        <strong>Computation of metrics:</strong> Some packages automatically derive second or third order movement variables (e.g. distance and angles between consecutive fixes) when transforming the tracking data into the package's data class. These packages are <pkg>adehabitatLT</pkg>, <pkg>momentuHMM</pkg>, <pkg>moveHMM</pkg> and <pkg>trajectories</pkg>. <pkg>bcpa</pkg> has a function to compute speeds, step lengths, orientations and other attributes from a track. <pkg>move</pkg>, <pkg>segclust2d</pkg>, <pkg>trajr</pkg> and <pkg>trip</pkg> also contain functions for computing those metrics, but the user needs to specify which ones they need to compute. <pkg>VTrack</pkg> is specifically for acoustic telemetry data, and compute statistics from those data.
       </li>
       
     </ul>
@@ -91,7 +91,7 @@
     <h3>Track description</h3>
     
     <p>
-      <pkg>amt</pkg> and <pkg>trajr</pkg> compute summary metrics of tracks, such as total distance covered, straightness index and sinuosity. <pkg>trackeR</pkg> was created to analyze running, cycling and swimming data from GPS-tracking devices for humans. <pkg>trackeR</pkg> computes metrics summarizing movement effort during each track (or workout effort per session). 
+      <pkg>trajr</pkg> computes summary metrics of tracks, such as total distance covered, straightness index and sinuosity. <pkg>trackeR</pkg> was created to analyze running, cycling and swimming data from GPS-tracking devices for humans. <pkg>trackeR</pkg> computes metrics summarizing movement effort during each track (or workout effort per session). 
     </p>
     
     <h3>Path reconstruction</h3>
@@ -136,11 +136,11 @@
     <ul>
     
       <li>
-        <strong>Home ranges:</strong> Several packages allow the estimation of home ranges, such as <pkg>adehabitatHR</pkg>, <pkg>amt</pkg>, <pkg>BBMM</pkg>, <pkg>ctmm</pkg>, <pkg>mkde</pkg> and <pkg>move</pkg>. They provide a variety of methods, from simple Minimum convex polygons to more complex probabilistic Utilization distributions, potentially accounting for the temporal autocorrelation in tracking data.
+        <strong>Home ranges:</strong> Several packages allow the estimation of home ranges, such as <pkg>adehabitatHR</pkg>, <pkg>BBMM</pkg>, <pkg>ctmm</pkg>, <pkg>mkde</pkg> and <pkg>move</pkg>. They provide a variety of methods, from simple Minimum convex polygons to more complex probabilistic Utilization distributions, potentially accounting for the temporal autocorrelation in tracking data.
       </li>
     
       <li>
-        <strong>Habitat use:</strong> The role of habitat features on animal space use, or habitat selection, can be investigated wih <pkg>adehabitatHR</pkg>, <pkg>amt</pkg>, <pkg>BBMM</pkg>, <pkg>ctmm</pkg>, <pkg>mkde</pkg> and <pkg>move</pkg>. They provide a variety of methods, from simple Minimum convex polygons to more complex probabilistic Utilization distributions, potentially accounting for the temporal autocorrelation in tracking data.
+        <strong>Habitat use:</strong> The role of habitat features on animal space use, or habitat selection, can be investigated wih <pkg>adehabitatHR</pkg>, <pkg>BBMM</pkg>, <pkg>ctmm</pkg>, <pkg>mkde</pkg> and <pkg>move</pkg>. They provide a variety of methods, from simple Minimum convex polygons to more complex probabilistic Utilization distributions, potentially accounting for the temporal autocorrelation in tracking data.
       </li>
       
       <li>
@@ -196,7 +196,6 @@
     <pkg>accelerometry</pkg>
     <pkg>adehabitatHR</pkg>
     <pkg priority="core">adehabitatLT</pkg>
-    <pkg>amt</pkg>
     <pkg>animalTrack</pkg>
     <pkg>anipaths</pkg>
     <pkg>argosfilter</pkg>
