@@ -3,7 +3,7 @@
   <name>Tracking</name>
   <topic>Processing and Analysis of Tracking Data</topic>
   <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael Sumner and Mathieu Basille </maintainer>
-  <version>2020-03-18</version>
+  <version>2020-06-29</version>
   
   <info>
     
@@ -159,7 +159,7 @@
     
     <ul>
     
-      <li> <strong>Interactions:</strong> Interactions between individuals can be assessed using metrics from <pkg>wildlifeDI</pkg> and <pkg>TrajDataMining</pkg>. <pkg>spatsoc</pkg> groups relocations within a same time-period or a same spatial range, and allows computing distances between individuals in the group and identifying nearest neighbors. 
+      <li> <strong>Interactions:</strong> Interactions between individuals can be assessed using metrics from <pkg>wildlifeDI</pkg> and <pkg>TrajDataMining</pkg>.
       </li>
       
       <li> <strong>Movement similarity:</strong> Measures such as the longest common subsequence, Fréchet distance, edit distance and dynamic time warping could be computed with <pkg>SimilarityMeasures</pkg> or <pkg>trajectories</pkg>.
@@ -232,7 +232,6 @@
     <pkg>SimilarityMeasures</pkg>
     <pkg>SiMRiv</pkg>
     <pkg>smam</pkg>
-    <pkg>spatsoc</pkg>
     <pkg>trackdem</pkg>
     <pkg>trackeR</pkg>
     <pkg>TrackReconstruction</pkg>
