@@ -3,7 +3,7 @@
   <name>Tracking</name>
   <topic>Processing and Analysis of Tracking Data</topic>
   <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael Sumner and Mathieu Basille </maintainer>
-  <version>2020-06-29</version>
+  <version>2020-07-15</version>
   
   <info>
     
@@ -74,7 +74,7 @@
       </li>
 
       <li>
-        <strong>Data compression:</strong> Rediscretization or getting data to equal step lengths can be achieved with <pkg>adehabitatLT</pkg>, <pkg>trajectories</pkg> or <pkg>trajr</pkg>. Regular time-step interpolation can be performed using <pkg>adehabitatLT</pkg> or <pkg>trajectories</pkg>. Other compression methods include Douglas-Peucker (<pkg>TrajDataMining</pkg> and <pkg>trajectories</pkg>), opening window (<pkg>TrajDataMining</pkg>) or Savitzky-Golay (<pkg>trajr</pkg>). <pkg>rsMove</pkg> provides functions to explore and transform tracking data for a posterior linkage with remote sensing data.
+        <strong>Data compression:</strong> Rediscretization or getting data to equal step lengths can be achieved with <pkg>adehabitatLT</pkg>, <pkg>trajectories</pkg> or <pkg>trajr</pkg>. Regular time-step interpolation can be performed using <pkg>adehabitatLT</pkg> or <pkg>trajectories</pkg>. Other compression methods include Douglas-Peucker (<pkg>TrajDataMining</pkg> and <pkg>trajectories</pkg>), opening window (<pkg>TrajDataMining</pkg>) or Savitzky-Golay (<pkg>trajr</pkg>).
       </li>
       <li>
         <strong>Computation of metrics:</strong> Some packages automatically derive second or third order movement variables (e.g. distance and angles between consecutive fixes) when transforming the tracking data into the package's data class. These packages are <pkg>adehabitatLT</pkg>, <pkg>momentuHMM</pkg>, <pkg>moveHMM</pkg> and <pkg>trajectories</pkg>. <pkg>bcpa</pkg> has a function to compute speeds, step lengths, orientations and other attributes from a track. <pkg>move</pkg>, <pkg>segclust2d</pkg>, <pkg>trajr</pkg> and <pkg>trip</pkg> also contain functions for computing those metrics, but the user needs to specify which ones they need to compute. <pkg>VTrack</pkg> is specifically for acoustic telemetry data, and compute statistics from those data.
@@ -144,7 +144,7 @@
       </li>
       
       <li>
-        <strong>Non-conventional approaches for space use:</strong> Other non-conventional approaches for investigating space use from tracking data can be found in <pkg>recurse</pkg>, <pkg>rsMove</pkg> and <pkg>VTrack</pkg>.
+        <strong>Non-conventional approaches for space use:</strong> Other non-conventional approaches for investigating space use from tracking data can be found in <pkg>recurse</pkg> and <pkg>VTrack</pkg>.
       </li>
       
     </ul>
@@ -226,7 +226,6 @@
     <pkg>PhysicalActivity</pkg>
     <pkg>recurse</pkg>
     <pkg>rpostgisLT</pkg>
-    <pkg>rsMove</pkg>
     <pkg>SDLfilter</pkg>
     <pkg>segclust2d</pkg>
     <pkg>SimilarityMeasures</pkg>
