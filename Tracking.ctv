@@ -2,7 +2,7 @@
 
 <name>Tracking</name> <topic>Processing and Analysis of Tracking Data</topic>
 <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael
-Sumner and Mathieu Basille </maintainer> <version>2020-01-27</version>
+Sumner and Mathieu Basille </maintainer> <version>2020-09-03</version>
 <url>https://CRAN.R-project.org/view=Tracking</url>
   
   <info>
@@ -199,10 +199,6 @@ Sumner and Mathieu Basille </maintainer> <version>2020-01-27</version>
 
       
 
-  <li> <strong>Database management:</strong> <pkg>rpostgisLT</pkg> handles database management for trajectory data by integrating R and the "PostgreSQL/PostGIS"" database system. 
-  </li>
-
-      
     </ul>
     
     <h3>Dealing with movement but not tracking data</h3>
@@ -260,7 +256,6 @@ Sumner and Mathieu Basille </maintainer> <version>2020-01-27</version>
     <pkg>PhysicalActivity</pkg>
     <pkg>recurse</pkg>
     <pkg>rerddapXtracto</pkg>
-    <pkg>rpostgisLT</pkg>
     <pkg>SDLfilter</pkg>
     <pkg>segclust2d</pkg>
     <pkg>SimilarityMeasures</pkg>
