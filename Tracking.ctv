@@ -2,7 +2,7 @@
 
 <name>Tracking</name> <topic>Processing and Analysis of Tracking Data</topic>
 <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael
-Sumner and Mathieu Basille </maintainer> <version>2020-09-03</version>
+Sumner and Mathieu Basille </maintainer> <version>2021-01-28</version>
 <url>https://CRAN.R-project.org/view=Tracking</url>
   
   <info>
@@ -206,7 +206,7 @@ Sumner and Mathieu Basille </maintainer> <version>2020-09-03</version>
     <ul>
     
 
-  <li> <strong>Analysis of biologging data:</strong> Packages to analyze time-depth recorder (TDR) and accelerometer data from animals is <pkg>diveMove</pkg>. It allows obtaining statistics of dive effort. Several packages focus on the analysis of human accelerometry data, mainly to describe periodicity and levels of activity: <pkg>acc</pkg>, <pkg>accelerometry</pkg>, <pkg>GGIR</pkg>, <pkg>nparACT</pkg>, <pkg>pawacc</pkg> and <pkg>PhysicalActivity</pkg>.
+  <li> <strong>Analysis of biologging data:</strong> Several packages focus on the analysis of human accelerometry data, mainly to describe periodicity and levels of activity: <pkg>acc</pkg>, <pkg>accelerometry</pkg>, <pkg>GGIR</pkg>, <pkg>nparACT</pkg>, <pkg>pawacc</pkg> and <pkg>PhysicalActivity</pkg>.
   </li>
 
       
@@ -237,7 +237,6 @@ Sumner and Mathieu Basille </maintainer> <version>2020-09-03</version>
     <pkg>crawl</pkg>
     <pkg>ctmcmove</pkg>
     <pkg>ctmm</pkg>
-    <pkg>diveMove</pkg>
     <pkg>EMbC</pkg>
     <pkg>FLightR</pkg>
     <pkg>foieGras</pkg>
