@@ -1,8 +1,9 @@
 <CRANTaskView>
 
-<name>Tracking</name> <topic>Processing and Analysis of Tracking Data</topic>
-<maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael
-Sumner and Mathieu Basille </maintainer> <version>2021-01-28</version>
+<name>Tracking</name>
+<topic>Processing and Analysis of Tracking Data</topic>
+<maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael Sumner and Mathieu Basille </maintainer>
+<version>2021-05-26</version>
 <url>https://CRAN.R-project.org/view=Tracking</url>
   
   <info>
@@ -50,7 +51,7 @@ Sumner and Mathieu Basille </maintainer> <version>2021-01-28</version>
 
         
     <li>
-      <strong>Curve-fitting methods:</strong> The observed light irradiance levels for each twilight are modeled as a function of theoretical light levels (i.e. the template). Then, parameters from the model (e.g. a slope in a linear regression) are used to estimate the locations. The formulation of the model and the parameters used for location estimation vary from method to method. The packages that use curve-fitting methods are <pkg>FLightR</pkg>, <pkg>tripEstimation</pkg> and <github>SWotherspoon/SGAT</github>.
+      <strong>Curve-fitting methods:</strong> The observed light irradiance levels for each twilight are modeled as a function of theoretical light levels (i.e. the template). Then, parameters from the model (e.g. a slope in a linear regression) are used to estimate the locations. The formulation of the model and the parameters used for location estimation vary from method to method. The packages that use curve-fitting methods are <pkg>tripEstimation</pkg> and <github>SWotherspoon/SGAT</github>.
     </li>
 
                 
@@ -238,7 +239,6 @@ Sumner and Mathieu Basille </maintainer> <version>2021-01-28</version>
     <pkg>ctmcmove</pkg>
     <pkg>ctmm</pkg>
     <pkg>EMbC</pkg>
-    <pkg>FLightR</pkg>
     <pkg>foieGras</pkg>
     <pkg>GeoLight</pkg>
     <pkg>GGIR</pkg>
