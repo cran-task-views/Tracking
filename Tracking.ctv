@@ -3,7 +3,7 @@
 <name>Tracking</name>
 <topic>Processing and Analysis of Tracking Data</topic>
 <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael Sumner and Mathieu Basille </maintainer>
-<version>2021-09-14</version>
+<version>2021-10-07</version>
 <url>https://CRAN.R-project.org/view=Tracking</url>
   
   <info>
@@ -79,7 +79,7 @@
 
 
   <li>
-    <strong>Data cleaning:</strong> <pkg>argosfilter</pkg>, <pkg>foieGras</pkg> and <pkg>SDLfilter</pkg> implement functions to filter implausible platform terminal transmitter (PTT) locations. <pkg>SDLfilter</pkg> is also adapted to GPS data. Other packages with functions for cleaning tracking data are <pkg>TrajDataMining</pkg> and <pkg>trip</pkg>. 
+    <strong>Data cleaning:</strong> <pkg>argosfilter</pkg> and <pkg>foieGras</pkg> implement functions to filter implausible platform terminal transmitter (PTT) locations. Other packages with functions for cleaning tracking data are <pkg>TrajDataMining</pkg> and <pkg>trip</pkg>. 
   </li>
 
 
@@ -255,7 +255,6 @@
     <pkg>PhysicalActivity</pkg>
     <pkg>recurse</pkg>
     <pkg>rerddapXtracto</pkg>
-    <pkg>SDLfilter</pkg>
     <pkg>segclust2d</pkg>
     <pkg>SimilarityMeasures</pkg>
     <pkg>SiMRiv</pkg>
