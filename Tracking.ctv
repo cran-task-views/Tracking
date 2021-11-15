@@ -3,7 +3,7 @@
 <name>Tracking</name>
 <topic>Processing and Analysis of Tracking Data</topic>
 <maintainer email="rocio.joo@ufl.edu">Rocío Joo, Matthew E. Boone, Michael Sumner and Mathieu Basille </maintainer>
-<version>2021-11-10</version>
+<version>2021-11-15</version>
 <url>https://CRAN.R-project.org/view=Tracking</url>
   
   <info>
@@ -46,7 +46,7 @@
   <ul>
 
     <li>
-      <strong>Threshold methods:</strong> Threshold levels of solar irradiance, which are arbritrarily chosen, are used to identify the timing of sunrise and sunset. The package that uses threshold methods are <pkg>GeoLight</pkg> and <github>SWotherspoon/SGAT</github>.
+      <strong>Threshold methods:</strong> Threshold levels of solar irradiance, which are arbritrarily chosen, are used to identify the timing of sunrise and sunset. The package that uses threshold methods is <github>SWotherspoon/SGAT</github>.
     </li>
 
         
@@ -239,7 +239,6 @@
     <pkg>ctmm</pkg>
     <pkg>EMbC</pkg>
     <pkg>foieGras</pkg>
-    <pkg>GeoLight</pkg>
     <pkg>GGIR</pkg>
     <pkg>m2b</pkg>
     <pkg>marcher</pkg>
