@@ -1,0 +1,86 @@
+"package_name","version","source","date_added_to_list","skip","recent_publish_track","recent_commit","cran_check","warnings","errors","vignette_error","imports","suggests","comments","mention","core"
+"acc","1.3.3","cran","2020-01-01",FALSE,"2016-12-16",NA,TRUE,NA,NA,NA,"mhsmm, zoo, PhysicalActivity, nleqslv, plyr, methods, DBI, RSQLite, circlize, ggplot2, R.utils, iterators, Rcpp, Rcpp, RcppArmadillo","","",0,FALSE
+"accelerometry","3.1.2","cran","2020-01-01",FALSE,"2018-08-24",NA,TRUE,NA,NA,NA,"dvmisc, Rcpp","knitr, rmarkdown, pander","",0,FALSE
+"adehabitatHR","0.4.19","cran","2020-01-01",FALSE,"2021-01-10",NA,TRUE,NA,NA,NA,"sp, methods, deldir, ade4, adehabitatMA, adehabitatLT, graphics, grDevices, stats","maptools, tkrplot, MASS, rgeos","",3,TRUE
+"adehabitatLT","0.3.25","cran","2020-01-01",FALSE,"2020-01-19",NA,TRUE,NA,NA,NA,"sp, methods, ade4, adehabitatMA, CircStats, stats, graphics, grDevices, utils","maptools, tkrplot, MASS","",9,TRUE
+"amt","0.1.6","cran","2020-01-01",FALSE,"2022-01-18",NA,TRUE,NA,NA,NA,"Rcpp","adehabitatLT, adehabitatMA, broom, ggplot2, ggraph, geosphere, KernSmooth, FNN, leaflet, moveHMM, move, sessioninfo, spacetime, trajectories, knitr, rmarkdown, tinytest, tidygraph, maptools","",1,FALSE
+"animalTrack","1.0.0","cran","2020-01-01",FALSE,"2013-09-23",NA,TRUE,NA,NA,NA,"rgl","","",0,FALSE
+"anipaths","0.10.1","cran","2020-01-01",FALSE,"2021-05-17",NA,TRUE,NA,NA,NA,"animation, RColorBrewer, scales, sp, raster, mgcv, grDevices, ggmap, crawl, dplyr, ellipse, ggplot2, igraph, lubridate, magrittr, stringr, tidyr, tidyselect","knitr, rgdal, rmarkdown, testthat","",0,FALSE
+"argosfilter","0.63","cran","2020-01-01",FALSE,"2012-11-01",NA,TRUE,NA,NA,NA,"","","",1,FALSE
+"argosTrack","1.2.2.1","github","2020-01-01",FALSE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,"TMB, stats, methods, grDevices, graphics, utils, RcppEigen","knitr, rmarkdown, inline","",0,FALSE
+"BayesianAnimalTracker","1.2","cran","2020-01-01",FALSE,"2014-12-07",NA,TRUE,NA,NA,NA,"TrackReconstruction","","",0,FALSE
+"bayesmove","0.2.1","cran","2021-02-07",FALSE,"2021-10-22",NA,TRUE,NA,NA,NA,"Rcpp, RcppArmadillo","covr, testthat, spelling, knitr, rmarkdown, ggforce, RcppArmadillo, xts, htmltools, shinythemes, DT, datamods, viridis","",0,FALSE
+"BBMM","3.0","cran","2020-01-01",FALSE,"2013-03-08",NA,TRUE,NA,NA,NA,"","","",0,FALSE
+"bcpa","1.1","cran","2020-01-01",FALSE,"2014-11-02",NA,TRUE,NA,NA,NA,"Rcpp, plyr, Rcpp","knitr, circular","",1,FALSE
+"bsam","1.1.3","cran","2020-01-01",FALSE,"2020-09-01",NA,TRUE,NA,NA,NA,"","","",0,FALSE
+"caribou","1.1","cran","2020-01-01",FALSE,"2012-06-11",NA,TRUE,NA,NA,NA,"","","",0,FALSE
+"crawl","2.2.1","cran","2020-01-01",FALSE,"2018-09-14",NA,TRUE,NA,NA,NA,"methods, shiny, dplyr, raster, gdistance, rmapshaper, sp, sf, magrittr, lubridate, tibble, purrr, Rcpp, RcppArmadillo","ggplot2, rgdal, argosfilter, tidyr, xts, broom, doParallel","",2,FALSE
+"ctmcmove","1.2.9","cran","2020-01-01",FALSE,"2018-04-20",NA,TRUE,NA,NA,NA,"raster, Matrix, fda, gdistance, sp","mgcv, dismo, crawl","",0,FALSE
+"ctmm","0.6.1","cran","2020-01-01",FALSE,"2021-07-28",NA,TRUE,NA,NA,NA,"Bessel, data.table, digest, expm, fasttime, Gmedian, graphics, grDevices, gsl, manipulate, MASS, methods, numDeriv, pbivnorm, pracma, raster, rgdal, shape, sp, statmod, stats, utils","animation, bit64, fftw, knitr, move, parallel, parsedate, rmarkdown, sf, suncalc","",1,FALSE
+"diveMove","1.6.0","cran","2020-01-01",FALSE,"2021-05-12",NA,TRUE,NA,NA,NA,"methods, stats4, geosphere, KernSmooth, plotly, quantreg, uniReg","knitr, lattice, pander, rmarkdown, tinytest","",0,FALSE
+"EMbC","2.0.3","cran","2020-01-01",FALSE,"2019-12-16",NA,TRUE,NA,NA,NA,"Rcpp, sp, methods, RColorBrewer, mnormt, maptools, Rcpp, RcppArmadillo","move, rgl, knitr","",1,FALSE
+"foieGras","0.7-6","cran","2020-01-01",FALSE,"2021-04-26",NA,TRUE,NA,NA,NA,"RcppEigen","testthat, covr, knitr, rmarkdown, rgeos, rworldmap","",0,FALSE
+"GGIR","2.5-0","cran","2020-01-01",FALSE,"2021-10-26",NA,TRUE,NA,NA,NA,"stats, utils, R, foreach, doParallel, signal, zoo, bitops, matlab, GENEAread, tuneR, unisensR, ineq, Rcpp","testthat, covr, knitr, rmarkdown","",0,FALSE
+"gtfs2gps","1.5-4","cran","2020-07-19",FALSE,"2021-09-06",NA,TRUE,NA,NA,NA,"data.table, furrr, future, gtfsio, magrittr, Rcpp, units, sf, sp, rgdal, rgeos, sfheaders, lwgeom, raster, pbapply, progressr, readr, Rcpp","rmarkdown, markdown, knitr, testthat, dplyr, bit64","",0,FALSE
+"m2b","1.0","cran","2020-01-01",FALSE,"2017-05-03",NA,TRUE,NA,NA,NA,"geosphere, caTools, ggplot2, randomForest, e1071, caret, methods, graphics, stats, utils","adehabitatLT, moveHMM, knitr, DiagrammeR, rmarkdown","",0,FALSE
+"marcher","0.0-2","cran","2020-01-01",FALSE,"2017-04-12",NA,TRUE,NA,NA,NA,"stats, Matrix, graphics, grDevices, plyr, mvtnorm, RColorBrewer, minpack.lm, zoo, numDeriv, magrittr, scales","knitr, rmarkdown, lubridate","",0,FALSE
+"mkde","0.1","cran","2020-01-01",FALSE,"2014-08-24",NA,TRUE,NA,NA,NA,"raster, sp, Rcpp","","",0,FALSE
+"momentuHMM","1.5.4","cran","2020-01-01",FALSE,"2021-09-03",NA,TRUE,NA,NA,NA,"mvtnorm, sp, MASS, Brobdingnag, doRNG, rlang, Rcpp, RcppArmadillo","testthat, setRNG, splines, splines2 , geosphere, mitools, doFuture, future, car, survival, prodlim, nleqslv, qdapRegex","",0,FALSE
+"move","4.1.6","cran","2020-01-01",FALSE,"2021-12-09",NA,TRUE,NA,NA,NA,"geosphere, httr, memoise, xml2, Rcpp, Rcpp","adehabitatHR, adehabitatLT, markdown, rmarkdown, circular, ggmap, mapproj, maptools, testthat, knitr, ggplot2, leaflet, lubridate, ctmm, amt, bcpa, EMbC","",7,TRUE
+"moveHMM","1.7","cran","2020-01-01",FALSE,"2019-05-19",NA,TRUE,NA,NA,NA,"CircStats, Rcpp, boot, MASS, sp, geosphere, ggplot2, ggmap, numDeriv, Rcpp, RcppArmadillo","testthat, knitr","",3,TRUE
+"moveVis","0.10.5","cran","2020-01-01",FALSE,"2020-03-28",NA,TRUE,NA,NA,NA,"move, raster, sf, lwgeom, slippymath, lubridate, curl, ggplot2, cowplot, magick, gifski, av, pbapply, magrittr, methods, stats","parallel, mapview, leaflet, testthat","",0,FALSE
+"moveWindSpeed","0.2.3","cran","2020-01-01",FALSE,"2019-03-20",NA,TRUE,NA,NA,NA,"methods, move, Rcpp, Rcpp","testthat, knitr, rmarkdown","",0,FALSE
+"nparACT","0.8","cran","2020-01-01",FALSE,"2017-12-20",NA,TRUE,NA,NA,NA,"ggplot2, grid, stringr, zoo, tools","","",0,FALSE
+"pawacc","1.2.2","cran","2020-01-01",FALSE,"2017-02-20",NA,TRUE,NA,NA,NA,"stats, utils, graphics, SparseM","","",0,FALSE
+"PhysicalActivity","0.2-4","cran","2020-01-01",FALSE,"2021-01-22",NA,TRUE,NA,NA,NA,"","RSQLite, DBI, data.table, e1071, keras, randomForest, reticulate, rms","",1,FALSE
+"recurse","1.1.2","cran","2020-01-01",FALSE,"2019-12-04",NA,TRUE,NA,NA,NA,"Rcpp, Rcpp","testthat, circular, prevR, scales, fields, methods, move, knitr, rmarkdown, sp, rgeos","",0,FALSE
+"rerddapXtracto","1.1.2","cran","2020-07-01",FALSE,"2021-09-26",NA,TRUE,NA,NA,NA,"sf, sp, stats, utils","cmocean, gganimate, knitr, mapdata, maptools, rgdal, rmarkdown","",0,FALSE
+"Rhabit","0.2.0","github","2020-07-01",FALSE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,"abind, dplyr, fields, formula.tools, ggplot2, nloptr, purrr, RandomFields, raster, rlang, sp, stats, stringr, tibble, tidyr, utils, viridis","knitr, gridExtra, testthat, rmarkdown","",0,FALSE
+"SDLfilter","2.2.0","cran","2020-01-01",FALSE,"2022-01-11",NA,TRUE,NA,NA,NA,"ggplot2, plotKML, sp, raster, trip, data.table, gridExtra, ggsn, stats, maps, pracma, plyr, ggmap, lubridate, dplyr, emmeans, utils","","",0,FALSE
+"segclust2d","0.3.0","cran","2020-01-01",FALSE,"2021-10-11",NA,TRUE,NA,NA,NA,"magrittr, Rcpp, zoo, grDevices, graphics, stats, utils, scales, rlang, methods, cli, Rcpp, RcppArmadillo","knitr, rmarkdown, testthat, dygraphs , htmltools, move, devtools, spelling","",0,FALSE
+"sftrack","0.5.3","cran","2021-02-07",FALSE,"2021-07-01",NA,TRUE,NA,NA,NA,"sf","testthat , utils, ggplot2, adehabitatLT, knitr, geosphere, scales, covr, rmarkdown, lwgeom","",0,FALSE
+"SGAT","0.1.3","github","2020-01-01",FALSE,NA,TRUE,TRUE,FALSE,FALSE,FALSE,"stats, utils, MASS, maptools, raster, sp, coda","GeoLight, geosphere, rgdal","",0,FALSE
+"SimilarityMeasures","1.4","cran","2020-01-01",FALSE,"2015-02-06",NA,TRUE,NA,NA,NA,"","","",0,FALSE
+"SiMRiv","1.0.4","cran","2020-01-01",FALSE,"2019-12-19",NA,TRUE,NA,NA,NA,"raster, methods, stats, sp, mco, parallel, rgdal","adehabitatLT, moveHMM, rgeos, testthat","",0,FALSE
+"smam","0.6.0","cran","2020-01-01",FALSE,"2021-07-11",NA,TRUE,NA,NA,NA,"nloptr, Matrix, stats, Rcpp, RcppParallel, doParallel, foreach, parallel, doSNOW, methods, numDeriv, EnvStats, Rcpp, RcppGSL, RcppParallel","R.rsp","",0,FALSE
+"spatsoc","0.1.16","cran","2019-11-08",FALSE,"2021-02-24",NA,TRUE,NA,NA,NA,"sp, rgeos, adehabitatHR, igraph, methods","testthat , knitr, rmarkdown, asnipe, markdown","added after the facts (was present in the CTV but not listed here)",0,FALSE
+"trackdem","0.6","cran","2020-01-01",FALSE,"2021-09-24",NA,TRUE,NA,NA,NA,"png, neuralnet, raster, Rcpp, MASS, grDevices, graphics, stats, shiny, Rcpp, RcppArmadillo","knitr, rmarkdown, testthat","",0,FALSE
+"trackeR","1.5.2","cran","2020-01-01",FALSE,"2019-05-15",NA,TRUE,NA,NA,NA,"zoo, ggplot2, ggridges, xml2, RSQLite, jsonlite, raster, scam, foreach, fda, sp, leaflet, ggmap, gridExtra, gtable","testthat, knitr, rmarkdown, covr","",0,FALSE
+"TrackReconstruction","1.3","cran","2020-01-01",FALSE,"2021-12-10",NA,TRUE,NA,NA,NA,"fields, RColorBrewer","lattice, onion, plotrix, rgl, scatterplot3d","",1,FALSE
+"TrajDataMining","0.1.6","cran","2020-01-01",FALSE,"2018-05-10",NA,TRUE,NA,NA,NA,"sp, trajectories, xts, spacetime, RPostgreSQL, geosphere, methods, rgdal","testthat, knitr, rmarkdown, covr, ggplot2, rgeos, magrittr","",0,FALSE
+"trajectories","0.2-3","cran","2020-01-01",FALSE,"2021-03-16",NA,TRUE,NA,NA,NA,"zoo","rgdal, rgeos, OpenStreetMap, RCurl, rjson, adehabitatLT, xts, knitr, rgl, forecast, MASS, spatstat , spatstat.core, spatstat.geom, taxidata","",2,FALSE
+"trajr","1.4.0","cran","2020-01-01",FALSE,"2020-12-17",NA,TRUE,NA,NA,NA,"signal, utils, stats, graphics, plotrix, grDevices","knitr, rmarkdown, testthat, BH, readr, tcltk, sp, MASS","",0,FALSE
+"trip","1.8.5","cran","2020-01-01",FALSE,"2021-03-16",NA,TRUE,NA,NA,NA,"crsmeta, dplyr, rlang","adehabitatLT, knitr, testthat, covr, rmarkdown, lubridate, maps, spelling","",1,FALSE
+"tripEstimation","0.0-44","cran","2020-01-01",FALSE,"2016-01-31",NA,TRUE,NA,NA,NA,"lattice, mgcv, rgdal, sp, zoo","","",0,FALSE
+"wildlifeDI","0.4.1","cran","2020-01-01",FALSE,"2021-06-16",NA,TRUE,NA,NA,NA,"adehabitatLT, dplyr, graphics, rgeos, sf, sp, stats","adehabitatHR, ggplot2, GGally, igraph, network, knitr, rmarkdown, nlme","",0,FALSE
+"ctmmweb","0.2.11","github","2020-07-01",FALSE,NA,TRUE,FALSE,TRUE,FALSE,FALSE,"shiny, shinydashboard, shinyWidgets, DT, crayon, rmarkdown, knitr, data.table, ctmm, magrittr, purrr, parallel, memoise, ggplot2, ggrepel, scales, grid, gridExtra, lubridate, leaflet, sp, rgdal, leaflet.extras, htmlwidgets, rgeos, httr, stringr, XML, xml2, zip, bit64","","",0,FALSE
+"drtracker","1.1.0","github","2020-01-01",FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,"Cairo, ggplot2, plyr, alphahull, fossil, KernSmooth, RANN, reshape2, SDMTools, testthat","","SDMTools (dependency) has been removed from CRAN (and archived) on 2020-01-12. Last version can be installed with : remotes::install_version(""SDMTools"", ""1.1-221.2"")",0,FALSE
+"feedr","0.11.0","github","2020-01-01",FALSE,NA,TRUE,FALSE,FALSE,TRUE,FALSE,"dplyr, ggplot2, htmltools, leaflet, lubridate, magrittr, maptools, rlang, purrr, scales, stringr, tibble, tidyr","activity, aniDom, asnipe, Dominance, knitr, Perc, png, rmarkdown, sp, testthat","",0,FALSE
+"FLightR",NA,"cran-archived","2020-01-01",FALSE,NA,NA,FALSE,NA,TRUE,NA,NA,NA,"",0,FALSE
+"GeoLight",NA,"cran-archived","2020-01-01",FALSE,NA,NA,FALSE,NA,TRUE,NA,NA,NA,"",0,FALSE
+"hab","1.20.4","github","2020-01-01",FALSE,NA,FALSE,FALSE,TRUE,FALSE,FALSE,"adehabitatLT, adehabitatHR, adehabitatMA","survival, tkrplot","",0,FALSE
+"HMMoce",NA,"cran-archived","2020-01-01",FALSE,NA,NA,FALSE,NA,TRUE,NA,NA,NA,"",0,FALSE
+"kftrack","0.70","github","2020-01-01",FALSE,NA,TRUE,FALSE,TRUE,TRUE,FALSE,"","","",0,FALSE
+"lsmnsd","0.0.0.9000","github","2020-01-01",FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,"R2jags","","",0,FALSE
+"migrateR","1.0.9","github","2020-01-01",FALSE,NA,FALSE,FALSE,FALSE,TRUE,TRUE,"adehabitatLT, car","knitr","",0,FALSE
+"movement","0.4","github","2020-01-01",FALSE,NA,FALSE,FALSE,TRUE,TRUE,FALSE,"raster, rgdal, tools, sp, methods, gdistance, viridis, snowfall","testthat","",0,FALSE
+"movementAnalysis","0.6","other","2020-01-01",FALSE,NA,NA,FALSE,FALSE,TRUE,FALSE,"adehabitat, adehabitatLT, sp, maptools, lmomco","OpenCL","adehabitat (dependency) has been removed from CRAN (and archived) on 2018-04-10. Last version can be installed with : remotes::install_version(""adehabitat"", ""1.8.20"")",0,FALSE
+"moveNT","0.0.0.9000","github","2020-01-01",FALSE,NA,TRUE,FALSE,TRUE,TRUE,FALSE,"raster, sp, adehabitatLT, igraph, mclust, moveHMM, uuid","","",0,FALSE
+"pathtrackr","1.2.3","github","2020-01-01",FALSE,NA,TRUE,FALSE,FALSE,TRUE,TRUE,"ggplot2, plyr, pbapply, abind, cluster, gridExtra, jpeg, EBImage, imager, viridis, marmap, rgdal, raster","knitr, rmarkdown","",0,FALSE
+"probGLS","0.9.5","github","2020-01-01",FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,"GeoLight, geosphere, raster, ncdf4, stringr","","",0,FALSE
+"rbl","0.1.30","github","2020-01-01",FALSE,NA,FALSE,FALSE,TRUE,TRUE,FALSE,"data.table, RcppRoll, signal, sqldf, fields","knitr, sp, testthat, manipulate","",0,FALSE
+"rhr","1.2.907","github","2020-01-01",FALSE,NA,FALSE,FALSE,TRUE,TRUE,FALSE,"grid, maptools, raster, adehabitatHR, adehabitatLT, ggplot2, graphics, gridExtra, KernSmooth, lubridate, mixtools, mvtnorm, rgdal, rgeos, reshape2, sp, spacetime, stringr, trajectories, zoo","shiny, knitr, markdown, testthat, shinyBS, brew, xtable","",0,FALSE
+"rpostgisLT",NA,"cran-archived","2020-01-01",FALSE,NA,NA,FALSE,NA,TRUE,NA,NA,NA,"removed from CRAN (and archived) on 2020-08-31",0,FALSE
+"rsMove",NA,"cran-archived","2020-01-01",FALSE,NA,NA,FALSE,NA,TRUE,NA,NA,NA,"removed from CRAN (and archived) on 2020-07-14",0,FALSE
+"stmove","0.0.9000","github","2020-07-01",FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,"adehabitatLT, ggplot2, ggrepel, sf, ctmm, dplyr, dplR, forcats, lubridate, move, RcppRoll, sp, TTR, tidyr, lunar, rmarkdown","tlocoh, testthat, vdiffr, imputeTS, covr, rstudioapi, miniUI, shiny, knitr, here","",0,FALSE
+"SwimR",NA,"bioc-deprecated","2020-01-01",FALSE,NA,NA,FALSE,NA,TRUE,NA,NA,NA,"heatmap.plus (dependency) has been removed from CRAN (and archived) on 2021-04-03. Last version can be installed with : remotes::install_version(""heatmap.plus"", ""1.3"")",0,FALSE
+"telemetr","0.3","github","2020-01-01",FALSE,NA,FALSE,FALSE,TRUE,FALSE,FALSE,"lattice, sp, plyr","","",0,FALSE
+"tlocoh","1.40.7","rforge","2020-01-01",FALSE,NA,NA,FALSE,FALSE,TRUE,TRUE,"sp, FNN, pbapply, rgeos","rgdal, move, png, raster, gpclib, XML","CRAN check fails because of ‘tlocoh_tutorial’ vignette (empty tex file), but regular install works (with same version)…",0,FALSE
+"trackit","0.2.6","github","2020-01-01",FALSE,NA,TRUE,FALSE,TRUE,TRUE,FALSE,"MASS, date","","",0,FALSE
+"TwilightFree","0.1.1","github","2020-01-01",FALSE,NA,TRUE,FALSE,TRUE,FALSE,FALSE,"SGAT, maptools, polyclip, viridisLite, BAStag, mclust, lubridate, magrittr, dplyr, e1071, raster, sp","","",0,FALSE
+"ukfsst","0.3","github","2020-01-01",FALSE,NA,TRUE,FALSE,FALSE,TRUE,FALSE,"date, kftrack, ncdf4","","",0,FALSE
+"vmstools","0.76","github","2020-07-01",FALSE,NA,TRUE,FALSE,TRUE,TRUE,FALSE,"cluster, data.table, doBy, maps, mapdata, maptools, PBSmapping, sp, segmented, mixtools","lattice, raster, shapefiles, tcltk","",0,FALSE
+"VTrack",NA,"cran-archived","2020-01-01",FALSE,NA,NA,FALSE,NA,TRUE,NA,NA,NA,"removed from CRAN (and archived) on 2021-09-13",0,FALSE
+"geoviz",NA,"cran","2020-07-01",TRUE,NA,NA,NA,NA,NA,NA,NA,NA,"Doesn't count as tracking package",0,FALSE
+"overlap",NA,"cran","2020-07-01",TRUE,NA,NA,NA,NA,NA,NA,NA,NA,"Doesn't count as tracking package as it's camera traps with no individual ID",0,FALSE
+"RNCEP",NA,"cran","2020-07-19",TRUE,NA,NA,NA,NA,NA,NA,NA,NA,"Doesn't count as tracking package as tracking data is not in its main goals",0,FALSE
