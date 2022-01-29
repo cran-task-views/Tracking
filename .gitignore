@@ -3,3 +3,8 @@
 .RData
 .Ruserdata
 Tracking.Rproj
+Tracking.html
+README.html
+packrat/
+check_logs/
+downloads/
