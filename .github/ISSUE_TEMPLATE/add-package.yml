@@ -1,0 +1,62 @@
+name: Submit a package
+description: Suggest the inclusion of a package in the CRAN Task View
+title: "Name of the package: description of the package (change this title)"
+labels: add-pkg
+body:
+  - type: dropdown
+    id: author
+    attributes:
+      label: Are you the author of the package?
+      multiple: true
+      options:
+        - 'Yes'
+        - 'No'
+    validations:
+      required: true
+  - type: dropdown
+    id: cran
+    attributes:
+      label: Is the package on a specific repository?
+      multiple: true
+      options:
+        - CRAN
+        - BioConductor
+        - RForge
+        - GitHub
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: url
+    attributes:
+      label: Please provide the URL of the package repository
+      description: This can be the canonical URL for a package on CRAN, the URL of the repository, or a direct URL to a personal webpage. 
+    validations:
+      required: true
+  - type: textarea
+    id: doc
+    attributes:
+      label: Is there a dedicated website for the documentation (e.g. a pkgdown website)?
+      description: Please provide the URL for the documentation. 
+  - type: dropdown
+    id: cran-check
+    attributes:
+      label: If you are the author of the package, does it pass CRAN check tests?
+      multiple: true
+      options:
+        - "Yes"
+        - "No"
+        - "I don't know"
+    validations:
+      required: true
+  - type: textarea
+    id: info
+    attributes:
+      label: Additional information
+      description: In order to be included in the Tracking CTV, we would appreciate more information to help us determine how the package fits into the Tracking CTV scope. 
+      value: "**Briefly, can you describe the purpose of this package and how it fits into the Tracking CTV?**
+
+**In terms of the tracking workflow (see Figure in the CTV), where does the package fit?** (Feel free to mention any particular functions and how they fit as well.)
+"
+    validations:
+      required: true

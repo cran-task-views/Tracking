@@ -1,0 +1,27 @@
+name: Package removed from the CTV
+description: Issue with details for packages removed from the Tracking CTV
+title: "Name of the package: description of the package (change this title)"
+labels: removed
+body:
+  - type: dropdown
+    id: why
+    attributes:
+      label: Why was the package removed?
+      multiple: true
+      options:
+        - No longer exists
+        - No longer on CRAN
+        - No longer on Bioconductor
+        - Does not pass CRAN check
+    validations:
+      required: true
+  - type: textarea
+    id: url
+    attributes:
+      label: URL of the CRAN check logs
+      description: (only if the package was actually checked and failed)
+  - type: textarea
+    id: info
+    attributes:
+      label: Additional information
+      description: (e.g. archival date)
