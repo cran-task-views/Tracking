@@ -11,7 +11,9 @@ version: 22.01 (2022-01-27)
 processing and analysis of tracking data.** Besides the maintainers, the
 following people contributed to the creation of this task view: Achim
 Zeileis, Edzer Pebesma, Michael Sumner, Matthew E. Boone 
-(former CTV maintainer).
+(former CTV maintainer). If you just want to see what is new in this version
+of the CTV, click 
+[here](https://github.com/cran-task-views/Tracking/blob/main/NEWS.md).
 
 Movement of an object (both living organisms and inanimate objects) is
 defined as a change in its geographic location in time, so movement data
