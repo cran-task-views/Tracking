@@ -146,8 +146,7 @@ metrics based on tracking data, which are useful for posterior analyses.
     `r pkg("segclust2d")`, `r pkg("sftrack")`, `r pkg("trajr")` and
     `r pkg("trip")` also contain functions for computing those
     metrics, but the user needs to specify which ones they need to
-    compute. `r pkg("feedr")` is specifically for radio-frequency 
-    identification data and compute statistics from this type of data.
+    compute.
 
 ### Visualization
 
@@ -230,8 +229,7 @@ split into two categories: home range calculation and habitat selection.
     respectively.
 -   **Non-conventional approaches for space use:** Other
     non-conventional approaches for investigating space use from
-    tracking data can be found in `r pkg("feedr")` and
-    `r pkg("recurse")`.
+    tracking data can be found in `r pkg("recurse")`.
 
 ### Trajectory simulation
 
