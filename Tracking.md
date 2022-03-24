@@ -172,10 +172,10 @@ ending time, number of points, and total distance covered.
 
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
-goal in movement analysis. Packages available for path reconstruction are `r
-github("argosTrack")`, `r pkg("BayesianAnimalTracker")`, `r pkg("bsam")`, `r
-pkg("crawl")`, `r `r pkg("ctmm")`, pkg("ctmcmove")`, `r pkg("foieGras")` and `r
-pkg("TrackReconstruction")`.
+goal in movement analysis. Packages available for path reconstruction are
+`r github("argosTrack")`, `r pkg("BayesianAnimalTracker")`, `r pkg("bsam")`,
+`r pkg("crawl")`, `r `r pkg("ctmm")`, pkg("ctmcmove")`, `r pkg("foieGras")` and
+`r pkg("TrackReconstruction")`.
 
 
 ### Behavioral pattern identification
@@ -227,8 +227,8 @@ home range calculation and habitat selection.
   and `r github("Rhabit")` using a classical resource selection function fitted
   with a Langevin model on movement data.
 - **Non-conventional approaches for space use:** Other non-conventional
-  approaches for investigating space use from tracking data can be found in `r
-  pkg("recurse")`.
+  approaches for investigating space use from tracking data can be found in
+  `r pkg("recurse")`.
 
 
 ### Trajectory simulation
@@ -236,8 +236,8 @@ home range calculation and habitat selection.
 Tracking packages implementing trajectory simulation are mainly based on Hidden
 Markov models, correlated random walks, Brownian motions, Lévy walks or
 Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`, `r github("argosTrack")`,
-`r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("momentuHMM")`, `r
-pkg("moveHMM")`, `r pkg("smam")`, `r pkg("SiMRiv")` and `r pkg("trajr")`.
+`r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("momentuHMM")`,
+`r pkg("moveHMM")`, `r pkg("smam")`, `r pkg("SiMRiv")` and `r pkg("trajr")`.
 
 
 ### Other analyses of tracking data
