@@ -148,8 +148,7 @@ metrics based on tracking data, which are useful for posterior analyses.
     `r pkg("segclust2d")`, `r pkg("sftrack")`, `r pkg("trajr")` and
     `r pkg("trip")` also contain functions for computing those
     metrics, but the user needs to specify which ones they need to
-    compute. `r pkg("feedr")` is specifically for radio-frequency 
-    identification data and compute statistics from this type of data.
+    compute.
 
 ### Visualization
 
@@ -170,16 +169,16 @@ tracks (`sf` points in a time sequence) and trajectories (`sf` linestrings in
 a time sequence) and provides functions to summarize both showing starting and
 ending time, number of points, and total distance covered.
 
+
 ### Path reconstruction
 
-Whether it is for the purposes of correcting for sampling errors, or
-obtaining finer data resolutions or regular time steps, path
-reconstruction is a common goal in movement analysis. Packages available
-for path reconstruction are
-`r pkg("BayesianAnimalTracker")`, `r pkg("bsam")`,
-`r pkg("crawl")`, `r pkg("ctmcmove")`,
-`r pkg("ctmm")`, `r pkg("foieGras")` and
+Whether it is for the purposes of correcting for sampling errors, or obtaining
+finer data resolutions or regular time steps, path reconstruction is a common
+goal in movement analysis. Packages available for path reconstruction are
+`r github("argosTrack")`, `r pkg("BayesianAnimalTracker")`, `r pkg("bsam")`,
+`r pkg("crawl")`, `r `r pkg("ctmm")`, pkg("ctmcmove")`, `r pkg("foieGras")` and
 `r pkg("TrackReconstruction")`.
+
 
 ### Behavioral pattern identification
 
@@ -210,41 +209,38 @@ hidden Markov models.
     packages implementing these methods are `r pkg("bsam")`,
     `r pkg("moveHMM")` and `r pkg("momentuHMM")`.
 
+
 ### Space and habitat use characterization
 
-Multiple packages implement functions to help answer questions related
-to where individuals spend their time and what role environmental
-conditions play in movement or space-use decisions, which are typically
-split into two categories: home range calculation and habitat selection.
+Multiple packages implement functions to help answer questions related to where
+individuals spend their time and what role environmental conditions play in
+movement or space-use decisions, which are typically split into two categories:
+home range calculation and habitat selection.
 
--   **Home ranges:** Several packages allow the estimation of home
-    ranges, such as `r pkg("adehabitatHR", priority = "core")`,
-    `r pkg("amt")`, `r pkg("BBMM")`,
-    `r pkg("ctmm")`, `r pkg("mkde")` and
-    `r pkg("move")`. They provide a variety of methods, from
-    simple Minimum convex polygons to more complex probabilistic
-    Utilization distributions, potentially accounting for the temporal
-    autocorrelation in tracking data.
--   **Habitat use:** The role of habitat features on animal space use,
-    or habitat selection, can be investigated with
-    `r pkg("amt")` and `r pkg("ctmcmove")`, using step selection
-    functions and functional movement modeling,
-    respectively.
--   **Non-conventional approaches for space use:** Other
-    non-conventional approaches for investigating space use from
-    tracking data can be found in `r pkg("feedr")` and
-    `r pkg("recurse")`.
+- **Home ranges:** Several packages allow the estimation of home ranges, such as
+  `r pkg("adehabitatHR", priority = "core")`, `r pkg("amt")`, `r pkg("BBMM")`,
+  `r pkg("ctmm")`, `r pkg("mkde")` and `r pkg("move")`. They provide a variety
+  of methods, from simple Minimum convex polygons to more complex probabilistic
+  Utilization distributions, potentially accounting for the temporal
+  autocorrelation in tracking data.
+- **Habitat use:** Several packages estimate the role of habitat features on
+  animal space use or habitat selection, such `r pkg("amt")` using step
+  selection functions, `r pkg("ctmcmove")` using functional movement modeling,
+  and `r github("Rhabit")` using a classical resource selection function fitted
+  with a Langevin model on movement data.
+- **Non-conventional approaches for space use:** Other non-conventional
+  approaches for investigating space use from tracking data can be found in
+  `r pkg("recurse")`.
+
 
 ### Trajectory simulation
 
-The tracking packages implement trajectory simulation are mainly based
-on Hidden Markov models, correlated random walks, Brownian motions, Lévy
-walks or Ornstein-Uhlenbeck processes:
-`r pkg("adehabitatLT")`, `r pkg("moveHMM")`,
-`r pkg("momentuHMM")`, `r pkg("bsam")`,
-`r pkg("crawl")`,
-`r pkg("ctmm")`, `r pkg("smam")`,
-`r pkg("SiMRiv")` and `r pkg("trajr")`.
+Tracking packages implementing trajectory simulation are mainly based on Hidden
+Markov models, correlated random walks, Brownian motions, Lévy walks or
+Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`, `r github("argosTrack")`,
+`r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("momentuHMM")`,
+`r pkg("moveHMM")`, `r pkg("smam")`, `r pkg("SiMRiv")` and `r pkg("trajr")`.
+
 
 ### Other analyses of tracking data
 
