@@ -11,7 +11,9 @@ version: 22.01 (2022-01-27)
 processing and analysis of tracking data.** Besides the maintainers, the
 following people contributed to the creation of this task view: Achim
 Zeileis, Edzer Pebesma, Michael Sumner, Matthew E. Boone 
-(former CTV maintainer).
+(former CTV maintainer). If you just want to see what is new in this version
+of the CTV, click 
+[here](https://github.com/cran-task-views/Tracking/blob/main/NEWS.md).
 
 Movement of an object (both living organisms and inanimate objects) is
 defined as a change in its geographic location in time, so movement data
@@ -173,7 +175,7 @@ ending time, number of points, and total distance covered.
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are
-`r github("argosTrack")`, `r pkg("BayesianAnimalTracker")`, `r pkg("bsam")`,
+`r github("calbertsen/argosTrack")`, `r pkg("BayesianAnimalTracker")`, `r pkg("bsam")`,
 `r pkg("crawl")`, `r `r pkg("ctmm")`, pkg("ctmcmove")`, `r pkg("foieGras")` and
 `r pkg("TrackReconstruction")`.
 
@@ -224,7 +226,7 @@ home range calculation and habitat selection.
 - **Habitat use:** Several packages estimate the role of habitat features on
   animal space use or habitat selection, such `r pkg("amt")` using step
   selection functions, `r pkg("ctmcmove")` using functional movement modeling,
-  and `r github("Rhabit")` using a classical resource selection function fitted
+  and `r github("papayoun/Rhabit")` using a classical resource selection function fitted
   with a Langevin model on movement data.
 - **Non-conventional approaches for space use:** Other non-conventional
   approaches for investigating space use from tracking data can be found in
@@ -235,7 +237,7 @@ home range calculation and habitat selection.
 
 Tracking packages implementing trajectory simulation are mainly based on Hidden
 Markov models, correlated random walks, Brownian motions, Lévy walks or
-Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`, `r github("argosTrack")`,
+Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`, `r github("calbertsen/argosTrack")`,
 `r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("momentuHMM")`,
 `r pkg("moveHMM")`, `r pkg("smam")`, `r pkg("SiMRiv")` and `r pkg("trajr")`.
 
