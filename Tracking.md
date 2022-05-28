@@ -40,7 +40,7 @@ include a subsection of other movement-related packages. The packages
 are mainly from CRAN and a few of them are from other repositories. The
 ones that are not from CRAN were only included if they passed the check
 test ( `R       CMD check`; more details
-[here](https://github.com/rociojoo/CranTaskView-Track/tree/master/checks)
+[here](https://github.com/cran-task-views/Tracking/tree/main/checks)
 ). Core packages are defined as the group of tracking packages with the
 highest number of mentions ( `Depends`, `Imports`, `Suggests`) from
 other tracking packages; the cutpoint is estimated using the
@@ -52,9 +52,9 @@ automatically accepted here as they are required to pass by a similar
 scrutiny than CRAN packages. We are also open to include more packages
 every time we update the CTV. We welcome and encourage 
 [contributions](https://github.com/cran-task-views/ctv/blob/main/Contributing.md) 
-to add packages at any time. To opening an issue on the GitHub
+to add packages at any time. To open an issue on the GitHub
 repository, please use this 
-[link](https://github.com/rociojoo/CranTaskView-Track/issues) .
+[link](https://github.com/cran-task-views/Tracking/issues) .
 
 Besides these packages, many other packages contain functions for data
 processing and analysis that could eventually be used for tracking data
@@ -290,8 +290,7 @@ Version 22.01 (2022-01-27). URL: https://cran.r-project.org/view=Tracking
 
 
 ### Links
+
 -   [Article at the base of this Task View](https://doi.org/dcnf)
 -   [GitHub repository for this Task
-    View](https://github.com/rociojoo/CranTaskView-Track)
--   [Release date of versions of the CRAN packages in this Task
-    View](https://github.com/rociojoo/CranTaskView-Track/blob/master/table_releasedates.md)
+    View](https://github.com/cran-task-views/Tracking/)
