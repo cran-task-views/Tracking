@@ -184,7 +184,7 @@ Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are
 `r github("calbertsen/argosTrack")`, `r pkg("BayesianAnimalTracker")`, `r pkg("bsam")`,
-`r pkg("crawl")`, `r `r pkg("ctmm")`, pkg("ctmcmove")`, `r pkg("foieGras")` and
+`r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("ctmcmove")`, `r pkg("foieGras")` and
 `r pkg("TrackReconstruction")`.
 
 
