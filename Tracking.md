@@ -91,7 +91,7 @@ simulation, and others.](`r svg`){width="500"}\
   - [Others analyses of tracking data](#other-analyses-of-tracking-data)
 
 
-## Pre-processing
+### Pre-processing
 
 Pre-processing is required when raw data are not in a tracking data format. The
 methods used for pre-processing depend heavily on the type of biologging device
@@ -126,7 +126,7 @@ GTFS (General Transit Feed Specification) data.
   with `r pkg("gtfs2gps")`.
 
 
-## Post-processing
+### Post-processing
 
 Post-processing of tracking data comprises data cleaning (e.g.  identification
 of outliers or errors), compressing (i.e. reducing data resolution which is
@@ -157,16 +157,16 @@ which are useful for posterior analyses.
   those metrics, but the user needs to specify which ones they need to compute.
 
 
-## Analysis
+### Analysis
 
 
-### Visualization
+#### Visualization
 
 The packages mainly developed for visualization purposes, and more specifically,
 animation of tracks, are `r pkg("anipaths")` and `r pkg("moveVis")`.
 
 
-### Track description
+#### Track description
 
 `r pkg("amt")` and `r pkg("trajr")` compute summary metrics of tracks, such as
 total distance covered, straightness index and sinuosity. `r pkg("trackeR")` was
@@ -179,7 +179,7 @@ functions to summarize both showing starting and ending time, number of points,
 and total distance covered.
 
 
-### Path reconstruction
+#### Path reconstruction
 
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
@@ -189,7 +189,7 @@ goal in movement analysis. Packages available for path reconstruction are
 `r pkg("foieGras")` and `r pkg("TrackReconstruction")`.
 
 
-### Behavioral pattern identification
+#### Behavioral pattern identification
 
 Another common goal in movement ecology is to get a proxy of the individual's
 behavior through the observed movement patterns, based on either the locations
@@ -215,7 +215,7 @@ clustering techniques, 2) segmentation methods and 3) hidden Markov models.
   `r pkg("bsam")`, `r pkg("moveHMM")` and `r pkg("momentuHMM")`.
 
 
-### Space and habitat use characterization
+#### Space and habitat use characterization
 
 Multiple packages implement functions to help answer questions related to where
 individuals spend their time and what role environmental conditions play in
@@ -238,7 +238,7 @@ home range calculation and habitat selection.
   `r pkg("recurse")`.
 
 
-### Trajectory simulation
+#### Trajectory simulation
 
 Tracking packages implementing trajectory simulation are mainly based on Hidden
 Markov models, correlated random walks, Brownian motions, Lévy walks or
@@ -248,7 +248,7 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
 `r pkg("SiMRiv")` and `r pkg("trajr")`.
 
 
-### Other analyses of tracking data
+#### Other analyses of tracking data
 
 - **Interactions:** Interactions between individuals can be assessed using
   metrics from `r pkg("wildlifeDI")` and `r pkg("TrajDataMining")`. 
@@ -266,7 +266,7 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   data served on any ERDDAP server along a given track.
 
 
-## Dealing with movement but not tracking data
+### Dealing with movement but not tracking data
 
 - **Analysis of biologging data:** Packages to analyze time-depth recorder (TDR)
   and accelerometer data from animals is `r pkg("diveMove")`. It allows
@@ -280,7 +280,7 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   processing frame-by-frame images).
 
 
-## Citing and acknowledgments
+### Citing and acknowledgments
 
 If you would like to cite this CTV, we suggest mentioning: maintainers, year,
 title of the CTV, version, and URL. For instance:
@@ -299,7 +299,7 @@ Science Program Young Investigator Grant** (SeabirdSound - RGY0072/2017; R. Joo
 and M. Basille).
 
 
-## Related links
+### Related links
 
 - [Article at the base of this Task View](https://doi.org/dcnf)
 - [GitHub repository for this Task
