@@ -3,7 +3,7 @@ name: Tracking
 topic: Processing and Analysis of Tracking Data
 maintainer: Rocío Joo and Mathieu Basille
 email: rocio.joo@globalfishingwatch.org
-version: 22.01 (2022-01-27)
+version: 22.01.1 (2023-02-10)
 source: https://github.com/cran-task-views/Tracking
 ---
 
@@ -133,7 +133,7 @@ of outliers or errors), compressing (i.e. reducing data resolution which is
 sometimes called resampling) and computation of metrics based on tracking data,
 which are useful for posterior analyses.
 
-- **Data cleaning:** `r pkg("foieGras")` and 
+- **Data cleaning:** `r pkg("argosfilter")`, `r pkg("foieGras")` and 
   `r pkg("SDLfilter")` implement functions to filter implausible platform
   terminal transmitter (PTT) locations. `r pkg("SDLfilter")` is also adapted to
   GPS data. Other packages with functions for cleaning tracking data are 
