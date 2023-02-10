@@ -76,13 +76,15 @@ svg <- xfun::base64_uri(svg)
 unlink(tdir)
 ```
 
-![Diagram depicting the workflow for data processing and analysis in movement
-ecology. Three steps are identified: 1) Pre-processing, taking raw data as input
-and leading to tracking data as output (x, y, t); 2) Post-processing,
-manipulating tracking data as both input and output; 3) Analysis, which takes
-tracking data as input for visualization, track description, path
-reconstruction, behavioral pattern identification, space use, trajectory
-simulation, and others.](`r svg`){width="500"}\
+![Diagram with boxes and arrows depicting the workflow for data processing and 
+analysis in movement ecology. Three steps—represented by arrows in the 
+diagram—are identified: 1) Pre-processing, taking raw data (box on the left) as 
+input and leading to tracking data as output (x, y, t) (box on the center); 
+2) Post-processing, manipulating tracking data as both input and output; 
+3) Analysis, which takes tracking data as input for visualization, 
+track description, path reconstruction, behavioral pattern identification, 
+space use, trajectory simulation, and others (all of these represented by 
+boxes on the right).](`r svg`){width="500"}\
 
 ## Table of contents
 
@@ -151,7 +153,7 @@ which are useful for posterior analyses.
   `r pkg("TrajDataMining")` and `r pkg("trip")`.
 - **Data compression:** Rediscretization or getting data to equal step lengths
   can be achieved with `r pkg("adehabitatLT", priority = "core")`, 
-  `r pkg("trajectories")` or `r pkg("trajr")`.  Regular time-step interpolation
+  `r pkg("trajectories")` or `r pkg("trajr")`. Regular time-step interpolation
   can be performed using `r pkg("adehabitatLT")`, `r pkg("amt")` or 
   `r pkg("trajectories")`. Other compression methods include Douglas-Peucker 
   (`r pkg("TrajDataMining")` and `r pkg("trajectories")`), opening window 
@@ -195,7 +197,7 @@ and total distance covered.
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are 
-`r github("calbertsen/argosTrack")`, 
+`r pkg("adehabitatLT")`, `r github("calbertsen/argosTrack")`, 
 `r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("ctmcmove")`, 
 `r pkg("foieGras")` and `r pkg("TrackReconstruction")`.
 
