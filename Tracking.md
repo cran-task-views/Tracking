@@ -44,7 +44,7 @@ and a few of them are from other repositories. The ones that are not from CRAN
 were only included if they passed the check test ( `R CMD check`; more details
 [here](https://github.com/cran-task-views/Tracking/tree/main/checks) ). Core
 packages are defined as the group of tracking packages with the highest number
-of mentions ( `Depends`, `Imports`, `Suggests`) from other tracking packages;
+of mentions (`Depends`, `Imports`, `Suggests`) from other tracking packages;
 the cutpoint is estimated using the `maxstat_test` function in the `coin`
 package. At the beginning and middle of each calendar year, we will update the
 CTV, making an assessment on the non-CRAN packages here and remove the non-CRAN
