@@ -19,7 +19,7 @@ as a change in its geographic location in time, so movement data can be defined
 by a space and a time component. Tracking data are composed by at least
 2-dimensional spatial coordinates (x,y) and a time index (t), and can be seen as
 the geometric representation (the trajectory) of an object's path. The packages
-listed here, henceforth called **tracking packages** , are those explicitly
+listed here, henceforth called **tracking packages**, are those explicitly
 **developed to either create, transform or analyze tracking data (i.e. (x,y,t))**,
 allowing a full workflow from raw data from tracking devices to final analytical
 outcome. In other words, a tracking package must have one or several functions 
