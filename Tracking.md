@@ -133,7 +133,7 @@ of outliers or errors), compressing (i.e. reducing data resolution which is
 sometimes called resampling) and computation of metrics based on tracking data,
 which are useful for posterior analyses.
 
-- **Data cleaning:** `r pkg("argosfilter")`, `r pkg("foieGras")` and 
+- **Data cleaning:** `r pkg("foieGras")` and 
   `r pkg("SDLfilter")` implement functions to filter implausible platform
   terminal transmitter (PTT) locations. `r pkg("SDLfilter")` is also adapted to
   GPS data. Other packages with functions for cleaning tracking data are 
@@ -184,7 +184,7 @@ and total distance covered.
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are 
-`r github("calbertsen/argosTrack")`, `r pkg("BayesianAnimalTracker")`, 
+`r github("calbertsen/argosTrack")`, 
 `r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("ctmcmove")`, 
 `r pkg("foieGras")` and `r pkg("TrackReconstruction")`.
 
@@ -223,8 +223,8 @@ movement or space-use decisions, which are typically split into two categories:
 home range calculation and habitat selection.
 
 - **Home ranges:** Several packages allow the estimation of home ranges, such as
-  `r pkg("adehabitatHR", priority = "core")`, `r pkg("amt")`, `r pkg("BBMM")`,
-  `r pkg("ctmm")`, `r pkg("mkde")` and `r pkg("move")`. They provide a variety
+  `r pkg("adehabitatHR", priority = "core")`, `r pkg("amt")`, 
+  `r pkg("ctmm")`, and `r pkg("move")`. They provide a variety
   of methods, from simple Minimum convex polygons to more complex probabilistic
   Utilization distributions, potentially accounting for the temporal
   autocorrelation in tracking data.
