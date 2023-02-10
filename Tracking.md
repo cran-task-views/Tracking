@@ -36,12 +36,12 @@ Regarding (x,y), some
 packages may assume 2-D Euclidean (Cartesian) coordinates, and others may assume
 geographic (longitude/latitude) coordinates. We encourage the users to verify
 how coordinates are processed in the packages, as the consequences can be
-important in terms of spatial attributes (e.g.  distance, speed and angles).
+important in terms of spatial attributes (e.g. distance, speed and angles).
 
 The packages included here are mainly tracking packages though we include a
 subsection of other movement-related packages. The packages are mainly from CRAN
 and a few of them are from other repositories. The ones that are not from CRAN
-were only included if they passed the check test ( `R CMD check`; more details
+were only included if they passed the check test (`R CMD check`; more details
 [here](https://github.com/cran-task-views/Tracking/tree/main/checks) ). Core
 packages are defined as the group of tracking packages with the highest number
 of mentions (`Depends`, `Imports`, `Suggests`) from other tracking packages;
