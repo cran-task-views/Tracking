@@ -20,14 +20,19 @@ by a space and a time component. Tracking data are composed by at least
 2-dimensional spatial coordinates (x,y) and a time index (t), and can be seen as
 the geometric representation (the trajectory) of an object's path. The packages
 listed here, henceforth called **tracking packages** , are those explicitly
-developed to either create, transform or analyze tracking data (i.e. (x,y,t)),
+**developed to either create, transform or analyze tracking data (i.e. (x,y,t))**,
 allowing a full workflow from raw data from tracking devices to final analytical
-outcome. For instance, a package that would use accelerometer, gyroscope and
+outcome. In other words, a tracking package must have one or several functions 
+that have tracking data as input or output. 
+For instance, a package that would use accelerometer, gyroscope and
 magnetometer data to reconstruct an objects's trajectory---most likely an
 animal's trajectory---via dead-reckoning, thus transforming those data into an
-(x,y,t) format, would fit into the definition.  However, a package analyzing
-accelerometry series to detect changes in behavior would not fit. See more on
-this in [Joo *et al.*  (2020)](https://doi.org/dcnf) . Regarding (x,y), some
+(x,y,t) format, would fit into the definition. However, a package analyzing
+accelerometry series to detect changes in behavior would not fit 
+(note that there is a dedicated section at the end of this CTV for packages that
+deal with movement but not tracking data per se). See more on
+this in [Joo *et al.*  (2020)](https://doi.org/dcnf). 
+Regarding (x,y), some
 packages may assume 2-D Euclidean (Cartesian) coordinates, and others may assume
 geographic (longitude/latitude) coordinates. We encourage the users to verify
 how coordinates are processed in the packages, as the consequences can be
@@ -79,6 +84,8 @@ tracking data as input for visualization, track description, path
 reconstruction, behavioral pattern identification, space use, trajectory
 simulation, and others.](`r svg`){width="500"}\
 
+## Table of contents
+
 * [Pre-processing](#pre-processing)
 * [Post-processing](#post-processing)
 * [Analysis](#analysis)
@@ -89,6 +96,10 @@ simulation, and others.](`r svg`){width="500"}\
   - [Space and habitat use characterization](#space-and-habitat-use-characterization)
   - [Trajectory simulation](#trajectory-simulation)
   - [Others analyses of tracking data](#other-analyses-of-tracking-data)
+* [Dealing with movement but not tracking data](#dealing-with-movement-but-not-tracking-data)
+* [Citing and acknowledgments](#citing-and-acknowledgments)
+* [Related links](#related-links)
+
 
 
 ### Pre-processing
