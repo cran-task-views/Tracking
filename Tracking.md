@@ -54,7 +54,7 @@ than CRAN packages. We are also open to include more packages every time we
 update the CTV. We welcome and encourage
 [contributions](https://github.com/cran-task-views/ctv/blob/main/Contributing.md)
 to add packages at any time. To open an issue on the GitHub repository, please
-use this [link](https://github.com/cran-task-views/Tracking/issues) .
+use this [link](https://github.com/cran-task-views/Tracking/issues).
 
 Besides these packages, many other packages contain functions for data
 processing and analysis that could eventually be used for tracking data or
