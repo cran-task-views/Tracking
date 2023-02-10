@@ -84,3 +84,8 @@ RNCEP,cran,,,,,2020-07-19,T,Doesn't count as tracking package as tracking data i
 bayesmove,cran,,,,,2021-02-07,,,,,,,,,,,,,,,,T,,,,,,,,,,,,
 sftrack,cran,,,,,2021-02-07,,,,,,,,,,,T,,T,,,,,,,,,,,,,,,
 spatsoc,cran,,,,,2019-11-08,,added after the facts (was present in the CTV but not listed here),,,,,,,,,,,,,,,,,,,,T,,,,,,
+mousetrap,cran,,,,,2022-09-13,,,,,,,,,,T,,,T,T,,,,,,,,,T,,,,,
+eyelinker,cran,,,,,2022-09-13,,,,,,,,T,,,,,,,,,,,,,,,,,,,,
+gazepath,cran,,,,,2022-09-13,,,,,,,,,,,,,,,T,,,,,,,,,,,,,
+mousetrack,cran,,,,,2022-09-13,,,,,,,,,,T,,,T,,,,,,,,,,,,,,,
+saccades,github,,tmalsburg,saccades,,2022-09-13,T,On CRAN: Archived on 2022-04-10 at the request of the maintainer. ,,,,,,,,,,,,,T,,,,,,,,,,,,,
