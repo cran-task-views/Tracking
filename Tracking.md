@@ -3,7 +3,7 @@ name: Tracking
 topic: Processing and Analysis of Tracking Data
 maintainer: Rocío Joo and Mathieu Basille
 email: rocio.joo@globalfishingwatch.org
-version: 22.01.1 (2023-02-10)
+version: 22.01.2 (2023-03-07)
 source: https://github.com/cran-task-views/Tracking
 ---
 
@@ -149,8 +149,9 @@ which are useful for posterior analyses.
 - **Data cleaning:** `r pkg("argosfilter")`, `r pkg("foieGras")` and 
   `r pkg("SDLfilter")` implement functions to filter implausible platform
   terminal transmitter (PTT) locations. `r pkg("SDLfilter")` is also adapted to
-  GPS data. Other packages with functions for cleaning tracking data are 
-  `r pkg("TrajDataMining")` and `r pkg("trip")`.
+  GPS data. `r pkg("track2KBA")` allows splitting tracks into trips for
+  central-place foraging species. Other packages with functions for cleaning 
+  tracking data are `r pkg("TrajDataMining")` and `r pkg("trip")`.
 - **Data compression:** Rediscretization or getting data to equal step lengths
   can be achieved with `r pkg("adehabitatLT", priority = "core")`, 
   `r pkg("trajectories")` or `r pkg("trajr")`. Regular time-step interpolation
@@ -181,8 +182,9 @@ animation of tracks, are `r pkg("anipaths")` and `r pkg("moveVis")`.
 
 #### Track description
 
-`r pkg("amt")` and `r pkg("trajr")` compute summary metrics of tracks, such as
-total distance covered, straightness index and sinuosity. `r pkg("trackeR")` was
+`r pkg("amt")`, `r pkg("trajr")`, and `r pkg("track2KBA")` compute summary 
+metrics of tracks, such as total distance covered, straightness index, sinuosity,
+trip duration, or others (depending on the package). `r pkg("trackeR")` was
 created to analyze running, cycling and swimming data from GPS-tracking devices
 for humans.  `r pkg("trackeR")` computes metrics summarizing movement effort
 during each track (or workout effort per session).  `r pkg("sftrack")` defines
@@ -236,13 +238,13 @@ movement or space-use decisions, which are typically split into two categories:
 home range calculation and habitat selection.
 
 - **Home ranges:** Several packages allow the estimation of home ranges, such as
-  `r pkg("adehabitatHR", priority = "core")`, `r pkg("amt")`, 
-  `r pkg("ctmm")`, and `r pkg("move")`. They provide a variety
+  `r pkg("adehabitatHR", priority = "core")`, `r pkg("amt")`, `r pkg("ctmm")`, 
+  `r pkg("move")`, and `r pkg("track2KBA")`. They provide a variety
   of methods, from simple Minimum convex polygons to more complex probabilistic
   Utilization distributions, potentially accounting for the temporal
   autocorrelation in tracking data.
 - **Habitat use:** Several packages estimate the role of habitat features on
-  animal space use or habitat selection, such `r pkg("amt")` using step
+  animal space use or habitat selection, such as `r pkg("amt")` using step
   selection functions, `r pkg("ctmcmove")` using functional movement modeling,
   and `r github("papayoun/Rhabit")` using a classical resource selection
   function fitted with a Langevin model on movement data.
