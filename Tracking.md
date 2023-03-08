@@ -289,10 +289,13 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   human accelerometry data, mainly to describe periodicity and levels of
   activity: `r pkg("acc")`, `r pkg("accelerometry")`, `r pkg("GGIR")`, 
   `r pkg("nparACT")`, `r pkg("pawacc")` and `r pkg("PhysicalActivity")`.
-- **Non-biologging video and images:** When a camera can encompass an area large
+- **Non-biologging data:** When a camera can encompass an area large
   enough for an individual to move in, video and images can be used to record
   movement. A package related to these data is `r pkg("trackdem")` (for
-  processing frame-by-frame images).
+  processing frame-by-frame images). Another example of a non-biologging but
+  movement package is `r pkg("actel")` which deals with data from acoustic
+  telemetry stations. It allows exploring time spend in each array, getting time
+  series of transitions between arrays, among others.
 
 
 ### Citing and acknowledgments
