@@ -1,7 +1,7 @@
 ---
 name: Tracking
 topic: Processing and Analysis of Tracking Data
-maintainer: Rocío Joo and Mathieu Basille
+maintainer: Rocío Joo, Mathieu Basille
 email: rocio.joo@globalfishingwatch.org
 version: 22.01.2 (2023-03-07)
 source: https://github.com/cran-task-views/Tracking
