@@ -394,7 +394,7 @@ track$core <- ifelse(is.na(track$core), FALSE, track$core)
 ## Save previous state, current state, and last run
 write.csv(track_old, "checks/Checked_packages_previous.csv", row.names = FALSE)
 write.csv(track, "checks/Checked_packages.csv", row.names = FALSE)
-writeLines(paste("LAST_RUN:", Sys.Date()), "LAST_RUN")
+writeLines(Sys.Date(), "LAST_RUN")
 
 
 ## Differences with previous state
