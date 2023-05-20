@@ -88,6 +88,7 @@ the GitHub repository following this
   - [Trajectory simulation](#trajectory-simulation)
   - [Others analyses of tracking data](#other-analyses-of-tracking-data)
 * [Dealing with movement but not tracking data](#dealing-with-movement-but-not-tracking-data)
+* [Technical notes](#technical-notes)
 * [Citing and acknowledgments](#citing-and-acknowledgments)
 * [Related links](#related-links)
 
