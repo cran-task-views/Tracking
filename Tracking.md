@@ -307,7 +307,7 @@ number of mentions (`Depends`, `Imports`, `Suggests`) from other tracking
 packages; the cutpoint is estimated using the `maxstat_test` function in the
 `coin` package. 
 
-**Last checked version on:** `r readLines("LAST_RUN")`
+**Last checked version on:** `r readLines("https://raw.githubusercontent.com/cran-task-views/Tracking/main/LAST_RUN")`
 
 
 ### Citing and acknowledgments
@@ -317,7 +317,7 @@ title of the CTV, version, and URL. For instance:
 
 > Joo and Basille (2023) CRAN Task View: Processing and Analysis of Tracking
 > Data. Version 2023-03-07). URL:
-> [https://cran.r-project.org/view=Tracking](https://cran.r-project.org/view=Tracking) 
+> [https://CRAN.R-project.org/view=Tracking](https://CRAN.R-project.org/view=Tracking) 
 
 Besides the maintainers, the following people contributed to the creation of
 this task view: **Achim Zeileis**, **Edzer Pebesma**, **Michael Sumner**,
