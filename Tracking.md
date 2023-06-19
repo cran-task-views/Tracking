@@ -131,7 +131,7 @@ GTFS (General Transit Feed Specification) data.
 * **Dead-reckoning using accelerometry and magnetometry data:** The combined use
   of magnetometer and accelerometer data, and optionally gyroscopes and speed
   sensors, allows to reconstruct sub-second fine scale movement paths using the
-  dead-reckoning (DR) technique.  `r pkg("animalTrack")` and 
+  dead-reckoning (DR) technique.   
   `r pkg("TrackReconstruction")` implement DR to obtain tracks, based on
   different methods.
 * **GTFS data pre-processing:** Public transportation data in GTFS format per
