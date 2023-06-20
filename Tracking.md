@@ -20,41 +20,23 @@ by a space and a time component. Tracking data are composed by at least
 2-dimensional spatial coordinates (x,y) and a time index (t), and can be seen as
 the geometric representation (the trajectory) of an object's path. The packages
 listed here, henceforth called **tracking packages**, are those explicitly
-**developed to either create, transform or analyze tracking data (i.e. (x,y,t))**,
-allowing a full workflow from raw data from tracking devices to final analytical
-outcome. In other words, a tracking package must have one or several functions 
-that have tracking data as input or output. 
-For instance, a package that would use accelerometer, gyroscope and
-magnetometer data to reconstruct an objects's trajectory---most likely an
-animal's trajectory---via dead-reckoning, thus transforming those data into an
-(x,y,t) format, would fit into the definition. However, a package analyzing
-accelerometry series to detect changes in behavior would not fit 
-(note that there is a dedicated section at the end of this CTV for packages that
-deal with movement but not tracking data per se). See more on
-this in [Joo *et al.*  (2020)](https://doi.org/dcnf). 
-Regarding (x,y), some
-packages may assume 2-D Euclidean (Cartesian) coordinates, and others may assume
-geographic (longitude/latitude) coordinates. We encourage the users to verify
-how coordinates are processed in the packages, as the consequences can be
-important in terms of spatial attributes (e.g. distance, speed and angles).
+**developed to either create, transform or analyze tracking data
+(i.e. (x,y,t))**, allowing a full workflow from raw data from tracking devices
+to final analytical outcome. In other words, a tracking package must have one or
+several functions that have tracking data as input or output.  For instance, a
+package that would use accelerometer, gyroscope and magnetometer data to
+reconstruct an objects's trajectory---most likely an animal's trajectory---via
+dead-reckoning, thus transforming those data into an (x,y,t) format, would fit
+into the definition. However, a package analyzing accelerometry series to detect
+changes in behavior would not fit (note that there is a dedicated section at the
+end of this CTV for packages that deal with movement but not tracking data per
+se). See more on this in [Joo *et al.*  (2020)](https://doi.org/dcnf).
 
-The packages included here are mainly tracking packages though we include a
-subsection of other movement-related packages. The packages are mainly from CRAN
-and a few of them are from other repositories. The ones that are not from CRAN
-were only included if they passed the check test (`R CMD check`; more details
-[here](https://github.com/cran-task-views/Tracking/tree/main/checks) ). Core
-packages are defined as the group of tracking packages with the highest number
-of mentions (`Depends`, `Imports`, `Suggests`) from other tracking packages;
-the cutpoint is estimated using the `maxstat_test` function in the `coin`
-package. At the beginning and middle of each calendar year, we will update the
-CTV, making an assessment on the non-CRAN packages here and remove the non-CRAN
-packages that do not pass the check test. Bioconductor packages are
-automatically accepted here as they are required to pass by a similar scrutiny
-than CRAN packages. We are also open to include more packages every time we
-update the CTV. We welcome and encourage
-[contributions](https://github.com/cran-task-views/ctv/blob/main/Contributing.md)
-to add packages at any time. To open an issue on the GitHub repository, please
-use this [link](https://github.com/cran-task-views/Tracking/issues).
+Regarding (x,y), some packages may assume 2-D Euclidean (Cartesian) coordinates,
+and others may assume geographic (longitude/latitude) coordinates. We encourage
+the users to verify how coordinates are processed in the packages, as the
+consequences can be important in terms of spatial attributes (e.g. distance,
+speed and angles).
 
 Besides these packages, many other packages contain functions for data
 processing and analysis that could eventually be used for tracking data or
@@ -63,7 +45,7 @@ check other CRAN Task Views like `r view("SpatioTemporal")`, `r view("Spatial")`
 and `r view("TimeSeries")`.
 
 This CTV was inspired on the review of tracking packages by [Joo *et al.*
-(2020)](https://doi.org/dcnf) , as an attempt to continuously update the list of
+(2020)](https://doi.org/dcnf), as an attempt to continuously update the list of
 packages already described in the review. Therefore, the CTV takes a similar
 structure as the review:
 
@@ -86,6 +68,13 @@ track description, path reconstruction, behavioral pattern identification,
 space use, trajectory simulation, and others (all of these represented by 
 boxes on the right).](`r svg`){width="500"}\
 
+We welcome and encourage
+[contributions](https://github.com/cran-task-views/ctv/blob/main/Contributing.md)
+to add packages at any time. To submit a new package, please open an issue on
+the GitHub repository following this
+[link](https://github.com/cran-task-views/Tracking/issues/new?assignees=&labels=add-pkg&projects=&template=add-package.yml&title=Name+of+the+package%3A+description+of+the+package+%28change+this+title%29).
+
+
 ## Table of contents
 
 * [Pre-processing](#pre-processing)
@@ -99,9 +88,9 @@ boxes on the right).](`r svg`){width="500"}\
   - [Trajectory simulation](#trajectory-simulation)
   - [Others analyses of tracking data](#other-analyses-of-tracking-data)
 * [Dealing with movement but not tracking data](#dealing-with-movement-but-not-tracking-data)
+* [Technical notes](#technical-notes)
 * [Citing and acknowledgments](#citing-and-acknowledgments)
 * [Related links](#related-links)
-
 
 
 ### Pre-processing
@@ -303,16 +292,39 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   `r github("KiranLDA/migflow")`, on the other hand, allows using a series of 
   distances traveled and positions (lon, lat) of sites to calculate the maximum 
   flow of animals through a migratory network. 
-  
-  
+
+
+### Technical notes
+
+The packages included in the Tracking CTV are mainly from CRAN and a few of them
+are from other repositories. Upon submission, packages from CRAN and
+Bioconductor are automatically accepted in the Tracking CTV if they fit the
+scope (see above), as they already passed tests from `R CMD check`. Packages
+that are not from CRAN/Bioconductor are only included after they are tested and
+pass the check tests (more details
+[here](https://github.com/cran-task-views/Tracking/tree/main/checks)).
+
+Once in a while, maintainers of the Tracking CTV release a **checked version**,
+which is a major update the CTV, with full tests run on every
+non-CRAN/non-Bioconductor packages. Packages that fail the tests are also
+removed on this occasion
+
+Core packages are defined as the group of tracking packages with the highest
+number of mentions (`Depends`, `Imports`, `Suggests`) from other tracking
+packages; the cutpoint is estimated using the `maxstat_test` function in the
+`coin` package. 
+
+**Last checked version on:** `r readLines("https://raw.githubusercontent.com/cran-task-views/Tracking/main/LAST_RUN")`
+
+
 ### Citing and acknowledgments
 
 If you would like to cite this CTV, we suggest mentioning: maintainers, year,
 title of the CTV, version, and URL. For instance:
 
-> Joo and Basille (2022) CRAN Task View: Processing and Analysis of Tracking
-> Data. Version 22.01 (2022-01-27). URL:
-> [https://cran.r-project.org/view=Tracking](https://cran.r-project.org/view=Tracking) 
+> Joo and Basille (2023) CRAN Task View: Processing and Analysis of Tracking
+> Data. Version 2023-06-19). URL:
+> [https://CRAN.R-project.org/view=Tracking](https://CRAN.R-project.org/view=Tracking) 
 
 Besides the maintainers, the following people contributed to the creation of
 this task view: **Achim Zeileis**, **Edzer Pebesma**, **Michael Sumner**,
