@@ -25,7 +25,7 @@ including 4 core packages:
   * [`migflow`](https://github.com/KiranLDA/migflow): Calculates the maximum 
   flow through a network
   ([documentation](https://github.com/KiranLDA/migflow))
-  * [`mousetrap`](https://cloud.r-project.org/package=mousetrap): Process and 
+  * [`mousetrap`](https://cran.r-project.org/package=mousetrap): Process and 
   Analyze Mouse-Tracking Data
   ([documentation](https://pascalkieslich.github.io/mousetrap/))
   * [`track2KBA`](https://cran.r-project.org/web/package=track2KBA): Identifying
