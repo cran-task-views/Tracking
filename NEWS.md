@@ -75,7 +75,9 @@ each package.
   * [`argosTrack`](https://github.com/cran-task-views/Tracking/issues/60): does 
   not pass checks anymore
   * [`foieGras`](https://github.com/rociojoo/CranTaskView-Track/issues/57): no
-    longer on CRAN (archived on 2022-12-12).
+    longer on CRAN (archived on 2022-12-12)
+  * [`mkde`](https://github.com/cran-task-views/Tracking/issues/47): no
+    longer on CRAN (archived on 2022-04-25).
 
 You can check the links to the removal threads to find explanations and logs for
 each package.
