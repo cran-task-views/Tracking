@@ -60,6 +60,9 @@ and Fixation Detection in R
   * [`vmsbase`](https://github.com/cran-task-views/Tracking/issues/43): 
   GUI Tools to Process, Analyze and Plot Fisheries Data
 
+You can check the links to the submission threads to find explanations and logs for
+each package.
+
 
 ## Packages removed
 
