@@ -74,6 +74,10 @@ each package.
     longer on CRAN (archived on 2023-02-02).
   * [`argosTrack`](https://github.com/cran-task-views/Tracking/issues/60): does 
   not pass checks anymore
+  * [`BayesianAnimalTracker`](https://github.com/cran-task-views/Tracking/issues/48): no
+    longer on CRAN (archived on 2022-06-08)
+  * [`BBMM`](https://github.com/cran-task-views/Tracking/issues/46): no
+    longer on CRAN (archived on 2022-05-23)
   * [`foieGras`](https://github.com/rociojoo/CranTaskView-Track/issues/57): no
     longer on CRAN (archived on 2022-12-12)
   * [`mkde`](https://github.com/cran-task-views/Tracking/issues/47): no
