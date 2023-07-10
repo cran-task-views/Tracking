@@ -84,7 +84,7 @@ each package.
 
 ## Packages back in the CTV
 
-1 package has been added back to the CTV
+1 package has been added back to the CTV as it now passes CRAN checks:
 
   * [`FLightR`](https://github.com/cran-task-views/Tracking/issues/26)
 
