@@ -115,17 +115,20 @@ GTFS (General Transit Feed Specification) data.
   template). Then, parameters from the model (e.g. a slope in a linear
   regression) are used to estimate the locations. The formulation of the model
   and the parameters used for location estimation vary from method to
-  method. The packages that use curve-fitting methods are 
+  method. The packages that use curve-fitting methods are `r pkg("FLightR")`,
   `r pkg("tripEstimation")` and `r github("SWotherspoon/SGAT")`.
 * **Dead-reckoning using accelerometry and magnetometry data:** The combined use
   of magnetometer and accelerometer data, and optionally gyroscopes and speed
   sensors, allows to reconstruct sub-second fine scale movement paths using the
-  dead-reckoning (DR) technique.  `r pkg("animalTrack")` and 
+  dead-reckoning (DR) technique.   
   `r pkg("TrackReconstruction")` implement DR to obtain tracks, based on
   different methods.
 * **GTFS data pre-processing:** Public transportation data in GTFS format per
   trip and vehicle can be interpolated in space-time to obtain GPS-like records
   with `r pkg("gtfs2gps")`.
+* **Eye tracking data pre-processing:** Plain-text ASC data files from Eyelink 
+  eye trackers are imported and transformed into (x,y,t) tracking data with
+  `r pkg("eyelinker")`.
 
 
 ### Post-processing
@@ -135,7 +138,7 @@ of outliers or errors), compressing (i.e. reducing data resolution which is
 sometimes called resampling) and computation of metrics based on tracking data,
 which are useful for posterior analyses.
 
-- **Data cleaning:** `r pkg("argosfilter")`, `r pkg("foieGras")` and 
+- **Data cleaning:** `r pkg("argosfilter")` and 
   `r pkg("SDLfilter")` implement functions to filter implausible platform
   terminal transmitter (PTT) locations. `r pkg("SDLfilter")` is also adapted to
   GPS data. `r pkg("track2KBA")` allows splitting tracks into trips for
@@ -143,11 +146,12 @@ which are useful for posterior analyses.
   tracking data are `r pkg("TrajDataMining")` and `r pkg("trip")`.
 - **Data compression:** Rediscretization or getting data to equal step lengths
   can be achieved with `r pkg("adehabitatLT", priority = "core")`, 
-  `r pkg("trajectories")` or `r pkg("trajr")`. Regular time-step interpolation
-  can be performed using `r pkg("adehabitatLT")`, `r pkg("amt")` or 
-  `r pkg("trajectories")`. Other compression methods include Douglas-Peucker 
-  (`r pkg("TrajDataMining")` and `r pkg("trajectories")`), opening window 
-  (`r pkg("TrajDataMining")`) or Savitzky-Golay (`r pkg("trajr")`).
+  `r pkg("mousetrap")`, `r pkg("trajectories")` or `r pkg("trajr")`. Regular 
+  time-step interpolation can be performed using `r pkg("adehabitatLT")`, 
+  `r pkg("amt")`, `r pkg("mousetrap")` or `r pkg("trajectories")`. Other 
+  compression methods include Douglas-Peucker (`r pkg("TrajDataMining")` and 
+  `r pkg("trajectories")`), opening window (`r pkg("TrajDataMining")`) or 
+  Savitzky-Golay (`r pkg("trajr")`).
 - **Computation of metrics:** Some packages automatically derive second or third
   order movement variables (e.g. distance and angles between consecutive fixes)
   when transforming the tracking data into the package's data class. These
@@ -171,16 +175,16 @@ animation of tracks, are `r pkg("anipaths")` and `r pkg("moveVis")`.
 
 #### Track description
 
-`r pkg("amt")`, `r pkg("trajr")`, and `r pkg("track2KBA")` compute summary 
-metrics of tracks, such as total distance covered, straightness index, sinuosity,
-trip duration, or others (depending on the package). `r pkg("trackeR")` was
-created to analyze running, cycling and swimming data from GPS-tracking devices
-for humans.  `r pkg("trackeR")` computes metrics summarizing movement effort
-during each track (or workout effort per session).  `r pkg("sftrack")` defines
-two classes of objects from tracking data, tracks (`sf` points in a time
-sequence) and trajectories (`sf` linestrings in a time sequence) and provides
-functions to summarize both showing starting and ending time, number of points,
-and total distance covered.
+`r pkg("amt")`, `rpkg("mousetrap")`, `r pkg("trajr")`, and `r pkg("track2KBA")` 
+compute summary metrics of tracks, such as total distance covered, straightness 
+index, sinuosity, trip duration, or others (depending on the package). 
+`r pkg("trackeR")` was created to analyze running, cycling and swimming data 
+from GPS-tracking devices for humans.  `r pkg("trackeR")` computes metrics 
+summarizing movement effort during each track (or workout effort per session). 
+`r pkg("sftrack")` defines two classes of objects from tracking data, tracks 
+(`sf` points in a time sequence) and trajectories (`sf` linestrings in a time 
+sequence) and provides functions to summarize both showing starting and ending 
+time, number of points, and total distance covered.
 
 
 #### Path reconstruction
@@ -188,9 +192,9 @@ and total distance covered.
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are 
-`r pkg("adehabitatLT")`, `r github("calbertsen/argosTrack")`, 
+`r pkg("adehabitatLT")`, 
 `r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("ctmcmove")`, 
-`r pkg("foieGras")` and `r pkg("TrackReconstruction")`.
+`r pkg("mousetrap")` and `r pkg("TrackReconstruction")`.
 
 
 #### Behavioral pattern identification
@@ -208,7 +212,8 @@ clustering techniques, 2) segmentation methods and 3) hidden Markov models.
   the track is classified as a given type of behavior, independently of the
   classification of the preceding or following fixes (i.e. independently of the
   temporal sequence). The packages implementing these techniques are 
-  `r pkg("EMbC")` and `r pkg("m2b")`.
+  `r pkg("EMbC")`, `r pkg("m2b")` and `r pkg("gazepath")`. The latter is for eye
+  tracking data only, classifying it into saccades and fixations.
 - **Segmentation methods:** They identify change in behavior in time series of
   movement patterns to cut them into several segments. The packages implementing
   these techniques are `r pkg("adehabitatLT")`, `r pkg("bcpa")`, 
@@ -234,9 +239,7 @@ home range calculation and habitat selection.
   autocorrelation in tracking data.
 - **Habitat use:** Several packages estimate the role of habitat features on
   animal space use or habitat selection, such as `r pkg("amt")` using step
-  selection functions, `r pkg("ctmcmove")` using functional movement modeling,
-  and `r github("papayoun/Rhabit")` using a classical resource selection
-  function fitted with a Langevin model on movement data.
+  selection functions and `r pkg("ctmcmove")` using functional movement modeling,.
 - **Non-conventional approaches for space use:** Other non-conventional
   approaches for investigating space use from tracking data can be found in 
   `r pkg("recurse")`.
@@ -247,7 +250,7 @@ home range calculation and habitat selection.
 Tracking packages implementing trajectory simulation are mainly based on Hidden
 Markov models, correlated random walks, Brownian motions, Lévy walks or
 Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`, 
-`r github("calbertsen/argosTrack")`, `r pkg("bsam")`, `r pkg("crawl")`, 
+`r pkg("bsam")`, `r pkg("crawl")`, 
 `r pkg("ctmm")`, `r pkg("momentuHMM")`, `r pkg("moveHMM")`, `r pkg("smam")`, 
 `r pkg("SiMRiv")` and `r pkg("trajr")`.
 
@@ -261,7 +264,8 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   and identifying nearest neighbors.
 - **Movement similarity:** Measures such as the longest common subsequence,
   Fréchet distance, edit distance and dynamic time warping could be computed
-  with `r pkg("SimilarityMeasures")` or `r pkg("trajectories")`.
+  with `r pkg("SimilarityMeasures")` or `r pkg("trajectories")`. 
+  `r pkg("mousetrap")` includes functions to cluster trajectories.
 - **Population size:** `r pkg("caribou")` was specifically created to estimate
   population size from Caribou tracking data, but can also be used for wildlife
   populations with similar home-range behavior.
@@ -284,7 +288,10 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   processing frame-by-frame images). Another example of a non-biologging but
   movement package is `r pkg("actel")` which deals with data from acoustic
   telemetry stations. It allows exploring time spend in each array, getting time
-  series of transitions between arrays, among others.
+  series of transitions between arrays, among others. 
+  `r github("KiranLDA/migflow")`, on the other hand, allows using a series of 
+  distances traveled and positions (lon, lat) of sites to calculate the maximum 
+  flow of animals through a migratory network. 
 
 
 ### Technical notes
@@ -316,7 +323,7 @@ If you would like to cite this CTV, we suggest mentioning: maintainers, year,
 title of the CTV, version, and URL. For instance:
 
 > Joo and Basille (2023) CRAN Task View: Processing and Analysis of Tracking
-> Data. Version 2023-03-07). URL:
+> Data. Version 2023-06-19). URL:
 > [https://CRAN.R-project.org/view=Tracking](https://CRAN.R-project.org/view=Tracking) 
 
 Besides the maintainers, the following people contributed to the creation of

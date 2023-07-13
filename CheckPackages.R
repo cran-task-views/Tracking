@@ -117,12 +117,19 @@ for (i in 1:nrow(track)) {
         phrase
         ## '\" href=\"../src/contrib/SwimR_1.26.0.tar.gz\"'
         match <- regexec("(?:href=\\\"\\.\\./)(.*)(?:\\\">)", phrase)
-        if (regmatches(phrase, match)[[1]][2] == "") {
+        # if the link goes to the removed packages page, adding some lines for it
+        if (length(phrase) == 0){
+          message("No source available. Package probably removed from Bioconductor.")
+          track$source[i] <- "bioc-deprecated"
+          track$errors[i] <- TRUE
+          track$cran_check[i] <- FALSE
+          next
+        }else if (regmatches(phrase, match)[[1]][2] == "") {
             message("No source available. Package probably removed from Bioconductor.")
             track$source[i] <- "bioc-deprecated"
             track$errors[i] <- TRUE
             track$cran_check[i] <- FALSE
-            next
+          next
         }
         ## Actual repository can be found in 'release/' (one fewer things to
         ## check)
@@ -394,7 +401,7 @@ track$core <- ifelse(is.na(track$core), FALSE, track$core)
 ## Save previous state, current state, and last run
 write.csv(track_old, "checks/Checked_packages_previous.csv", row.names = FALSE)
 write.csv(track, "checks/Checked_packages.csv", row.names = FALSE)
-writeLines(paste("LAST_RUN:", Sys.Date()), "LAST_RUN")
+writeLines(paste0(Sys.Date()), "LAST_RUN")
 
 
 ## Differences with previous state
