@@ -10,6 +10,9 @@
       * doc: https://bartk.gitlab.io/move2/
 - [ ] moveR: https://github.com/qpetitjean/MoveR
       * doc: https://qpetitjean.github.io/MoveR/index.html
+- [ ] cylcop: Circular-Linear Copulas with Angular Symmetry for Movement Data
+      https://cran.r-project.org/web/packages/cylcop/index.html
+      * paper: https://doi.org/10.1111/2041-210X.13821
 
 ## Markdown CTV file
 
