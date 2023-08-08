@@ -1,18 +1,7 @@
 ## Check and add packages
 
-- [ ] movedesign: https://ecoisilva.github.io/movedesign/
-      * paper: https://twitter.com/ecoisilva/status/1668177982718980097?s=46&t=Z2tKSAWwQu4saaRVEKNTvQ
-- [ ] hmmSSF: https://github.com/NJKlappstein/hmmSSF
-      * paper: https://twitter.com/njklappstein/status/1665417299963019264?s=46&t=Z2tKSAWwQu4saaRVEKNTvQ
-- [ ] MoveFormer: https://github.com/cifkao/moveformer
-      * paper: https://twitter.com/chamaillejammes/status/1633197981858947072?s=46&t=Z2tKSAWwQu4saaRVEKNTvQ
-- [ ] move2: https://cran.r-project.org/web/packages/move2/index.html
-      * doc: https://bartk.gitlab.io/move2/
-- [ ] moveR: https://github.com/qpetitjean/MoveR
-      * doc: https://qpetitjean.github.io/MoveR/index.html
-- [ ] cylcop: Circular-Linear Copulas with Angular Symmetry for Movement Data
-      https://cran.r-project.org/web/packages/cylcop/index.html
-      * paper: https://doi.org/10.1111/2041-210X.13821
+NA.
+
 
 ## Markdown CTV file
 

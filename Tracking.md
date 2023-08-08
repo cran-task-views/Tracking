@@ -184,7 +184,10 @@ summarizing movement effort during each track (or workout effort per session).
 `r pkg("sftrack")` defines two classes of objects from tracking data, tracks 
 (`sf` points in a time sequence) and trajectories (`sf` linestrings in a time 
 sequence) and provides functions to summarize both showing starting and ending 
-time, number of points, and total distance covered.
+time, number of points, and total distance covered. `r pkg("cylcop")` can fit
+multivariate distributions using the method of copulae that allows for correlated
+step lengths and turn angles; these distributions can later be used for
+step-selection modeling.
 
 
 #### Path reconstruction
