@@ -1,7 +1,20 @@
 ## Check and add packages
 
-NA.
+- eyetrackingR: Does it fit?
+  https://github.com/cran-task-views/Tracking/issues/12
+- RSP: check issue with synonymous on CRAN
+  https://github.com/cran-task-views/Tracking/issues/37
+- MoveR: meta-package… where do we put it?
+  https://github.com/cran-task-views/Tracking/issues/68
+- move2: maybe create a new (sub)section for formal classes?
+  https://github.com/cran-task-views/Tracking/issues/70
 
+**Archived packages:** https://github.com/cran-task-views/Tracking/issues/49
+
+- moveVis: https://github.com/cran-task-views/Tracking/issues/71
+- gazepath: https://github.com/cran-task-views/Tracking/issues/72
+- FLightR: https://github.com/cran-task-views/Tracking/issues/73
+- TrajDataMining: https://github.com/cran-task-views/Tracking/issues/74
 
 ## Markdown CTV file
 
@@ -31,10 +44,6 @@ NA.
       [here](https://github.com/r-lib/actions) for relevant examples.
       * See also https://github.com/cran-task-views/ctv/tree/main/validate-ctv
         and particularly https://github.com/cran-task-views/ctv/blob/main/validate-ctv/action.yml
-- [ ] **Check [`renv`](https://rstudio.github.io/renv/)** as a replacement to
-      `packrat` to deal with the private library of packages. [Migration
-      tools](https://rstudio.github.io/renv/articles/renv.html#migrating-from-packrat)
-      are provided with `renv`.
 - [ ] **Implement automatic CRAN package search** in our workflow, for instance
       with `pkgsearch::pkg_search()`, fixing some search terms (#33), or with
       `CTVsuggest::CTVsuggest()`.
