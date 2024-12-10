@@ -4,12 +4,16 @@
 ##                                                        ##
 ## ------------------------------------------------------ ##
 
-## Install packrat if not available
-if (!require("packrat")) install.packages("packrat")
+## Install 'renv' if not available and initialize it
+if (!require("renv")) install.packages("renv")
+## To initialize renv the first time you use it, run the following line (it runs
+## automatically after that):
+## renv::init()
+## To record a change in the packages used in this script, run:
+## renv::snapshot()
+## To update said packages, use:
+## renv::update()
 
-## Set up private library (delete it first)
-unlink("packrat", recursive = TRUE)
-packrat::init(infer.dependencies = FALSE)
 
 ## Install necessary utility packages for this script (devtools, remotes, desc,
 ## dplyr, coin)
