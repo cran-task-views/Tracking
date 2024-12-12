@@ -3,6 +3,14 @@ description: To-do list to prepare a new checked release
 title: "20XX checked release — progress tracker"
 labels: add-pkg
 body:
+  - type: input
+    id: version
+    attributes:
+      label: Release version
+      description: What is the version number of the release?
+      placeholder: 2024-12
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
