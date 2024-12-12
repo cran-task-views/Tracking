@@ -4,10 +4,12 @@ This is a long due update of the Tracking CTV.
 
 ## New packages
 
+  * [`tagtools`](https://cran.r-project.org/package=tagtools): tools for
+    calibration and processing of high-resolution biologging data
+    ([documentation](https://animaltags.github.io/tagtools_r/index.html))
   * [`pathroutr`](https://github.com/jmlondon/pathroutr): Re-routing paths that
     cross land around barrier polygons
     ([documentation](https://jmlondon.github.io/pathroutr/))
-
 
 ## Packages removed
 
@@ -17,7 +19,6 @@ This is a long due update of the Tracking CTV.
     Archived on 2023-08-19 as email to the maintainer is undeliverable.
   * [`TrajDataMining`](https://github.com/cran-task-views/Tracking/issues/77):
     Archived on CRAN on 2023-10-16 as requires archived package 'rgdal'.
-
 
 # Tracking CTV 2023-06-19
 
@@ -84,7 +85,6 @@ of the maintainer
 You can check the links to the submission threads to find explanations and logs for
 each package.
 
-
 ## Packages removed
 
 4 packages have been removed from the list:
@@ -112,8 +112,6 @@ each package.
 1 package has been added back to the CTV as it now passes CRAN checks:
 
   * [`FLightR`](https://github.com/cran-task-views/Tracking/issues/26)
-
-
 
 # Tracking CTV 22.01 (2022-01-27)
 
@@ -168,7 +166,6 @@ package.
 You can check the links to the removal threads to find explanations and logs for
 each package.
 
-
 # Tracking CTV 20.07 (2020-07-15)
 
 We have completed our very first update! We had 8 submissions this round. The
@@ -205,7 +202,6 @@ package.
 
   * [`rsMove`](https://github.com/rociojoo/CranTaskView-Track/issues/21): no
     longer on CRAN (archived on 2020-07-14).
-
 
 # Tracking CTV 20.01 (2020-01-27)
 
