@@ -14,17 +14,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Tracking CTV 2024-xx-xx
         ([details for full process](https://github.com/cran-task-views/Tracking/issues/50))
         - [ ] Branch out from `main` into `dev`
         - [ ] Check [archived packages](https://github.com/cran-task-views/Tracking/issues/49)
         - [ ] Check all [open issues for package submissions](https://github.com/cran-task-views/Tracking/issues?q=is%3Aissue+is%3Aopen+label%3Aadd-pkg), and make sure submitted packages are sorted out and included in [`Tracking_tbl.csv`](https://github.com/cran-task-views/Tracking/blob/main/checks/Tracking_tbl.csv)
         - [ ] Run the [full tests](https://github.com/cran-task-views/Tracking/blob/main/CheckPackages.R) (note: Make sure to check the packages that have `skip = TRUE` in the table).
-            - [ ] Check packages that fail.
-        - [ ] Complete the [`NEWS.md`](https://github.com/cran-task-views/Tracking/blob/main/NEWS.md) file fully (see template below), including: 
-            - [ ] Overview
-            - [ ] Newly included non-CRAN/non-Bioconductor packages
-            - [ ] Packages removed (including archived packages)
+        - [ ] Check packages that fail the tests.
+        - [ ] Complete the [`NEWS.md`](https://github.com/cran-task-views/Tracking/blob/main/NEWS.md)         file fully (see template below), including overview, newly included packages, packages removed.
         - [ ] Fully update [`Tracking.md`](https://github.com/cran-task-views/Tracking/blob/main/Tracking.md) with new and removed packages.
         - [ ] Complete and close all open issues.
         - [ ] Merge `dev` back into `main` and delete the `dev` branch.
