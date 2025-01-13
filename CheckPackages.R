@@ -1,11 +1,16 @@
-## ------------------------------------------------------ ##
-##                                                        ##
-## /!\ Make sure to start with a fully updated system /!\ ##
-##                                                        ##
-## ------------------------------------------------------ ##
+## -------------------------------------------------------- ##
+##                                                          ##
+## /!\ Make sure to start with a fully updated system with: ##
+##                                                          ##
+##   update.packages()                                      ##
+##                                                          ##
+## -------------------------------------------------------- ##
 
-## Install 'renv' if not available and initialize it
-if (!require("renv")) install.packages("renv")
+## Install necessary utility packages for this script (devtools, remotes, desc,
+## dplyr, coin)
+pkg_utilities <- c("renv", "devtools", "remotes", "desc", "dplyr", "coin")
+install.packages(pkg_utilities[!(pkg_utilities %in% installed.packages()[,"Package"])])
+
 ## To initialize renv the first time you use it, run the following line (it runs
 ## automatically after that):
 ## renv::init()
@@ -14,10 +19,6 @@ if (!require("renv")) install.packages("renv")
 ## To update said packages, use:
 ## renv::update()
 
-
-## Install necessary utility packages for this script (devtools, remotes, desc,
-## dplyr, coin)
-install.packages(c("devtools", "remotes", "desc", "dplyr", "coin"))
 
 ## Directories to download and run checks in
 download_local <- "checks/downloads"
@@ -382,7 +383,7 @@ pkg_net <- rbind.data.frame(pkg_import_gather, pkg_suggest_gather)
 # Filtering out non movement packages
 pkg_net <- subset(pkg_net, network %in% pkg_check$package_name)
 
-## Counting how much is package is needed or suggested
+## Counting how much a package is needed or suggested
 pkg_net_tb <- data.frame(table(pkg_net$network))
 names(pkg_net_tb) <- c("package_name", "mention")
 pkg_net_tb <- pkg_net_tb[order(pkg_net_tb$mention, decreasing = TRUE), ]
