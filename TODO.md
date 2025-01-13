@@ -1,20 +1,7 @@
 ## Check and add packages
 
-- eyetrackingR: Does it fit?
-  https://github.com/cran-task-views/Tracking/issues/12
 - RSP: check issue with synonymous on CRAN
   https://github.com/cran-task-views/Tracking/issues/37
-- MoveR: meta-package… where do we put it?
-  https://github.com/cran-task-views/Tracking/issues/68
-- move2: maybe create a new (sub)section for formal classes?
-  https://github.com/cran-task-views/Tracking/issues/70
-
-**Archived packages:** https://github.com/cran-task-views/Tracking/issues/49
-
-- moveVis: https://github.com/cran-task-views/Tracking/issues/71
-- gazepath: https://github.com/cran-task-views/Tracking/issues/72
-- FLightR: https://github.com/cran-task-views/Tracking/issues/73
-- TrajDataMining: https://github.com/cran-task-views/Tracking/issues/74
 
 ## Markdown CTV file
 
