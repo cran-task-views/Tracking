@@ -118,7 +118,9 @@ from each source.
 
 ### CRAN
 
-As CRAN checks are required to pass to be allowed on CRAN, we do not run checks on CRAN packages. We do check if the package is still active. To do this we cross reference the package name with the `tools::cran_package_DB()` table.
+As CRAN checks are required to pass to be allowed on CRAN, we do not run checks
+on CRAN packages. We do check if the package is still active. To do this we
+cross reference the package name with the `tools::cran_package_DB()` table.
 
 
 ### GitHub

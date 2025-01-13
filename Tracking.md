@@ -44,10 +44,12 @@ second/third degree variables obtained from tracking data; we encourage users to
 check other CRAN Task Views like `r view("SpatioTemporal")`, `r view("Spatial")`
 and `r view("TimeSeries")`.
 
-This CTV was inspired on the review of tracking packages by [Joo *et al.*
-(2020)](https://doi.org/dcnf), as an attempt to continuously update the list of
-packages already described in the review. Therefore, the CTV takes a similar
-structure as the review:
+This CTV is aimed at both users and developers, with the ultimate objective to
+maximize the utility of packages and strengthen the links within the R
+community. If is based on a published review of tracking packages by [Joo *et
+al.*  (2020)](https://doi.org/dcnf), and can be seen as an attempt to
+continuously update the list of packages already described in the
+review. Therefore, the CTV takes a similar structure as the review:
 
 ```{r, include = FALSE}
 tdir <- tempfile()
@@ -58,15 +60,16 @@ svg <- xfun::base64_uri(svg)
 unlink(tdir)
 ```
 
-![Diagram with boxes and arrows depicting the workflow for data processing and 
-analysis in movement ecology. Three steps—represented by arrows in the 
-diagram—are identified: 1) Pre-processing, taking raw data (box on the left) as 
-input and leading to tracking data as output (x, y, t) (box on the center); 
-2) Post-processing, manipulating tracking data as both input and output; 
-3) Analysis, which takes tracking data as input for visualization, 
-track description, path reconstruction, behavioral pattern identification, 
-space use, trajectory simulation, and others (all of these represented by 
-boxes on the right).](`r svg`){width="500"}\
+![Diagram with boxes and arrows depicting the workflow for data processing and
+analysis in movement ecology. Three steps—represented by arrows in the
+diagram—are identified: 1) Pre-processing, taking raw data (box on the left) as
+input and leading to tracking data as output (x, y, t) (box on the center); 2)
+Formal classes, offered by packages to store and handle tracking data; 3)
+Post-processing, manipulating tracking data as both input and output; 4)
+Analysis, which takes tracking data as input for visualization, track
+description, path reconstruction, behavioral pattern identification, space use,
+trajectory simulation, and others (all of these represented by boxes on the
+right).](`r svg`){width="500"}\
 
 We welcome and encourage
 [contributions](https://github.com/cran-task-views/ctv/blob/main/Contributing.md)
@@ -79,6 +82,7 @@ the GitHub repository following this
 
 * [Pre-processing](#pre-processing)
 * [Post-processing](#post-processing)
+* [Formal classes](#formal-classes)
 * [Analysis](#analysis)
   - [Visualization](#visualization)
   - [Track description](#track-description)
@@ -111,18 +115,17 @@ GTFS (General Transit Feed Specification) data.
     sunset. The package that uses threshold methods is 
     `r github("SWotherspoon/SGAT")`.
   - **Curve-fitting methods:** The observed light irradiance levels for each
-  twilight are modeled as a function of theoretical light levels (i.e. the
-  template). Then, parameters from the model (e.g. a slope in a linear
-  regression) are used to estimate the locations. The formulation of the model
-  and the parameters used for location estimation vary from method to
-  method. The packages that use curve-fitting methods are `r pkg("FLightR")`,
-  `r pkg("tripEstimation")` and `r github("SWotherspoon/SGAT")`.
+    twilight are modeled as a function of theoretical light levels (i.e. the
+    template). Then, parameters from the model (e.g. a slope in a linear
+    regression) are used to estimate the locations. The formulation of the model
+    and the parameters used for location estimation vary from method to
+    method. The packages that use curve-fitting methods are `r pkg("FLightR")`,
+    `r pkg("tripEstimation")` and `r github("SWotherspoon/SGAT")`.
 * **Dead-reckoning using accelerometry and magnetometry data:** The combined use
   of magnetometer and accelerometer data, and optionally gyroscopes and speed
   sensors, allows to reconstruct sub-second fine scale movement paths using the
-  dead-reckoning (DR) technique.   
-  `r pkg("TrackReconstruction")` implement DR to obtain tracks, based on
-  different methods.
+  dead-reckoning (DR) technique. `r pkg("TrackReconstruction")` implement DR to
+  obtain tracks, based on different methods.
 * **GTFS data pre-processing:** Public transportation data in GTFS format per
   trip and vehicle can be interpolated in space-time to obtain GPS-like records
   with `r pkg("gtfs2gps")`.
@@ -130,14 +133,23 @@ GTFS (General Transit Feed Specification) data.
   eye trackers are imported and transformed into (x,y,t) tracking data with
   `r pkg("eyelinker")`.
 
+### Formal classes
+
+Several packages offer formal classes to store and handle tracking data, with
+both a space and time structures for the data: `r pkg("adehabitatLT"), `r
+pkg("move2")` (replacing `r pkg("move")`), `r pkg("sftrack"), `r pkg("trip"), `r
+pkg("trajectories"). Formal classes can benefit both users to manipulate
+tracking data and developers to rely on such classes for their own needs.
 
 ### Post-processing
 
-Post-processing of tracking data comprises data cleaning (e.g.  identification
-of outliers or errors), compressing (i.e. reducing data resolution which is
-sometimes called resampling) and computation of metrics based on tracking data,
-which are useful for posterior analyses.
+Post-processing of tracking data comprises import from online repositories, data
+cleaning (e.g. identification of outliers or errors), compressing (i.e. reducing
+data resolution which is sometimes called resampling) and computation of metrics
+based on tracking data, which are useful for posterior analyses.
 
+- **Import from online repositories**: `r pkg("move2")` (replacing `r
+  pkg("move")`) allows to import data from [Movebank](https://movebank.org).
 - **Data cleaning:** `r pkg("argosfilter")` and 
   `r pkg("SDLfilter")` implement functions to filter implausible platform
   terminal transmitter (PTT) locations. `r pkg("SDLfilter")` is also adapted to
@@ -175,7 +187,7 @@ animation of tracks, are `r pkg("anipaths")` and `r pkg("moveVis")`.
 
 #### Track description
 
-`r pkg("amt")`, `rpkg("mousetrap")`, `r pkg("trajr")`, and `r pkg("track2KBA")` 
+`r pkg("amt")`, `r pkg("mousetrap")`, `r pkg("trajr")`, and `r pkg("track2KBA")` 
 compute summary metrics of tracks, such as total distance covered, straightness 
 index, sinuosity, trip duration, or others (depending on the package). 
 `r pkg("trackeR")` was created to analyze running, cycling and swimming data 
@@ -195,10 +207,10 @@ step-selection modeling.
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are 
-`r pkg("adehabitatLT")`, 
-`r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("ctmcmove")`, 
-`r pkg("mousetrap")` and `r pkg("TrackReconstruction")`.
-
+`r pkg("adehabitatLT")`, `r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, 
+`r pkg("ctmcmove")`, `r pkg("mousetrap")` and `r pkg("TrackReconstruction")`.
+`r pkg("pathroutr")` allows to re-route paths when there are barriers
+(e.g. terrestrial land for marine species).
 
 #### Behavioral pattern identification
 
