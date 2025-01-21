@@ -61,14 +61,18 @@ error_list <- list()
 ## START LOOP
 ## Loop over all packages (looooong process)
 for (i in 1:nrow(track)) {
-    if (isTRUE(track$skip[i])) { next }
+
+    message(paste0("\n\n########################################\n\nNow processing package '",
+        track$package_name[i], "' (", i, "/", nrow(track), ")."))
+
+    if (isTRUE(track$skip[i])) {
+        message("  * Instructed to do so, skipping…")
+        next
+    }
 
     ## Check that source is properly filled out
     if (!track$source[i] %in% c("cran", "github", "bioc", "rforge", "other")) {
-        message(paste0(
-            track$package_name[i],
-            " source is not valid, skipping..."
-        ))
+        message("  * Source is not valid, skipping…")
         next
     }
 
@@ -77,7 +81,7 @@ for (i in 1:nrow(track)) {
         track_pkg <- pkg_db[pkg_db$Package == track$package_name[i], ]
         if (nrow(track_pkg) == 1) {
             track$source[i] <- "cran"
-            message(paste0(track$package_name[i], " is now on CRAN"))
+            message("  * Is on CRAN.")
         }
     }
 
@@ -85,7 +89,7 @@ for (i in 1:nrow(track)) {
     if (track$source[i] == "cran") {
         track_pkg <- pkg_db[pkg_db$Package == track$package_name[i], ]
         if (nrow(track_pkg) == 0) {
-            warning(paste0(track$package_name[i], " is not on CRAN"))
+            warning("  * Is not on CRAN anymore (archived).")
             track$source[i] <- "cran-archived"
             track$errors[i] <- TRUE
             track$cran_check[i] <- FALSE
@@ -103,7 +107,7 @@ for (i in 1:nrow(track)) {
         track$suggests[i] <- as.character(string)
         ## Recent track
         track$recent_publish_track[i] <- track_pkg$Published
-        track$cran_check[i] <- TRUE
+        track$cran_check[i] <- TRUE + véhicules + 2 vélos électriques (Charlie)
         track$version[i] <- track_pkg$Version
         ## House cleaning
         suppressWarnings(rm(string, track_pkg))
@@ -123,18 +127,18 @@ for (i in 1:nrow(track)) {
         ## '\" href=\"../src/contrib/SwimR_1.26.0.tar.gz\"'
         match <- regexec("(?:href=\\\"\\.\\./)(.*)(?:\\\">)", phrase)
         # if the link goes to the removed packages page, adding some lines for it
-        if (length(phrase) == 0){
-          message("No source available. Package probably removed from Bioconductor.")
-          track$source[i] <- "bioc-deprecated"
-          track$errors[i] <- TRUE
-          track$cran_check[i] <- FALSE
-          next
-        }else if (regmatches(phrase, match)[[1]][2] == "") {
-            message("No source available. Package probably removed from Bioconductor.")
+        if (length(phrase) == 0) {
+            message("  * No source available. Package probably removed from Bioconductor.")
             track$source[i] <- "bioc-deprecated"
             track$errors[i] <- TRUE
             track$cran_check[i] <- FALSE
-          next
+            next
+        } else if (regmatches(phrase, match)[[1]][2] == "") {
+            message("  * No source available. Package probably removed from Bioconductor.")
+            track$source[i] <- "bioc-deprecated"
+            track$errors[i] <- TRUE
+            track$cran_check[i] <- FALSE
+            next
         }
         ## Actual repository can be found in 'release/' (one fewer things to
         ## check)
@@ -147,6 +151,7 @@ for (i in 1:nrow(track)) {
         download.file(url = download_file, destfile = download_folder,
             method = "libcurl")
         untar(tarfile = download_folder, exdir = download_local)
+        message("  * Is on Bioconductor.")
     }
 
     ## Specific R-Forge (includes download + untar)
@@ -156,6 +161,7 @@ for (i in 1:nrow(track)) {
         download_folder <- out[2]
         working_folder <- paste0(download_local, "/", track$package_name[i])
         untar(tarfile = download_folder, exdir = download_local)
+        message("  * Is on R-Forge.")
     }
 
     ## Specific GitHub
@@ -194,6 +200,7 @@ for (i in 1:nrow(track)) {
         commit <- (Sys.time() - as.POSIXct(strptime(commit_list[[1]]$commit$author$date,
             format = "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"))) < 365
         track$recent_commit[i] <- commit
+        message("  * Is on GitHub.")
     }
 
     # Specific Other: we assume that we provide the download URL to the .tar.gz
@@ -201,10 +208,7 @@ for (i in 1:nrow(track)) {
     if (track$source[i] == "other") {
         ## Check if package even has a repository
         if (nchar(as.character(track$download_link[i])) == 0) {
-            message(paste0(
-                track$package_name[i],
-                " does not have a selected repository, skipping..."
-            ))
+            message("  * Does not have a selected repository, skipping…")
             next
         }
         download_file <- as.character(track$download_link[i])
@@ -230,6 +234,7 @@ for (i in 1:nrow(track)) {
                 untar(tarfile = download_folder, exdir = working_folder)
             }
         }
+        message("  * Is on a selected repository.")
     }
 
     ## Delete some folders that may exist that may interfere with building
@@ -303,8 +308,7 @@ for (i in 1:nrow(track)) {
         track$suggests[i] <- as.character(string)
         track$version[i] <- gsub("‘", "", track_desc$get_version())
     } else {
-        tryCatch(
-        {
+        tryCatch({
             track_desc <- desc::desc(file =  paste0(working_folder, "/",
                 "/DESCRIPTION"))
             track_dep <- track_desc$get_deps()
@@ -317,7 +321,7 @@ for (i in 1:nrow(track)) {
             track$suggests[i] <- as.character(string)
             track$version[i] <- gsub("‘", "", track_desc$get_version())
         },
-        error = function(e) "cannot retrieve DESCRIPTION"
+        error = function(e) "  * Cannot retrieve DESCRIPTION."
         )
     }
 
