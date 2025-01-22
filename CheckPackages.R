@@ -29,7 +29,7 @@ unlink(check_logs, recursive = TRUE)
 dir.create(check_logs)
 
 
-## List of CRAN packages
+## List of current CRAN packages
 pkg_db <- tools::CRAN_package_db()
 
 ## Previous state
@@ -52,9 +52,11 @@ track$imports <- NA_character_
 track$suggests <- NA_character_
 track$recent_publish_track <- NA
 track$version <- NA
-## set up an error list to check later if installs failed because of
+## Set up an error list to check later if installs failed because of
 ## dependencies the computer doesn't have
 error_list <- list()
+## Packages to check now, by alphabetical order
+sort(track$package_name)
 
 
 ######################################################################
@@ -107,7 +109,7 @@ for (i in 1:nrow(track)) {
         track$suggests[i] <- as.character(string)
         ## Recent track
         track$recent_publish_track[i] <- track_pkg$Published
-        track$cran_check[i] <- TRUE + véhicules + 2 vélos électriques (Charlie)
+        track$cran_check[i] <- TRUE
         track$version[i] <- track_pkg$Version
         ## House cleaning
         suppressWarnings(rm(string, track_pkg))
