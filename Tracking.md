@@ -138,19 +138,18 @@ of outliers or errors), compressing (i.e. reducing data resolution which is
 sometimes called resampling) and computation of metrics based on tracking data,
 which are useful for posterior analyses.
 
-- **Data cleaning:** `r pkg("argosfilter")` and 
-  `r pkg("SDLfilter")` implement functions to filter implausible platform
-  terminal transmitter (PTT) locations. `r pkg("SDLfilter")` is also adapted to
-  GPS data. `r pkg("track2KBA")` allows splitting tracks into trips for
-  central-place foraging species. Other packages with functions for cleaning 
-  tracking data are `r pkg("TrajDataMining")` and `r pkg("trip")`.
+- **Data cleaning:** `r pkg("argosfilter")` and `r pkg("SDLfilter")` implement
+  functions to filter implausible platform terminal transmitter (PTT)
+  locations. `r pkg("SDLfilter")` is also adapted to GPS data. 
+  `r pkg("track2KBA")` allows splitting tracks into trips for central-place
+  foraging species. `r pkg("trip")` also provides functions for cleaning
+  tracking data.
 - **Data compression:** Rediscretization or getting data to equal step lengths
   can be achieved with `r pkg("adehabitatLT", priority = "core")`, 
   `r pkg("mousetrap")`, `r pkg("trajectories")` or `r pkg("trajr")`. Regular 
   time-step interpolation can be performed using `r pkg("adehabitatLT")`, 
   `r pkg("amt")`, `r pkg("mousetrap")` or `r pkg("trajectories")`. Other 
-  compression methods include Douglas-Peucker (`r pkg("TrajDataMining")` and 
-  `r pkg("trajectories")`), opening window (`r pkg("TrajDataMining")`) or 
+  compression methods include Douglas-Peucker (`r pkg("trajectories")`) or 
   Savitzky-Golay (`r pkg("trajr")`).
 - **Computation of metrics:** Some packages automatically derive second or third
   order movement variables (e.g. distance and angles between consecutive fixes)
@@ -169,8 +168,8 @@ which are useful for posterior analyses.
 
 #### Visualization
 
-The packages mainly developed for visualization purposes, and more specifically,
-animation of tracks, are `r pkg("anipaths")` and `r pkg("moveVis")`.
+`r pkg("anipaths")` is a package mainly developed for visualization purposes,
+and more specifically, animation of tracks.
 
 
 #### Track description
@@ -215,8 +214,7 @@ clustering techniques, 2) segmentation methods and 3) hidden Markov models.
   the track is classified as a given type of behavior, independently of the
   classification of the preceding or following fixes (i.e. independently of the
   temporal sequence). The packages implementing these techniques are 
-  `r pkg("EMbC")`, `r pkg("m2b")` and `r pkg("gazepath")`. The latter is for eye
-  tracking data only, classifying it into saccades and fixations.
+  `r pkg("EMbC")` and `r pkg("m2b")`.
 - **Segmentation methods:** They identify change in behavior in time series of
   movement patterns to cut them into several segments. The packages implementing
   these techniques are `r pkg("adehabitatLT")`, `r pkg("bcpa")`, 
@@ -261,10 +259,9 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
 #### Other analyses of tracking data
 
 - **Interactions:** Interactions between individuals can be assessed using
-  metrics from `r pkg("wildlifeDI")` and `r pkg("TrajDataMining")`. 
-  `r pkg("spatsoc")` groups relocations within a same time-period or a same
-  spatial range, and allows computing distances between individuals in the group
-  and identifying nearest neighbors.
+  metrics from `r pkg("wildlifeDI")`.  `r pkg("spatsoc")` groups relocations
+  within a same time-period or a same spatial range, and allows computing
+  distances between individuals in the group and identifying nearest neighbors.
 - **Movement similarity:** Measures such as the longest common subsequence,
   Fréchet distance, edit distance and dynamic time warping could be computed
   with `r pkg("SimilarityMeasures")` or `r pkg("trajectories")`. 
