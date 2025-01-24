@@ -30,6 +30,16 @@
 - [ ] Create a mini package: one function to work on a single line of the table,
       one function to make it a loop and produce the final table, another one
       for network stuff, and another one for differences.
+- [ ] Sometimes download from GitHub fails with:
+
+        trying URL 'https://github.com/SESman/rbl/archive/master.zip'
+        downloaded 55.5 MB
+        
+        Error in `httr2::resp_body_json()`:
+        ! Unexpected content type "text/html".
+        • Expecting type "application/json" or suffix "json".
+        Run `rlang::last_trace()` to see where the error occurred.
+
 - [ ] Use **GitHub Actions for continuous integration** of the CTV (just like a
       R package). That would allow to automatically test current packages. New
       packages would only be tested when formally added. See
