@@ -32,12 +32,8 @@ check_packages <- function(pkg_table, pkg_name) {
         check_package(pkg_table[row, ], cran_pkg_db = cran_pkg_db,
             download_local = download_local, check_logs =  check_logs)
     }))
-
-    pkg_table |>
-        dplyr::arrange(desc(cran_check), package_name) |>
-        dplyr::select(package_name, version, source, date_added_to_list, skip,
-            recent_publish_track, recent_commit, cran_check, warnings, errors,
-            vignette_error, imports, suggests, comments, dep_errors)
+    class(pkg_table) <- c("ctv_pkg_check", class(pkg_tbl))
+    return(pkg_table)
 }
 
 check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
@@ -82,13 +78,11 @@ check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
         dep_string <- ifelse(is.na(cran_pkg$Suggests), "", cran_pkg$Suggests)
         dep_string <- gsub("\\(.*\\)|,$", "" , dep_string)
         dep_string <- trimws(gsub("\n" , " ", dep_string), "both")
-        track$suggests <- as.character(dep_string)
+        pkg_info$suggests <- as.character(dep_string)
         ## Recent track
         pkg_info$recent_publish_track <- cran_pkg$Published
         pkg_info$cran_check <- TRUE
         pkg_info$version <- cran_pkg$Version
-        ## House cleaning
-        suppressWarnings(rm(dep_string, track_pkg))
         return(pkg_info)
     }
 
@@ -106,14 +100,14 @@ check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
         match <- regexec("(?:href=\\\"\\.\\./)(.*)(?:\\\">)", phrase)
         ## If the link goes to the removed packages page, adding some lines for it
         if (length(phrase) == 0) {
-            message("  * No source available. Package probably archived on Bioconductor.")
+            message("  * No source available; probably archived on Bioconductor.")
             pkg_info$cran_check <- FALSE
             pkg_info$errors <- TRUE
             pkg_info$archived <- TRUE
             return(pkg_info)
         } else if (regmatches(phrase, match)[[1]][2] == "") {
         ## Second check needs to happen after first
-            message("  * No source available. Package probably archived on Bioconductor.")
+            message("  * No source available; probably archived on Bioconductor.")
             pkg_info$cran_check <- FALSE
             pkg_info$errors <- TRUE
             pkg_info$archived <- TRUE
@@ -315,55 +309,83 @@ check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
         overwrite = TRUE)
 
     return(pkg_info)
-
 }
 
-ctv_network <- function(pkg_table) {
-    pkg_check <- subset(pkg_table, cran_check)
+print.ctv_pkg_check <- function(x, by = c("check", "NA", "names"), select) {
+    if (missing(select))
+        select <- c(c("package_name", "version", "source", "date_added_to_list",
+            "cran_check", "skip", "archived", "warnings", "errors", "vignette_error"))
+    by <-match.arg(by)
+    pkg_tbl <- pkg_tbl[order(!pkg_tbl$cran_check, pkg_tbl$package_name), ]
+    if (by == "check")
+        return(pkg_tbl[, ])
+    if (by == "NA")
+        return(subset(pkg_tbl, is.na(cran_check)))
+    if (by == "names")
+        return(sort(pkg_tbl$package_name))
+}
+
+ctv_network <- function(pkg_check) {
+    pkg_check_ok <- subset(pkg_check, cran_check)
 
     ## Remove spaces, separate imported packages by commas
-    pkg_import <- strsplit(gsub("\\s*", "", pkg_check$imports), split = ",")
+    pkg_import <- strsplit(gsub("\\s*", "", pkg_check_ok$imports), split = ",")
     ## Remove duplicates
     pkg_import <- lapply(pkg_import, FUN = unique)
     ## Number of dependencies
     pkg_import_length <- sapply(pkg_import, FUN = length)
     ## Create empty data.frame with that number of elements
     pkg_import_gather <- data.frame(
-        package = rep.int(pkg_check$package_name, times = pkg_import_length),
+        package = rep.int(pkg_check_ok$package_name, times = pkg_import_length),
         network = unlist(pkg_import), role = rep("import", sum(pkg_import_length)))
 
     ## Now same thing for suggest
-    pkg_suggest <- strsplit(gsub("\\s*", "", pkg_check$suggests), split = ",")
+    pkg_suggest <- strsplit(gsub("\\s*", "", pkg_check_ok$suggests), split = ",")
     pkg_suggest <- lapply(pkg_suggest, FUN = unique)
     pkg_suggest_length <- sapply(pkg_suggest, FUN = length)
     pkg_suggest_gather <- data.frame(
-        package = rep.int(pkg_check$package_name, times = pkg_suggest_length),
+        package = rep.int(pkg_check_ok$package_name, times = pkg_suggest_length),
         network = unlist(pkg_suggest), role = rep("suggest", sum(pkg_suggest_length)))
 
     ## One data frame to rule them all
     pkg_net <- rbind.data.frame(pkg_import_gather, pkg_suggest_gather)
     ## Filtering out non movement packages
-    pkg_net <- subset(pkg_net, network %in% pkg_check$package_name)
+    pkg_net <- subset(pkg_net, network %in% pkg_check_ok$package_name)
 
     ## Counting how much a package is needed or suggested
     pkg_net_tb <- data.frame(table(pkg_net$network))
     names(pkg_net_tb) <- c("package_name", "mention")
     pkg_net_tb <- pkg_net_tb[order(pkg_net_tb$mention, decreasing = TRUE), ]
-    pkg_net_tb$t <- 1:nrow(pkg_net_tb)
+    row.names(pkg_net_tb) <- t <- 1:nrow(pkg_net_tb)
 
     ## Actual test
-    (cointest <- coin::maxstat_test(mention ~ t, dist = "approx", data = pkg_net_tb))
+    cointest <- coin::maxstat_test(mention ~ t, dist = "approx", data = pkg_net_tb)
+    print(cointest)
 
     ## Add 'core' variable
     pkg_net_tb$core <- (pkg_net_tb$mention > cointest@estimates$estimate$cutpoint)
-    pkg_net_tb
 
-    ## Merge to global table
-    pkg_table <- dplyr::left_join(pkg_table, pkg_net_tb[, -3], by = "package_name")
-    pkg_table$mention <- ifelse(is.na(pkg_table$mention), 0, pkg_table$mention)
-    pkg_table$core <- ifelse(is.na(pkg_table$core), FALSE, track$core)
+    ## Add 'core' and 'mention' to global table
+    mm <- match(pkg_check$package_name, as.character(pkg_net_tb$package_name))
+    pkg_check$mention <- ifelse(is.na(mm), 0, pkg_net_tb$mention[mm])
+    pkg_check$core <- ifelse(is.na(mm), FALSE, pkg_net_tb$core[mm])
 
-    return(pkg_table)
+    return(pkg_check)
+}
+
+ctv_stats <- function(pkg_check) {
+    pkg_check <- subset(pkg_check, !skip)
+    ctv_stats <- table(pkg_check$cran_check, factor(pkg_check$source,
+        levels = c("bioc", "cran", "github", "other", "rforge")))
+    ctv_stats <- cbind(ctv_stats, apply(ctv_stats, 1, sum))
+    ctv_stats <- rbind(ctv_stats, apply(ctv_stats, 2, sum))
+    rownames(ctv_stats) <- c("fails", "checks", "total")
+    colnames(ctv_stats) <- c("bioc", "cran", "github", "other", "rforge", "total")
+    return(ctv_stats[c(2, 1, 3), c(2, 3, 1, 5, 4, 6)])
+}
+
+ctv_news <- function(pkg_check, pkg_check_previous) {
+
 }
 
 download_retry <- function(
