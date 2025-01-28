@@ -33,6 +33,12 @@ check_packages <- function(pkg_table, pkg_name) {
             download_local = download_local, check_logs =  check_logs)
     }))
     class(pkg_table) <- c("ctv_pkg_check", class(pkg_tbl))
+
+    ## Check and test the network
+    pkg_table <- ctv_network(pkg_table)
+    message("\n################################################\n\nChecking and testing the package network.\n")
+    print(attr(pkg_table, "ctv_network_test"))
+
     return(pkg_table)
 }
 
@@ -311,20 +317,6 @@ check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
     return(pkg_info)
 }
 
-print.ctv_pkg_check <- function(x, by = c("check", "NA", "names"), select) {
-    if (missing(select))
-        select <- c(c("package_name", "version", "source", "date_added_to_list",
-            "cran_check", "skip", "archived", "warnings", "errors", "vignette_error"))
-    by <-match.arg(by)
-    pkg_tbl <- pkg_tbl[order(!pkg_tbl$cran_check, pkg_tbl$package_name), ]
-    if (by == "check")
-        return(pkg_tbl[, ])
-    if (by == "NA")
-        return(subset(pkg_tbl, is.na(cran_check)))
-    if (by == "names")
-        return(sort(pkg_tbl$package_name))
-}
-
 ctv_network <- function(pkg_check) {
     pkg_check_ok <- subset(pkg_check, cran_check)
 
@@ -359,16 +351,17 @@ ctv_network <- function(pkg_check) {
     row.names(pkg_net_tb) <- t <- 1:nrow(pkg_net_tb)
 
     ## Actual test
-    cointest <- coin::maxstat_test(mention ~ t, dist = "approx", data = pkg_net_tb)
-    print(cointest)
+    network_test <- coin::maxstat_test(mention ~ t, dist = "approx", data = pkg_net_tb)
 
     ## Add 'core' variable
-    pkg_net_tb$core <- (pkg_net_tb$mention > cointest@estimates$estimate$cutpoint)
+    pkg_net_tb$core <- (pkg_net_tb$mention > network_test@estimates$estimate$cutpoint)
 
     ## Add 'core' and 'mention' to global table
     mm <- match(pkg_check$package_name, as.character(pkg_net_tb$package_name))
     pkg_check$mention <- ifelse(is.na(mm), 0, pkg_net_tb$mention[mm])
     pkg_check$core <- ifelse(is.na(mm), FALSE, pkg_net_tb$core[mm])
+    ## Add the test as attribute
+    attr(pkg_check, "ctv_network_test") <- network_test
 
     return(pkg_check)
 }
@@ -384,8 +377,33 @@ ctv_stats <- function(pkg_check) {
     return(ctv_stats[c(2, 1, 3), c(2, 3, 1, 5, 4, 6)])
 }
 
-ctv_news <- function(pkg_check, pkg_check_previous) {
-
+ctv_news <- function(pkg_check, pkg_check_prev) {
+    ## Differences with previous state
+    ## 1) submitted packages that pass/fail CRAN checks
+    pkg_check |>
+        dplyr::filter(!skip) |>
+        dplyr::filter(!(package_name %in% pkg_check_prev$package_name)) |>
+        dplyr::mutate(news = ifelse(cran_check, "new-pass", "new-fail")) |>
+        dplyr::arrange(desc(cran_check), tolower(package_name)) |>
+        dplyr::select(news, package_name, version, source, date_added_to_list,
+            cran_check, warnings, errors, vignette_error, comments) -> pkg_check_new
+    ## 2) previous packages that now pass or now fail CRAN checks
+    dplyr::left_join(pkg_check, pkg_check_prev, by = "package_name", suffix = c("", "_old")) |>
+        ## filter(!skip) |>
+        dplyr::filter(cran_check != cran_check_old) |>
+        dplyr::mutate(news = ifelse(cran_check, "mod-pass", "mod-fail")) |>
+        dplyr::arrange(desc(cran_check), tolower(package_name)) |>
+        dplyr::select(news, package_name, version, source, date_added_to_list,
+            cran_check, warnings, errors, vignette_error, comments) -> pkg_check_mod
+    ## 3) submitted but skipped packages
+    pkg_check |>
+        dplyr::filter(skip) |>
+        dplyr::filter(!(package_name %in% pkg_check_prev$package_name)) |>
+        dplyr::mutate(news = "skipped") |>
+        dplyr::select(news, package_name, version, source, date_added_to_list,
+            cran_check, warnings, errors, vignette_error, comments) -> pkg_check_skipped
+    ## 4) bind all 3
+    dplyr::bind_rows(pkg_check_new, pkg_check_mod, pkg_check_skipped)
 }
 
 download_retry <- function(
