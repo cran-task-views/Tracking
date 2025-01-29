@@ -1,16 +1,36 @@
-check_packages <- function(pkg_table, pkg_name) {
+ctv_check_packages <- function(pkg_table, pkg_name) {
+    if (!requireNamespace("tools", quietly = TRUE)) {
+        stop("Package 'tools' must be installed to use this function.",
+            call. = FALSE)
+    }
     ## Check input
     if (!inherits(pkg_table, "data.frame"))
-        stop("'pkg_table' should inherit from a data.frame")
-    if (!all(c("package_name", "source", "download_link", "owner", "repository",
-        "branch", "sub", "date_added_to_list", "skip", "archived", "recent_commit",
-        "dep_errors", "cran_check", "warnings", "errors", "vignette_error",
-        "imports", "suggests", "recent_publish_track", "version") %in% names(pkg_table)))
-        stop("Required columns: 'package_name', 'source', 'download_link', 'owner', 'repository', 'branch', 'sub', 'date_added_to_list', 'skip', 'archived', 'recent_commit', 'dep_errors', 'cran_check', 'warnings', 'errors', 'vignette_error', 'imports', 'suggests', 'recent_publish_track', and 'version'.")
+        stop("'pkg_table' should be a data.frame.")
+    if (!all(c(c("package_name", "source", "download_link", "owner",
+        "repository", "branch", "sub", "date_added_to_list", "force_check",
+        "skip", "comments")) %in% names(pkg_table)))
+        stop("Required columns: 'package_name', 'source', 'download_link', 'owner', 'repository', 'branch', 'sub', 'date_added_to_list', 'force_check', 'skip', and 'comments'.")
+    if (!inherits(pkg_name, "character"))
+        stop("'pkg_name' should be a character vector.")
 
     ## If 'pkg_name' supplied, we subset the whole table
     if(!missing(pkg_name))
         pkg_table <- subset(pkg_table, package_name %in% pkg_name)
+
+    ## Create columns that do not exist
+    pkg_table$source <- tolower(pkg_table$source)
+    pkg_table$skip <- ifelse(is.na(pkg_table$skip), FALSE, pkg_table$skip)
+    pkg_table$archived <- NA
+    pkg_table$recent_commit <- NA
+    pkg_table$dep_errors <- NA_character_
+    pkg_table$cran_check <- NA
+    pkg_table$warnings <- NA
+    pkg_table$errors <- NA
+    pkg_table$vignette_error <- NA
+    pkg_table$imports <- NA_character_
+    pkg_table$suggests <- NA_character_
+    pkg_table$recent_publish_track <- NA
+    pkg_table$version <- NA
 
     ## Prepare list of current CRAN packages
     cran_pkg_db <- tools::CRAN_package_db()
@@ -23,13 +43,13 @@ check_packages <- function(pkg_table, pkg_name) {
     unlink(check_logs, recursive = TRUE)
     dir.create(check_logs)
 
-    ## Run the function on each package and return the modified table
+    ## Run the check function on each package and return the updated table
     pkg_table <- do.call("rbind", lapply(1:nrow(pkg_table), \(row) {
         ## Announcement
         message(paste0("\n################################################\n\nNow processing package '",
             pkg_table$package_name[row], "' (", row, "/", nrow(pkg_table), ").\n"))
         ## Work on individual package
-        check_package(pkg_table[row, ], cran_pkg_db = cran_pkg_db,
+        ctv_check_package(pkg_table[row, ], cran_pkg_db = cran_pkg_db,
             download_local = download_local, check_logs =  check_logs)
     }))
     class(pkg_table) <- c("ctv_pkg_check", class(pkg_tbl))
@@ -42,7 +62,23 @@ check_packages <- function(pkg_table, pkg_name) {
     return(pkg_table)
 }
 
-check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
+ctv_check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
+    if (!requireNamespace("gh", quietly = TRUE)) {
+        stop("Package 'gh' must be installed to use this function.",
+            call. = FALSE)
+    }
+    if (!requireNamespace("remotes", quietly = TRUE)) {
+        stop("Package 'remotes' must be installed to use this function.",
+            call. = FALSE)
+    }
+    if (!requireNamespace("devtools", quietly = TRUE)) {
+        stop("Package 'devtools' must be installed to use this function.",
+            call. = FALSE)
+    }
+    if (!requireNamespace("desc", quietly = TRUE)) {
+        stop("Package 'desc' must be installed to use this function.",
+            call. = FALSE)
+    }
 
     ## If 'skip' is 'T'
     if (isTRUE(pkg_info$skip)) {
@@ -322,6 +358,10 @@ check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
 }
 
 ctv_network <- function(pkg_check) {
+    if (!requireNamespace("coin", quietly = TRUE)) {
+        stop("Package 'coin' must be installed to use this function.",
+            call. = FALSE)
+    }
     pkg_check_ok <- subset(pkg_check, cran_check)
 
     ## Remove spaces, separate imported packages by commas
@@ -382,6 +422,10 @@ ctv_stats <- function(pkg_check) {
 }
 
 ctv_news <- function(pkg_check, pkg_check_prev) {
+    if (!requireNamespace("dplyr", quietly = TRUE)) {
+        stop("Package 'dplyr' must be installed to use this function.",
+            call. = FALSE)
+    }
     ## Differences with previous state
     ## 1) submitted packages that pass/fail CRAN checks
     pkg_check |>

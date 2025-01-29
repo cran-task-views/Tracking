@@ -1,5 +1,0 @@
-library("ctv")
-x <- read.ctv("Tracking.md")
-print(x)
-ctv2html(x)
-browseURL("Tracking.html")
