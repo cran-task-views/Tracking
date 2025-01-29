@@ -59,8 +59,12 @@ check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs) {
     ## Check if package has been published on CRAN (and edit it if it's the case)
     if (pkg_info$source != "cran") {
         if (nrow(cran_pkg_db[cran_pkg_db$Package == pkg_info$package_name, ]) == 1) {
-            pkg_info$source <- "cran"
-            message("  * Is on CRAN.")
+            if (pkg_info$source == "force_check") {
+                message("  * A package with the same name is on CRAN. Checking source anyway.")
+            } else {
+                pkg_info$source <- "cran"
+                message("  * Is on CRAN.")
+            }
         }
     }
 
