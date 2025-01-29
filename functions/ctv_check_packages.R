@@ -389,7 +389,6 @@ ctv_news <- function(pkg_check, pkg_check_prev) {
             cran_check, warnings, errors, vignette_error, comments) -> pkg_check_new
     ## 2) previous packages that now pass or now fail CRAN checks
     dplyr::left_join(pkg_check, pkg_check_prev, by = "package_name", suffix = c("", "_old")) |>
-        ## filter(!skip) |>
         dplyr::filter(cran_check != cran_check_old) |>
         dplyr::mutate(news = ifelse(cran_check, "mod-pass", "mod-fail")) |>
         dplyr::arrange(desc(cran_check), tolower(package_name)) |>

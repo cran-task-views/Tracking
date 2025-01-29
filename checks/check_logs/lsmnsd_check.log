@@ -1,0 +1,205 @@
+* using log directory ‘/tmp/RtmpXMgjCE/lsmnsd.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘lsmnsd/DESCRIPTION’ ... OK
+* this is package ‘lsmnsd’ version ‘0.0.0.9000’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘lsmnsd’ can be installed ... [11s/11s] OK
+* checking installed package size ... NOTE
+  installed size is 90.7Mb
+  sub-directories of 1Mb or more:
+    data  90.6Mb
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... NOTE
+Malformed Description field: should contain one or more complete sentences.
+* checking top-level files ... NOTE
+Non-standard file/directory found at top level:
+  ‘lsmnsd.pdf’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... WARNING
+Error: package or namespace load failed for ‘lsmnsd’:
+ object 'time' not found whilst loading namespace 'lsmnsd'
+Execution halted
+
+It looks like this package (or one of its dependent packages) has an
+unstated dependence on a standard package.  All dependencies must be
+declared in DESCRIPTION.
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* checking whether the package can be unloaded cleanly ... WARNING
+Error: package or namespace load failed for ‘lsmnsd’:
+ object 'time' not found whilst loading namespace 'lsmnsd'
+Execution halted
+* checking whether the namespace can be loaded with stated dependencies ... WARNING
+Error: object 'time' not found whilst loading namespace 'lsmnsd'
+Execution halted
+
+A namespace must be able to be loaded with just the base namespace
+loaded: otherwise if the namespace gets loaded by a saved object, the
+session will be unable to start.
+
+Probably some imports need to be declared in the NAMESPACE file.
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Error: object 'time' not found whilst loading namespace 'lsmnsd'
+Call sequence:
+4: stop(gettextf("object '%s' not found whilst loading namespace '%s'", 
+       genname, package), call. = FALSE, domain = NA)
+3: .registerS3method(fin[i, 1], fin[i, 2], fin[i, 3], fin[i, 4], 
+       env)
+2: registerS3methods(nsInfo$S3methods, package, env)
+1: loadNamespace(package, lib.loc)
+Execution halted
+* checking S3 generic/method consistency ... WARNING
+t:
+  function(x)
+t.plot:
+  function(out)
+
+print:
+  function(x, ...)
+print.mov.clust:
+  function(object)
+
+summary:
+  function(object, ...)
+summary.clust.classify:
+  function(object)
+
+summary:
+  function(object, ...)
+summary.mov.clust:
+  function(object)
+
+summary:
+  function(object, ...)
+summary.boot.clust:
+  function(object)
+
+plot:
+  function(x, ...)
+plot.boot.clust:
+  function(object)
+
+plot:
+  function(x, ...)
+plot.mov.clust:
+  function(object)
+See section ‘Generic functions and methods’ in the ‘Writing R
+Extensions’ manual.
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+Error: object 'time' not found whilst loading namespace 'lsmnsd'
+Execution halted
+
+Found if() conditions comparing class() to string:
+File ‘lsmnsd/R/clust.classify_fcts.R’: if (class(object) == "rjags") ...
+File ‘lsmnsd/R/clust.classify_fcts.R’: if (class(object) == "rjags") ...
+File ‘lsmnsd/R/clust.classify_fcts.R’: if (class(object) == "rjags") ...
+File ‘lsmnsd/R/mov.clust_fcts.R’: if (class(out) != "rjags") ...
+File ‘lsmnsd/R/mov.clust_fcts.R’: if (class(object) == "rjags") ...
+Use inherits() (or maybe is()) instead.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... NOTE
+Rd file 'bootNSD.Rd':
+  \examples lines wider than 100 characters:
+     boot1<-bootNSD(Christian$x[1:300], Christian$y[1:300], Christian$Time[1:300], interval=20, by=5, n.iter=10000) 
+
+These lines will be truncated in the PDF manual.
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in Rd file 'bootNSD.Rd'
+  ‘y’ ‘day’ ‘...’
+
+Undocumented arguments in Rd file 'classify.Rd'
+  ‘...’
+
+Undocumented arguments in Rd file 'clustNSD.Rd'
+  ‘...’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... WARNING
+  LazyData DB of 90.5 MB without LazyDataCompression set
+  See §1.1.6 of 'Writing R Extensions'
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... [13s/13s] ERROR
+Running examples in ‘lsmnsd-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: bootNSD
+> ### Title: Iterative latent-state model of NSD
+> ### Aliases: bootNSD
+> ### Keywords: boot.clust bootNSD clustNSD
+> 
+> ### ** Examples
+> 
+> data(Christian)
+> #May results in low convergence given low number of iterations
+> boot1<-bootNSD(Christian$x[1:300], Christian$y[1:300], Christian$Time[1:300], interval=20, by=5, n.iter=10000) 
+Loading required package: R2jags
+Loading required package: rjags
+Loading required package: coda
+Linked to JAGS 4.3.1
+Loaded modules: basemod,bugs
+
+Attaching package: ‘R2jags’
+
+The following object is masked from ‘package:coda’:
+
+    traceplot
+
+[1] "R2jags is loaded correctly"
+module glm loaded
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 285
+   Unobserved stochastic nodes: 293
+   Total graph size: 4021
+
+Initializing model
+
+Error in names(criteria) <- c("pd", "DIC", "WAIC") : 
+  'names' attribute [3] must be the same length as the vector [2]
+Calls: bootNSD -> clustNSD -> simple.clust
+Execution halted
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 6 WARNINGs, 7 NOTEs

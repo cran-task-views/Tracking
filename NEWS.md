@@ -1,24 +1,70 @@
-# Tracking CTV 2024/2025
+# Tracking CTV 2025-02
 
-This is a long due update of the Tracking CTV. 
+This is a long due update of the Tracking CTV. 7 packages were submitted this
+round. The Tracking CTV now lists 59 tracking packages, including X core
+packages: [`adehabitatLT`](https://cran.r-project.org/package=adehabitatLT),
+[`move`](https://cran.r-project.org/package=move)
+([documentation](https://bartk.gitlab.io/move/)), and
+[`moveHMM`](https://cran.r-project.org/package=moveHMM).
 
-## New packages
+## Packages added to the tracking CTV
 
-  * [`tagtools`](https://cran.r-project.org/package=tagtools): tools for
-    calibration and processing of high-resolution biologging data
-    ([documentation](https://animaltags.github.io/tagtools_r/index.html))
-  * [`pathroutr`](https://github.com/jmlondon/pathroutr): Re-routing paths that
-    cross land around barrier polygons
-    ([documentation](https://jmlondon.github.io/pathroutr/))
+4 newly submitted packages:
 
-## Packages removed
+- [`eyetrackingR`](https://cran.r-project.org/package=eyetrackingR):
+  Eye-Tracking Data Analysis
+  ([documentation](https://samforbes.me/eyetrackingR/))
+- [`move2`](https://cran.r-project.org/package=move2): Processing and Analysing
+  Animal Trajectories ([documentation](https://bartk.gitlab.io/move2/))
+- [`tagtools`](https://cran.r-project.org/package=tagtools): Work with Data from
+  High-Resolution Biologging Tags
+  ([documentation](https://animaltags.github.io/tagtools_r/))
+- [`triact`](https://cran.r-project.org/package=triact): Analyzing the Lying
+  Behavior of Cows from Accelerometer Data
 
-  * [`moveVis`](https://github.com/cran-task-views/Tracking/issues/79): Archived
-    on CRAN on 2023-07-11 as issues were not corrected in time.
-  * [`gazepath`](https://github.com/cran-task-views/Tracking/issues/78):
-    Archived on 2023-08-19 as email to the maintainer is undeliverable.
-  * [`TrajDataMining`](https://github.com/cran-task-views/Tracking/issues/77):
-    Archived on CRAN on 2023-10-16 as requires archived package 'rgdal'.
+2 packages previously submitted and now passing CRAN checks: 
+
+- [`argosTrack`](https://github.com/calbertsen/argosTrack): Fit Movement Models
+  to Argos Data for Marine Animals
+- [`Rhabit`](https://github.com/papayoun/Rhabit): Estimation of animal habitat
+  selection using the Langevin movement model
+
+1 package previously submitted that was not tested before due to a bug in the
+CTV code:
+
+- [`pathroutr`](https://github.com/jmlondon/pathroutr): Re-routing paths that
+  cross land around barrier polygons
+  ([documentation](https://jmlondon.github.io/pathroutr/))
+
+## Packages submitted but not added to the tracking CTV
+
+3 packages that did not pass CRAN checks:
+
+- [MoveR](https://github.com/cran-task-views/Tracking/issues/68): Fails examples
+  and tests.
+- [hmmSSF](https://github.com/cran-task-views/Tracking/issues/66): Various
+  warnings and notes.
+- [movedesign](https://github.com/cran-task-views/Tracking/issues/65): Various
+  warnings and notes.
+
+Check the links to the submission threads to find details for each package.
+
+## Packages removed from the tracking CTV
+
+4 packages removed because they were archived or did not pass CRAN checks
+anymore:
+
+- [`gazepath`](https://github.com/cran-task-views/Tracking/issues/78): Archived
+  on 2023-08-19 as email to the maintainer is undeliverable.
+- [`migflow`](https://github.com/cran-task-views/Tracking/issues/38): Package
+  required but not available: `maptools`.
+- [`moveVis`](https://github.com/cran-task-views/Tracking/issues/79): Archived
+  on CRAN on 2023-07-11 as issues were not corrected in time.
+- [`TrajDataMining`](https://github.com/cran-task-views/Tracking/issues/77):
+  Archived on CRAN on 2023-10-16 as requires archived package 'rgdal'.
+
+Check the links to the submission threads to find details for each package.
+
 
 # Tracking CTV 2023-06-19
 

@@ -1,0 +1,25 @@
+* using log directory ‘/tmp/RtmpXMgjCE/kftrack.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘kftrack/DESCRIPTION’ ... OK
+* this is package ‘kftrack’ version ‘0.70’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘kftrack’ can be installed ... ERROR
+Installation failed.
+See ‘/tmp/RtmpXMgjCE/kftrack.Rcheck/00install.out’ for details.
+* DONE
+Status: 1 ERROR

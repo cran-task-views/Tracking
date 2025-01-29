@@ -1,0 +1,114 @@
+* using log directory ‘/tmp/RtmpXMgjCE/hmmSSF.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘hmmSSF/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘hmmSSF’ version ‘0.1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘hmmSSF’ can be installed ... [10s/10s] OK
+* used C++ compiler: ‘g++ (Debian 12.2.0-14) 12.2.0’
+* checking installed package size ... NOTE
+  installed size is 22.1Mb
+  sub-directories of 1Mb or more:
+    data          1.8Mb
+    libs          1.5Mb
+    sim_data      1.9Mb
+    sim_example   1.8Mb
+    zebra        14.8Mb
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespace in Imports field not imported from: ‘Rcpp’
+  All declared Imports should be used.
+Unexported object imported by a ':::' call: ‘moveHMM:::trMatrix_rcpp’
+  See the note in ?`:::` about the use of this operator.
+* checking S3 generic/method consistency ... WARNING
+confint:
+  function(object, parm, level, ...)
+confint.hmmSSF:
+  function(mod, range, pretty)
+See section ‘Generic functions and methods’ in the ‘Writing R
+Extensions’ manual.
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+setup_samp: no visible global function definition for ‘na.omit’
+Undefined global functions or variables:
+  na.omit
+Consider adding
+  importFrom("stats", "na.omit")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘cov1’ ‘track’
+Undocumented data sets:
+  ‘cov1’ ‘track’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... WARNING
+  Error loading dataset 'cov1':
+   Error in .requirePackage(package) : 
+    unable to find required package 'raster'
+  
+  The dataset(s) may use package(s) not declared in Depends/Imports.
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking pragmas in C/C++ headers and code ... OK
+* checking compilation flags used ... OK
+* checking compiled code ... OK
+* checking files in ‘vignettes’ ... WARNING
+Files in the 'vignettes' directory but no files in 'inst/doc':
+  ‘hmmSSF_introduction.log’ ‘hmmSSF_introduction.pdf’
+  ‘hmmSSF_introduction.Rmd’ ‘refs.bib’
+Package has no Sweave vignette sources and no VignetteBuilder field.
+The following files look like leftovers/mistakes:
+  ‘hmmSSF_introduction.log’
+Please remove them from your package.
+* checking examples ... NONE
+* checking package vignettes ... NOTE
+Package has ‘vignettes’ subdirectory but apparently no vignettes.
+Perhaps the ‘VignetteBuilder’ information is missing from the
+DESCRIPTION file?
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 4 WARNINGs, 5 NOTEs

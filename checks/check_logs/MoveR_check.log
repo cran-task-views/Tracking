@@ -1,0 +1,554 @@
+* using log directory ‘/tmp/RtmpXMgjCE/MoveR.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘MoveR/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘MoveR’ version ‘0.3.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .here
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘MoveR’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking whether startup messages can be suppressed ... OK
+* checking dependencies in R code ... WARNING
+'::' or ':::' import not declared from: ‘fpc’
+* checking S3 generic/method consistency ... WARNING
+summary:
+  function(object, ...)
+summary.tracklets:
+  function(trackDat, frameR, scale, units, progress)
+See section ‘Generic functions and methods’ in the ‘Writing R
+Extensions’ manual.
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+activity2: no visible global function definition for ‘na.omit’
+activity2: no visible global function definition for ‘cov’
+activity2: no visible global function definition for ‘qchisq’
+ANND: no visible binding for global variable ‘Tstep’
+ANND: no visible global function definition for ‘sd’
+ANND : <anonymous>: no visible global function definition for ‘sd’
+ANND: no visible global function definition for ‘quantile’
+circles: no visible global function definition for ‘dev.list’
+countMat: no visible global function definition for ‘na.omit’
+detectPerf: no visible global function definition for ‘setNames’
+detectPerf: no visible global function definition for ‘sd’
+DLsampleData: no visible global function definition for ‘download.file’
+DLsampleData: no visible global function definition for ‘unzip’
+drawTracklets: no visible global function definition for ‘adjustcolor’
+drawTracklets: no visible global function definition for ‘strwidth’
+exploredArea: no visible global function definition for ‘dev.off’
+locPos: no visible global function definition for ‘read.delim’
+locPos: no visible global function definition for ‘read.csv’
+locROI: no visible global function definition for ‘read.delim’
+MSD: no visible global function definition for ‘Power’
+polygons: no visible global function definition for ‘dev.list’
+readAnimalTA: no visible global function definition for ‘read.delim’
+readPlain: no visible global function definition for ‘read.delim’
+readTrackR: no visible global function definition for ‘read.delim’
+resampTracklets: no visible global function definition for ‘setNames’
+summary.tracklets: no visible global function definition for ‘str’
+temporalBoot : <anonymous>: no visible global function definition for
+  ‘na.omit’
+temporalBoot : <anonymous>: no visible global function definition for
+  ‘sd’
+temporalBoot : <anonymous> : <anonymous>: no visible global function
+  definition for ‘sd’
+temporalBoot : <anonymous>: no visible global function definition for
+  ‘quantile’
+temporalTrend : <anonymous>: no visible global function definition for
+  ‘na.omit’
+trackStats: no visible global function definition for ‘str’
+Undefined global functions or variables:
+  adjustcolor cov dev.list dev.off download.file na.omit Power qchisq
+  quantile read.csv read.delim sd setNames str strwidth Tstep unzip
+Consider adding
+  importFrom("graphics", "strwidth")
+  importFrom("grDevices", "adjustcolor", "dev.list", "dev.off")
+  importFrom("stats", "cov", "na.omit", "qchisq", "quantile", "sd",
+             "setNames")
+  importFrom("utils", "download.file", "read.csv", "read.delim", "str",
+             "unzip")
+to your NAMESPACE file.
+
+Found if() conditions comparing class() to string:
+File ‘MoveR/R/cutTracklets.R’: if (class(trackDat) == "data.frame") ...
+File ‘MoveR/R/exploredArea.R’: if (class(trackDat) == "tracklets" & length(trackDat) >= 1) ...
+File ‘MoveR/R/exploredArea.R’: if (class(trackDat) == "tracklets" & length(trackDat) >= 1) ...
+Use inherits() (or maybe is()) instead.
+* checking Rd files ... NOTE
+checkRd: (-1) ANND.Rd:39-47: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:41: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:42: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:43: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:44: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:45: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:46: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:49-53: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:51: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:54-58: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:56: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) ANND.Rd:57: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) detectPerf.Rd:49-55: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:51: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:52: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:53: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:54: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:56-60: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:58: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:59: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:61-66: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:63: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:64: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:65: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:67-68: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) detectPerf.Rd:36: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) detectPerf.Rd:37: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) detectPerf.Rd:38: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) detectPerf.Rd:39: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:23-33: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:25: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:26: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:27: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:28: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:29: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:30: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:31: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:32: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) filterTracklets.Rd:34: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) readAnimalTA.Rd:29: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readAnimalTA.Rd:30: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readAnimalTA.Rd:31: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readAnimalTA.Rd:32: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readAnimalTA.Rd:33: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readAnimalTA.Rd:34: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readAnimalTA.Rd:35: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readCtrax.Rd:25: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readCtrax.Rd:26: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readCtrax.Rd:27: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readCtrax.Rd:28: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readCtrax.Rd:29: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readCtrax.Rd:30: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readCtrax.Rd:31: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readIdtracker.Rd:25: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readIdtracker.Rd:26: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readIdtracker.Rd:27: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readIdtracker.Rd:28: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readIdtracker.Rd:29: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readIdtracker.Rd:30: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readIdtracker.Rd:31: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readPlain.Rd:42: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readPlain.Rd:43: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readPlain.Rd:44: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readPlain.Rd:45: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrackR.Rd:29: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrackR.Rd:30: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrackR.Rd:31: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrackR.Rd:32: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrackR.Rd:33: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrackR.Rd:34: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrackR.Rd:35: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrex.Rd:29: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrex.Rd:30: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrex.Rd:31: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrex.Rd:32: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrex.Rd:33: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrex.Rd:34: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) readTrex.Rd:35: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:36-43: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:38: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:39: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:40: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:41: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:45-56: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:47: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:48: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:49: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:50: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:51: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:52: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:53: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) summary.tracklets.Rd:54: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) temporalBoot.Rd:49-56: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:51: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:52: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:53: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:54: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:55: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:57-65: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:60: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:61: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:62: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) temporalBoot.Rd:63-64: Lost braces in \itemize; \value handles \item{}{} directly
+checkRd: (-1) trackStats.Rd:36-43: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:38: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:39: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:40: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:41: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:45-56: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:47: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:48: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:49: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:50: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:51: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:52: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:53: Lost braces in \itemize; meant \describe ?
+checkRd: (-1) trackStats.Rd:54: Lost braces in \itemize; meant \describe ?
+* checking Rd metadata ... OK
+* checking Rd line widths ... NOTE
+Rd file 'ANND.Rd':
+  \examples lines wider than 100 characters:
+     # It is also possible to add the number of particles on which ANND was computed across time on the plot
+
+Rd file 'DCoef.Rd':
+  \examples lines wider than 100 characters:
+           ## compute turning angle in radians over each tracklet (a modulus present within the MoveR package)
+
+Rd file 'DLsampleData.Rd':
+  \examples lines wider than 100 characters:
+     # Here we are selecting the first sample dataset, that have been tracked using \href{https://trex.run}{TRex}
+     # If the "dir" argument is not specified, the data are saved in a temporary directory (deleted after the R session is properly terminat ... [TRUNCATED]
+     # In case the sample data has already been downloaded, the function will retrieve it instead of downloading it again.
+
+Rd file 'IdStateSeq.Rd':
+  \examples lines wider than 100 characters:
+     ArenaEdge <- MoveR::circles(x = 300, y = 300, radius = 50, draw = T, col = adjustcolor("firebrick", alpha = 0.1), border = "firebrick")
+     # Also, if the distance to the area edge is negative the particle is inside else it is outside the area
+     # draw the moments where particles are entering (>) and leaving (<) the area (only one particle enters and leaves a single time) 
+     graphics::points(enteringArea[["1"]][["1.1"]]$x.pos[which(enteringArea[["1"]][["1.1"]]$InOut == "OUT")], 
+                      enteringArea[["1"]][["1.1"]]$y.pos[which(enteringArea[["1"]][["1.1"]]$InOut == "OUT")], 
+     graphics::points(leavingingArea[["1"]][["1.1"]]$x.pos[which(leavingingArea[["1"]][["1.1"]]$InOut == "IN")], 
+                      leavingingArea[["1"]][["1.1"]]$y.pos[which(leavingingArea[["1"]][["1.1"]]$InOut == "IN")], 
+
+Rd file 'MSD.Rd':
+  \examples lines wider than 100 characters:
+           ## compute turning angle in radians over each tracklet (a modulus present within the MoveR package)
+
+Rd file 'activity1.Rd':
+  \examples lines wider than 100 characters:
+     # we can then define the speed treshold above which the particle is considered actives using quantiles
+
+Rd file 'activity2.Rd':
+  \examples lines wider than 100 characters:
+           # specify a first function to compute speed over each tracklet (a modulus present within the MoveR package)
+           # compute turning angle in radians over each tracklet (a modulus present within the MoveR package)
+     # use density based clustering to classify actives and inactives states in a 2 dimension array (here the speed and the angle variance)
+
+Rd file 'analyseTracklets.Rd':
+  \examples lines wider than 100 characters:
+           # specify a first function to compute speed over each tracklet (a modulus present within the MoveR package)
+           # compute turning angle in radians over each tracklet (a modulus present within the MoveR package)
+           # convert the time expressed in frame in second using a conversion factor of 25 frame per second
+
+Rd file 'circles.Rd':
+  \examples lines wider than 100 characters:
+     # draw 2 red-border and red-filled circles and 2 blue-border and blue-filled circles of different size on #' a new plot
+       col = c(rep(adjustcolor("firebrick", alpha = 0.2), 2), rep(adjustcolor("lightblue", alpha = 0.2), 2)),
+
+Rd file 'detectPerf.Rd':
+  \examples lines wider than 100 characters:
+     # load the reference dataset (a dataframe containing manually detected position of the particle's over time unit)
+     ## NB: here NAs are introduced because some tracklets in the raw data have Inf values in x and y.pos, which usually produce a warning m ... [TRUNCATED]
+     ## here the warning has been silenced but in this case sensitivity analysis should be preceded by a filtering step to remove Inf values ... [TRUNCATED]
+           if (length(sensitivity$FalsePositive$x.pos[sensitivity$FalsePositive$frame == TimeF[[i]]]) > 0) {
+
+Rd file 'dist2Edge.Rd':
+  \examples lines wider than 100 characters:
+     # Compute the distance to the closest part of the edge based on the form of the arena (here circular)
+     # Negative values indicate increasing distance from the edge of the object in the direction of its center (the particle is considered i ... [TRUNCATED]
+     # Compute the distance to the closest part of the edge based on the form of the arena (here circular)
+     # Negative values indicate increasing distance from the edge of the object in the direction of its center (the particle is considered i ... [TRUNCATED]
+     # load the distance matrix to the arena edge, an object or the location of one or several areas of interest (here we have created a dis ... [TRUNCATED]
+     # because it is tough and time consuming to compute the distance to the closest part of the arena edge in this case (lot of vertices on ... [TRUNCATED]
+     # we can use another sister function helping to retrieve the distance to the edge from the distance matrix
+     ## NB: here NAs are introduced because some tracklets in the raw data have Inf values in x and y.pos, which usually produce a warning m ... [TRUNCATED]
+     ## here the warning has been silenced but in this case retrieving the distance from the edge should be preceded by a filtering step to  ... [TRUNCATED]
+     MoveR::locPos(Path2Data[[2]], trackDat[[1]], Fun = function(x) round(x, digits = 0))[950:1000] # display only the 50 position between t ... [TRUNCATED]
+
+Rd file 'drawTracklets.Rd':
+  \examples lines wider than 100 characters:
+      # example 3: draw tracklets according to time intervals (first interval 1 to 100, second interval 800 to 900 frames)
+      # example 4: draw tracklets according to time intervals (first interval 1 to 100, second interval 800 to 900 frames)
+      # example 5: draw tracklets according to time interval (interval 1 to 100) and add dummy points on the plot
+       # example 7: select some particles' identity, time windows and color tracklet (all tracklets belonging to the selected particles' ide ... [TRUNCATED]
+
+Rd file 'exploredArea.Rd':
+  \examples lines wider than 100 characters:
+     # compute the surface explored for each tracklet and display (but do not save) the heatmap for the 2 first tracklets
+     # by combining exploredArea and analyseTracklets, the surface explored for each tracklet is appended to the data
+
+Rd file 'filterFunc.Rd':
+  \examples lines wider than 100 characters:
+     # example 1: test for the presence of infinite value in x.pos, if infinite values are detected, the result is TRUE 
+     CondTest1 <- MoveR::filterFunc(trackDat, toFilter = "x.pos", customFunc = function(x) is.infinite(x))
+     # example 2: test for the length of the particles, if particles size is ranging between 1 and 20 pixels, the result is TRUE 
+     CondTest2 <- MoveR::filterFunc(trackDat, toFilter = "maj.ax", customFunc = function(x) x >= 1 & x <= 20)
+
+Rd file 'filterTracklets.Rd':
+  \examples lines wider than 100 characters:
+     ## test for the presence of infinite value in x.pos, if infinite values are detected, the result is TRUE
+     ## here we keep every remaining tracklet, whatever its duration (the number of record within each tracklet)
+     ## alternatively, we can only keep the tracklets with a duration above 10 (the number of record within each tracklet)
+     trackDatNoInfDur10 <- MoveR::filterTracklets(trackDat, filter = FiltInf, splitCond = TRUE, minDur = 10)
+     FiltSize <- MoveR::filterFunc(trackDat, toFilter = "maj.ax", customFunc = function(x) x >= 1 & x <= 20)
+     ## Then remove values that are not included within the [1:20] interval and split the tracklets accordingly
+     ## here we keep every remaining tracklet, whatever its duration (the number of record within each tracklet)
+     ## alternatively, we can only keep the tracklets with a duration above 10 (the number of record within each tracklet) by modifying the  ... [TRUNCATED]
+     trackDatSize20Dur10 <- MoveR::filterTracklets(trackDat, filter = FiltSize, splitCond = TRUE, minDur = 10)
+
+Rd file 'getInfo.Rd':
+  \examples lines wider than 100 characters:
+     # get the tracking informations from the tracklets object (frameR corresponding to the frame rate is already returned because it is inc ... [TRUNCATED]
+     # check the result (now the tracklets object contains both information about the frame rate and the image resolution, which can be used ... [TRUNCATED]
+
+Rd file 'locPos.Rd':
+  \examples lines wider than 100 characters:
+     # Import the reference dataset (A matrix or dataframe or path to a file (either .txt or .csv) containing a distance matrix to any objec ... [TRUNCATED]
+     # the location of one or several areas of interest (here we have created a distance map using ImageJ)
+
+Rd file 'locROI.Rd':
+  \examples lines wider than 100 characters:
+     ## For this exemple, we are importing the distance matrix from the edge of the arena (a distance matrix generated using color tresholdi ... [TRUNCATED]
+     ## here, the edge of the ROI (i.e., the arena) correspond to the lower value of the distrance matrix plus 1 pixel (i.e., 1)
+     ## From the same distance matrix we can also retrieve the center of the arena which correspond to the maximum value of the distance mat ... [TRUNCATED]
+
+Rd file 'mergeFilters.Rd':
+  \examples lines wider than 100 characters:
+     # create 3 filters, i.e., 3 lists containing the results of a condition tests (TRUE or FALSE) as returned by \code{\link{filterFunc}} f ... [TRUNCATED]
+
+Rd file 'polygons.Rd':
+  \examples lines wider than 100 characters:
+      # draw 2 red-border and red-filled circles and 2 blue-border and blue-filled circles of different size on a new plot
+        col = c(rep(adjustcolor("firebrick", alpha = 0.2), 2), rep(adjustcolor("lightblue", alpha = 0.2), 2)),
+
+Rd file 'readPlain.Rd':
+  \examples lines wider than 100 characters:
+     # Import the data as an object of class "tracklets" (the function can also retrieve the plainTab from a table file by giving the full p ... [TRUNCATED]
+
+Rd file 'resampTracklets.Rd':
+  \examples lines wider than 100 characters:
+     # convert the time unit (frame) to seconds using analyseTracklets (according to a frame rate of 25 fps)
+                             # convert the time expressed in frame in second using a conversion factor of 25 frame per second
+
+Rd file 'setInfo.Rd':
+  \examples lines wider than 100 characters:
+     # get the tracking informations from the tracklets object (frameR corresponding to the frame rate is already returned because it is inc ... [TRUNCATED]
+     # check the result (now the tracklets object contains both information about the frame rate and the image resolution, which can be used ... [TRUNCATED]
+
+Rd file 'speed.Rd':
+  \examples lines wider than 100 characters:
+     # to compute the speed according to another time unit, a new column containing the new timeline could be used
+     # alternatively, we can use the frameR and timeU arguments to specify the frame rate and the desired time unit within the function
+     # it is also possible to resample the tracklet before computing speed, here every 10 time unit (i.e., frame)
+
+Rd file 'temporalBoot.Rd':
+  \examples lines wider than 100 characters:
+           # specify a first function to compute speed over each tracklet (a modulus present within the MoveR package)
+           # compute turning angle in radians over each tracklet (a modulus present within the MoveR package)
+           # convert the time expressed in frame in second using a conversion factor of 25 frame per second
+     # smooth the speed and the turning angle across tracklets and time, and compute studentize 95% CI using bootstrap with 999 sampling.
+     ## plot the mean and the 95% CI envelope by looping through the list containing the smoothed results for the speed and the turning angl ... [TRUNCATED]
+
+Rd file 'temporalTrend.Rd':
+  \examples lines wider than 100 characters:
+          # specify a first function to compute speed over each tracklet (a modulus present within the MoveR package)
+          # compute turning angle in radians over each tracklet (a modulus present within the MoveR package)
+          # convert the time expressed in frame in second using a conversion factor of 25 frame per second
+     # every 50 time unit and on an interval of 100 values, 50 values are taken before and 50 values after the given time unit.
+     plot(Smoothedtracks[["MeanTurnAngle"]]$MeanTurnAngle ~ Smoothedtracks[["MeanTurnAngle"]]$frame, type = "l")
+
+These lines will be truncated in the PDF manual.
+* checking Rd cross-references ... WARNING
+Package unavailable to check Rd xrefs: ‘fpc’
+Missing link or links in Rd file 'drawTracklets.Rd':
+  ‘0,1’
+
+Missing link or links in Rd file 'getInfo.Rd':
+  ‘getinfo’
+
+Missing link or links in Rd file 'locPos.Rd':
+  ‘[graphics]{locROI}’ ‘[graphics]{circles}’
+
+Missing link or links in Rd file 'readAnimalTA.Rd':
+  ‘rawDat’ ‘flipY’
+
+Missing link or links in Rd file 'readCtrax.Rd':
+  ‘flipY’
+
+Missing link or links in Rd file 'readIdtracker.Rd':
+  ‘flipY’
+
+Missing link or links in Rd file 'readPlain.Rd':
+  ‘flipY’
+
+Missing link or links in Rd file 'readTrackR.Rd':
+  ‘rawDat’ ‘flipY’
+
+Missing link or links in Rd file 'readTrex.Rd':
+  ‘rawDat’ ‘flipY’
+
+Missing link or links in Rd file 'setInfo.Rd':
+  ‘getinfo’
+
+See section 'Cross-references' in the 'Writing R Extensions' manual.
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in Rd file 'resampTracklets.Rd'
+  ‘trackDat’
+Documented arguments not in \usage in Rd file 'resampTracklets.Rd':
+  ‘trackDatA’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... WARNING
+'::' or ':::' imports not declared from:
+  ‘circular’ ‘viridis’
+* checking files in ‘vignettes’ ... WARNING
+Files in the 'vignettes' directory but no files in 'inst/doc':
+  ‘MoveR-Clean-FilterData.Rmd’ ‘MoveR-ComputeMetrics.Rmd’
+  ‘MoveR-ImportData.Rmd’ ‘MoveR-ParallelComputation.Rmd’
+  ‘MoveR-PatternId.Rmd’ ‘MoveR-SensitivityAnalysis.Rmd’
+Files named as vignettes but with no recognized vignette engine:
+   ‘vignettes/MoveR-Clean-FilterData.Rmd’
+   ‘vignettes/MoveR-ComputeMetrics.Rmd’
+   ‘vignettes/MoveR-ImportData.Rmd’
+   ‘vignettes/MoveR-ParallelComputation.Rmd’
+   ‘vignettes/MoveR-PatternId.Rmd’
+   ‘vignettes/MoveR-SensitivityAnalysis.Rmd’
+(Is a VignetteBuilder field missing?)
+* checking examples ... ERROR
+Running examples in ‘MoveR-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: ANND
+> ### Title: Compute Average Nearest Neighbour Distance (ANND) among
+> ###   tracklets.
+> ### Aliases: ANND
+> 
+> ### ** Examples
+> 
+> 
+> set.seed(2023)
+> # generate some dummy tracklets
+> ## start to specify some parameters to generate tracklets
+> TrackN <- 50 # the number of tracklet to simulate
+> TrackL <-
++   100:1000 # the length of the tracklets or a sequence to randomly sample tracklet length
+> id <- 0
+> TrackList <- MoveR::trackletsClass(stats::setNames(lapply(lapply(seq(TrackN), function(i)
++   trajr::TrajGenerate(sample(TrackL, 1), random = TRUE, fps = 1)), function(j) {
++     id <<- id + 1
++     data.frame(
++       x.pos = j$x - min(j$x),
++       y.pos = j$y - min(j$y),
++       frame = j$time,
++       identity = paste("Tracklet", id, sep = "_")
++     )
++   }), seq(TrackN)))
+> 
+> # compute the ANND with a sampling of 100 time unit
+> ANNDRes <-
++   MoveR::ANND(
++     TrackList,
++     timeCol = "frame",
++     sampling = 100,
++     scale = 1,
++     bootn = 500
++   )
+Warning in MoveR::ANND(TrackList, timeCol = "frame", sampling = 100, scale = 1,  :
+  for time unit = [988], only 1 or no tracklet detected, the returned neighbour distance is NA
+> 
+> # the results can be retrieved by accessing the "ANND" data frame
+> str(ANNDRes[["ANND"]])
+'data.frame':	11 obs. of  6 variables:
+ $ ANNDmean: num  22.3 22.1 23.4 23.1 28.1 ...
+ $ 97.5%   : num  15.4 16.1 17.2 16.6 19.9 ...
+ $ 2.5%    : num  44.1 39.8 40 46.2 49.7 ...
+ $ ANNDsd  : num  35.1 30.9 26.5 27.9 31.1 ...
+ $ nInd    : int  50 50 43 38 33 28 26 18 13 6 ...
+ $ frame   : num  1 100 200 300 400 500 600 700 800 900 ...
+> 
+> # And hence you can plot it against the timeCol (here "frame")
+> ## remove the NA to avoid problem when plotting the confidence interval
+> ANNDRes[["ANND"]] <-
++   ANNDRes[["ANND"]][!is.na(ANNDRes[["ANND"]]$ANNDmean), ]
+> plot(
++   ANNDRes[["ANND"]]$ANNDmean ~ ANNDRes[["ANND"]]$frame,
++   type = "l",
++   ylim = c(0, signif(max(
++     ANNDRes[["ANND"]]$`2.5%`, na.rm = T
++   ), digits = 3)),
++   col = "red",
++   xlab = "Time (frame)",
++   ylab = "Average Nearest Neighbour Distance (ANND) and 95% CI"
++ )
+Error in FUN(X[[i]], ...) : T used instead of TRUE
+Calls: plot -> plot.formula -> lapply -> FUN -> FUN
+Execution halted
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... ERROR
+  Running ‘testthat.R’
+Running the tests in ‘tests/testthat.R’ failed.
+Last 13 lines of output:
+  > 
+  > test_check("MoveR")
+  [ FAIL 1 | WARN 0 | SKIP 0 | PASS 0 ]
+  
+  ══ Failed tests ════════════════════════════════════════════════════════════════
+  ── Error ('test-demo.R:4:3'): Test demo ────────────────────────────────────────
+  Error in `print_msg()`: could not find function "print_msg"
+  Backtrace:
+      ▆
+   1. └─testthat::expect_invisible(print_msg()) at test-demo.R:4:3
+   2.   └─base::withVisible(call)
+  
+  [ FAIL 1 | WARN 0 | SKIP 0 | PASS 0 ]
+  Error: Test failures
+  Execution halted
+* checking package vignettes ... NOTE
+Package has ‘vignettes’ subdirectory but apparently no vignettes.
+Perhaps the ‘VignetteBuilder’ information is missing from the
+DESCRIPTION file?
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 2 ERRORs, 6 WARNINGs, 6 NOTEs

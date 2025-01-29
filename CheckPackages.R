@@ -54,8 +54,10 @@ pkg_check <- check_packages(pkg_tbl)
 ## pkg_check <- check_packages(pkg_tbl, c("adehabitatLT", "adehabitatHR", "drtracker"))
 
 
-## Check output:
-sum(!is.na(pkg_check$cran_check)) == nrow(pkg_check[!pkg_check$skip, ]) # Must be TRUE
+## Check output (check that only packages with 'skip = TRUE' have NA for
+## 'cran_check', must be TRUE):
+sum(!is.na(pkg_check$cran_check)) == nrow(pkg_check[!pkg_check$skip, ])
+
 
 ## Some stats:
 ctv_stats(pkg_check)
