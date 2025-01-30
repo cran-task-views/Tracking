@@ -10,12 +10,13 @@ ctv_check_packages <- function(pkg_table, pkg_name) {
         "repository", "branch", "sub", "date_added_to_list", "force_check",
         "skip", "comments")) %in% names(pkg_table)))
         stop("Required columns: 'package_name', 'source', 'download_link', 'owner', 'repository', 'branch', 'sub', 'date_added_to_list', 'force_check', 'skip', and 'comments'.")
-    if (!inherits(pkg_name, "character"))
-        stop("'pkg_name' should be a character vector.")
 
     ## If 'pkg_name' supplied, we subset the whole table
-    if(!missing(pkg_name))
+    if(!missing(pkg_name)) {
+        if (!inherits(pkg_name, "character"))
+            stop("'pkg_name' should be a character vector.")
         pkg_table <- subset(pkg_table, package_name %in% pkg_name)
+    }
 
     ## Create columns that do not exist
     pkg_table$source <- tolower(pkg_table$source)
@@ -54,10 +55,18 @@ ctv_check_packages <- function(pkg_table, pkg_name) {
     }))
     class(pkg_table) <- c("ctv_pkg_check", class(pkg_tbl))
 
+    ## Check output (check that there is no NA in '$cran_check' for non-skipped
+    ## packages):
+    if (sum(is.na(pkg_table$cran_check[!pkg_table$skip])) != 0) {
+        warning("\n\n/!\ NAs exist in `$cran_check` for tested packages /!\\n\n")
+    }
+
     ## Check and test the network
-    pkg_table <- ctv_network(pkg_table)
     message("\n################################################\n\nChecking and testing the package network.\n")
-    print(attr(pkg_table, "ctv_network_test"))
+    pkg_table <- ctv_network(pkg_table)
+    if (!is.null(attr(pkg_table, "ctv_network_test"))) {
+        print(attr(pkg_table, "ctv_network_test"))
+    }
 
     return(pkg_table)
 }
@@ -168,7 +177,7 @@ ctv_check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs)
             pkg_info$package_name, ".tar.gz")
         ## Download and unzip folder so we can install dependencies
         download_retry(url = download_file, destfile = download_folder,
-            method = "libcurl")
+            method = "libcurl", quiet = TRUE)
         untar(tarfile = download_folder, exdir = download_local)
         message("  * Is on Bioconductor.")
     }
@@ -176,7 +185,8 @@ ctv_check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs)
     ## Specific R-Forge (includes download + untar)
     if (pkg_info$source == "rforge") {
         out <- download.packages(pkg_info$package_name,
-            destdir = download_local, repos = "http://download.R-Forge.R-project.org")
+            destdir = download_local, repos = "http://download.R-Forge.R-project.org",
+            quiet = TRUE)
         download_folder <- out[2]
         working_folder <- paste0(download_local, "/", pkg_info$package_name)
         untar(tarfile = download_folder, exdir = download_local)
@@ -190,6 +200,7 @@ ctv_check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs)
         branch <- pkg_info$branch
         branch <- ifelse(branch == "", "master", branch)
         sub <- pkg_info$sub
+        ## See https://docs.github.com/en/repositories/working-with-files/using-files/downloading-source-code-archives
         download_file <-
             paste0("https://github.com/",
                 owner,
@@ -239,7 +250,7 @@ ctv_check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs)
             pkg_info$package_name, ".tar.gz")
         ## Download and unzip folder so we can install dependencies
         download_retry(url = download_file, destfile = download_folder,
-            method = "libcurl")
+            method = "libcurl", quiet = TRUE)
         if (grepl("\\.zip", download_folder)) {
             if (unzip(zipfile = download_folder, list = TRUE)[1] ==
                 paste0(pkg_info$package_name, "/")) {
@@ -362,7 +373,13 @@ ctv_network <- function(pkg_check) {
         stop("Package 'coin' must be installed to use this function.",
             call. = FALSE)
     }
-    pkg_check_ok <- subset(pkg_check, cran_check)
+
+    if (sum(pkg_check$cran_check, na.rm = TRUE) == 0) {
+        message("No package that passes CRAN checks.")
+        return(pkg_check)
+    } else {
+        pkg_check_ok <- subset(pkg_check, cran_check)
+    }
 
     ## Remove spaces, separate imported packages by commas
     pkg_import <- strsplit(gsub("\\s*", "", pkg_check_ok$imports), split = ",")
@@ -386,7 +403,12 @@ ctv_network <- function(pkg_check) {
     ## One data frame to rule them all
     pkg_net <- rbind.data.frame(pkg_import_gather, pkg_suggest_gather)
     ## Filtering out non movement packages
-    pkg_net <- subset(pkg_net, network %in% pkg_check_ok$package_name)
+    if (sum(pkg_net$network %in% pkg_check_ok$package_name, na.rm = TRUE) == 0) {
+        message("There is no network in the movement packages.\n")
+        return(pkg_check)
+    } else {
+        pkg_net <- subset(pkg_net, network %in% pkg_check_ok$package_name)
+    }
 
     ## Counting how much a package is needed or suggested
     pkg_net_tb <- data.frame(table(pkg_net$network))
@@ -455,7 +477,7 @@ ctv_news <- function(pkg_check, pkg_check_prev) {
 
 download_retry <- function(
         url, destfile = basename(url), mode = "wb",
-        N.TRIES = 3L, ...) {
+        N.TRIES = 10L, ...) {
     ## From 'recount::download_retry'
 
     N.TRIES <- as.integer(N.TRIES)
@@ -469,7 +491,7 @@ download_retry <- function(
         if (!inherits(result, "error")) {
             break
         }
-        ## Wait between 0 and 2 seconds between retries
+        ## Wait between 2 and 5 seconds between retries
         Sys.sleep(runif(n = 1, min = 2, max = 5))
         N.TRIES <- N.TRIES - 1L
     }

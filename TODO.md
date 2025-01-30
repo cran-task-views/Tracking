@@ -18,6 +18,9 @@
 
 ## Dev
 
+- [ ] **Print informative messages** on different steps, and success or not
+      of CRAN checks.
+- [ ] **Handle errors** so that the check function does not stop.
 - [ ] **Update the function documentation** (the mini-package).
 - [ ] **Create a proper package** from the mini-package.
 - [ ] **Account for the new Git convention for the primary branch?** Previously
