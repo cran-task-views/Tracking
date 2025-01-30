@@ -18,6 +18,7 @@
 
 ## Dev
 
+- [ ] **Update technical documentation** (`checks/README.md`).
 - [ ] **Print informative messages** on different steps, and success or not
       of CRAN checks.
 - [ ] **Handle errors** so that the check function does not stop.
