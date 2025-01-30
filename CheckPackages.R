@@ -40,14 +40,9 @@ sort(pkg_tbl$package_name)
 pkg_check <- ctv_check_packages(pkg_tbl)
 ## pkg_check <- ctv_check_packages(pkg_tbl, c("adehabitatLT", "adehabitatHR", "drtracker"))
 
-## Check output (check that only packages with 'skip = TRUE' have NA for
-## 'cran_check', must be TRUE):
-sum(!is.na(pkg_check$cran_check)) == nrow(pkg_check[!pkg_check$skip, ])
-
-
-## Some stats:
+## Some stats and core packages:
 ctv_stats(pkg_check)
-subset(pkg_check, core)
+subset(pkg_check, core, select = c("package_name", "source"))
 
 ## CTV NEWS (differences from previous release):
 ctv_news(pkg_check, pkg_check_prev)
@@ -57,6 +52,7 @@ ctv_news(pkg_check, pkg_check_prev)
 write.csv(pkg_check_prev, "checks/Checked_packages_previous.csv", row.names = FALSE)
 write.csv(pkg_check, "checks/Checked_packages.csv", row.names = FALSE)
 writeLines(paste0(Sys.Date()), "checks/LAST_RUN")
+
 
 ## To test the CTV:
 ctv::read.ctv("Tracking.md", cran = TRUE)

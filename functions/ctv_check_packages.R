@@ -64,9 +64,6 @@ ctv_check_packages <- function(pkg_table, pkg_name) {
     ## Check and test the network
     message("\n################################################\n\nChecking and testing the package network.\n")
     pkg_table <- ctv_network(pkg_table)
-    if (!is.null(attr(pkg_table, "ctv_network_test"))) {
-        print(attr(pkg_table, "ctv_network_test"))
-    }
 
     return(pkg_table)
 }
@@ -104,11 +101,10 @@ ctv_check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs)
     ## Check if package has been published on CRAN (and edit it if it's the case)
     if (pkg_info$source != "cran") {
         if (nrow(cran_pkg_db[cran_pkg_db$Package == pkg_info$package_name, ]) == 1) {
-            if (pkg_info$source == "force_check") {
+            if (pkg_info$force_check) {
                 message("  * A package with the same name is on CRAN. Checking source anyway.")
             } else {
                 pkg_info$source <- "cran"
-                message("  * Is on CRAN.")
             }
         }
     }
@@ -368,11 +364,13 @@ ctv_check_package <- function(pkg_info, cran_pkg_db, download_local, check_logs)
     return(pkg_info)
 }
 
-ctv_network <- function(pkg_check) {
+ctv_network <- function(pkg_check, include = c("import-suggest", "import-only")) {
     if (!requireNamespace("coin", quietly = TRUE)) {
         stop("Package 'coin' must be installed to use this function.",
             call. = FALSE)
     }
+
+    include <- match.arg(include)
 
     if (sum(pkg_check$cran_check, na.rm = TRUE) == 0) {
         message("No package that passes CRAN checks.")
@@ -388,20 +386,22 @@ ctv_network <- function(pkg_check) {
     ## Number of dependencies
     pkg_import_length <- sapply(pkg_import, FUN = length)
     ## Create empty data.frame with that number of elements
-    pkg_import_gather <- data.frame(
+    pkg_net <- data.frame(
         package = rep.int(pkg_check_ok$package_name, times = pkg_import_length),
         network = unlist(pkg_import), role = rep("import", sum(pkg_import_length)))
 
     ## Now same thing for suggest
-    pkg_suggest <- strsplit(gsub("\\s*", "", pkg_check_ok$suggests), split = ",")
-    pkg_suggest <- lapply(pkg_suggest, FUN = unique)
-    pkg_suggest_length <- sapply(pkg_suggest, FUN = length)
-    pkg_suggest_gather <- data.frame(
-        package = rep.int(pkg_check_ok$package_name, times = pkg_suggest_length),
-        network = unlist(pkg_suggest), role = rep("suggest", sum(pkg_suggest_length)))
+    if (include == "import-suggest") {
+        pkg_suggest <- strsplit(gsub("\\s*", "", pkg_check_ok$suggests), split = ",")
+        pkg_suggest <- lapply(pkg_suggest, FUN = unique)
+        pkg_suggest_length <- sapply(pkg_suggest, FUN = length)
+        pkg_suggest_gather <- data.frame(
+            package = rep.int(pkg_check_ok$package_name, times = pkg_suggest_length),
+            network = unlist(pkg_suggest), role = rep("suggest", sum(pkg_suggest_length)))
+        ## One data frame to rule them all
+        pkg_net <- rbind.data.frame(pkg_net, pkg_suggest_gather)
+    }
 
-    ## One data frame to rule them all
-    pkg_net <- rbind.data.frame(pkg_import_gather, pkg_suggest_gather)
     ## Filtering out non movement packages
     if (sum(pkg_net$network %in% pkg_check_ok$package_name, na.rm = TRUE) == 0) {
         message("There is no network in the movement packages.\n")
@@ -418,6 +418,9 @@ ctv_network <- function(pkg_check) {
 
     ## Actual test
     network_test <- coin::maxstat_test(mention ~ t, dist = "approx", data = pkg_net_tb)
+    print(network_test)
+    ## Add the test as attribute
+    attr(pkg_check, "ctv_network_test") <- network_test
 
     ## Add 'core' variable
     pkg_net_tb$core <- (pkg_net_tb$mention > network_test@estimates$estimate$cutpoint)
@@ -426,8 +429,6 @@ ctv_network <- function(pkg_check) {
     mm <- match(pkg_check$package_name, as.character(pkg_net_tb$package_name))
     pkg_check$mention <- ifelse(is.na(mm), 0, pkg_net_tb$mention[mm])
     pkg_check$core <- ifelse(is.na(mm), FALSE, pkg_net_tb$core[mm])
-    ## Add the test as attribute
-    attr(pkg_check, "ctv_network_test") <- network_test
 
     return(pkg_check)
 }

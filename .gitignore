@@ -5,6 +5,6 @@
 Tracking.Rproj
 Tracking.html
 README.html
-packrat/
-downloads/
-packrat/lib*/
+renv/
+renv.lock
+checks/downloads/

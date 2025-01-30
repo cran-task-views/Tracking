@@ -1,7 +1,7 @@
 # Tracking CTV 2025-02
 
 This is a long due update of the Tracking CTV. 7 packages were submitted this
-round. The Tracking CTV now lists 59 tracking packages, including X core
+round. The Tracking CTV now lists 59 tracking packages, including 3 core
 packages: [`adehabitatLT`](https://cran.r-project.org/package=adehabitatLT),
 [`move`](https://cran.r-project.org/package=move)
 ([documentation](https://bartk.gitlab.io/move/)), and
@@ -29,12 +29,13 @@ packages: [`adehabitatLT`](https://cran.r-project.org/package=adehabitatLT),
 - [`Rhabit`](https://github.com/papayoun/Rhabit): Estimation of animal habitat
   selection using the Langevin movement model
 
-1 package previously submitted that was not tested before due to a bug in the
-CTV code:
+2 packages previously submitted that were not tested before due to bugs in the
+Tracking CTV code:
 
 - [`pathroutr`](https://github.com/jmlondon/pathroutr): Re-routing paths that
   cross land around barrier polygons
   ([documentation](https://jmlondon.github.io/pathroutr/))
+- [`RSP`](https://github.com/YuriNiella/RSP): Refined Shortest Paths
 
 ## Packages submitted but not added to the tracking CTV
 

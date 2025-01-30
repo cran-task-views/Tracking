@@ -1,0 +1,110 @@
+* using log directory ‘/tmp/RtmpVmML1G/RSP.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘RSP/DESCRIPTION’ ... OK
+* this is package ‘RSP’ version ‘1.0.5’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .github
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘RSP’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking ‘build’ directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking examples with --run-donttest ... [14m/14m] OK
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... [161s/161s] OK
+  Running ‘testthat.R’ [161s/161s]
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes ... OK
+* checking re-building of vignette outputs ... OK
+* checking for non-standard things in the check directory ... NOTE
+Found the following files/directories:
+  ‘gganim_plot0001.png’ ‘gganim_plot0002.png’ ‘gganim_plot0003.png’
+  ‘gganim_plot0004.png’ ‘gganim_plot0005.png’ ‘gganim_plot0006.png’
+  ‘gganim_plot0007.png’ ‘gganim_plot0008.png’ ‘gganim_plot0009.png’
+  ‘gganim_plot0010.png’ ‘gganim_plot0011.png’ ‘gganim_plot0012.png’
+  ‘gganim_plot0013.png’ ‘gganim_plot0014.png’ ‘gganim_plot0015.png’
+  ‘gganim_plot0016.png’ ‘gganim_plot0017.png’ ‘gganim_plot0018.png’
+  ‘gganim_plot0019.png’ ‘gganim_plot0020.png’ ‘gganim_plot0021.png’
+  ‘gganim_plot0022.png’ ‘gganim_plot0023.png’ ‘gganim_plot0024.png’
+  ‘gganim_plot0025.png’ ‘gganim_plot0026.png’ ‘gganim_plot0027.png’
+  ‘gganim_plot0028.png’ ‘gganim_plot0029.png’ ‘gganim_plot0030.png’
+  ‘gganim_plot0031.png’ ‘gganim_plot0032.png’ ‘gganim_plot0033.png’
+  ‘gganim_plot0034.png’ ‘gganim_plot0035.png’ ‘gganim_plot0036.png’
+  ‘gganim_plot0037.png’ ‘gganim_plot0038.png’ ‘gganim_plot0039.png’
+  ‘gganim_plot0040.png’ ‘gganim_plot0041.png’ ‘gganim_plot0042.png’
+  ‘gganim_plot0043.png’ ‘gganim_plot0044.png’ ‘gganim_plot0045.png’
+  ‘gganim_plot0046.png’ ‘gganim_plot0047.png’ ‘gganim_plot0048.png’
+  ‘gganim_plot0049.png’ ‘gganim_plot0050.png’ ‘gganim_plot0051.png’
+  ‘gganim_plot0052.png’ ‘gganim_plot0053.png’ ‘gganim_plot0054.png’
+  ‘gganim_plot0055.png’ ‘gganim_plot0056.png’ ‘gganim_plot0057.png’
+  ‘gganim_plot0058.png’ ‘gganim_plot0059.png’ ‘gganim_plot0060.png’
+  ‘gganim_plot0061.png’ ‘gganim_plot0062.png’ ‘gganim_plot0063.png’
+  ‘gganim_plot0064.png’ ‘gganim_plot0065.png’ ‘gganim_plot0066.png’
+  ‘gganim_plot0067.png’ ‘gganim_plot0068.png’ ‘gganim_plot0069.png’
+  ‘gganim_plot0070.png’ ‘gganim_plot0071.png’ ‘gganim_plot0072.png’
+  ‘gganim_plot0073.png’ ‘gganim_plot0074.png’ ‘gganim_plot0075.png’
+  ‘gganim_plot0076.png’ ‘gganim_plot0077.png’ ‘gganim_plot0078.png’
+  ‘gganim_plot0079.png’ ‘gganim_plot0080.png’ ‘gganim_plot0081.png’
+  ‘gganim_plot0082.png’ ‘gganim_plot0083.png’ ‘gganim_plot0084.png’
+  ‘gganim_plot0085.png’ ‘gganim_plot0086.png’ ‘gganim_plot0087.png’
+  ‘gganim_plot0088.png’ ‘gganim_plot0089.png’ ‘gganim_plot0090.png’
+  ‘gganim_plot0091.png’ ‘gganim_plot0092.png’ ‘gganim_plot0093.png’
+  ‘gganim_plot0094.png’ ‘gganim_plot0095.png’ ‘gganim_plot0096.png’
+  ‘gganim_plot0097.png’ ‘gganim_plot0098.png’ ‘gganim_plot0099.png’
+  ‘gganim_plot0100.png’ ‘save.csv’
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 3 NOTEs
