@@ -38,7 +38,8 @@ sort(pkg_tbl$package_name)
 
 ## Check all packages (loooong process):
 pkg_check <- ctv_check_packages(pkg_tbl)
-## pkg_check <- ctv_check_packages(pkg_tbl, c("adehabitatLT", "adehabitatHR", "drtracker"))
+## pkg_check <- ctv_check_packages(pkg_tbl, c("adehabitatLT", "adehabitatHR", "drtracker", clean = FALSE))
+
 
 ## Some stats and core packages:
 ctv_stats(pkg_check)

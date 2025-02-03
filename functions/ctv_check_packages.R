@@ -1,4 +1,4 @@
-ctv_check_packages <- function(pkg_table, pkg_name) {
+ctv_check_packages <- function(pkg_table, pkg_name, clean = TRUE) {
     if (!requireNamespace("tools", quietly = TRUE)) {
         stop("Package 'tools' must be installed to use this function.",
             call. = FALSE)
@@ -36,13 +36,16 @@ ctv_check_packages <- function(pkg_table, pkg_name) {
     ## Prepare list of current CRAN packages
     cran_pkg_db <- tools::CRAN_package_db()
 
-    ## Directories to download and run checks in
+    ## Directories to download and run checks in (creates them empty if 'clean =
+    ## TRUE')
     download_local <- "checks/downloads"
-    unlink(download_local, recursive = TRUE)
-    dir.create(download_local)
     check_logs <- "checks/check_logs"
-    unlink(check_logs, recursive = TRUE)
-    dir.create(check_logs)
+    if (clean) {
+        unlink(download_local, recursive = TRUE)
+        dir.create(download_local, recursive = TRUE)
+        unlink(check_logs, recursive = TRUE)
+        dir.create(check_logs, recursive = TRUE)
+    }
 
     ## Run the check function on each package and return the updated table
     pkg_table <- do.call("rbind", lapply(1:nrow(pkg_table), \(row) {
