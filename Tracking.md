@@ -124,8 +124,9 @@ GTFS (General Transit Feed Specification) data.
 * **Dead-reckoning using accelerometry and magnetometry data:** The combined use
   of magnetometer and accelerometer data, and optionally gyroscopes and speed
   sensors, allows to reconstruct sub-second fine scale movement paths using the
-  dead-reckoning (DR) technique. `r pkg("TrackReconstruction")` implement DR to
-  obtain tracks, based on different methods.
+  dead-reckoning (DR) technique. `r pkg("TrackReconstruction")` and 
+  `r pkg("tagtools")` implement DR to obtain tracks, based on different methods.
+  
 * **GTFS data pre-processing:** Public transportation data in GTFS format per
   trip and vehicle can be interpolated in space-time to obtain GPS-like records
   with `r pkg("gtfs2gps")`.
@@ -136,10 +137,11 @@ GTFS (General Transit Feed Specification) data.
 ### Formal classes
 
 Several packages offer formal classes to store and handle tracking data, with
-both a space and time structures for the data: `r pkg("adehabitatLT"), `r
-pkg("move2")` (replacing `r pkg("move")`), `r pkg("sftrack"), `r pkg("trip"), `r
-pkg("trajectories"). Formal classes can benefit both users to manipulate
-tracking data and developers to rely on such classes for their own needs.
+both a space and time structures for the data: `r pkg("adehabitatLT")`, 
+`r pkg("move2")` (replacing `r pkg("move")`), `r pkg("sftrack")`, 
+`r pkg("trip")`, `r pkg("trajectories")`. Formal classes can benefit both users 
+to manipulate tracking data and developers to rely on such classes for their own 
+needs.
 
 ### Post-processing
 
@@ -207,9 +209,10 @@ step-selection modeling.
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are 
-`r pkg("adehabitatLT")`, `r pkg("bsam")`, `r pkg("crawl")`, `r pkg("ctmm")`, 
-`r pkg("ctmcmove")`, `r pkg("mousetrap")` and `r pkg("TrackReconstruction")`.
-`r pkg("pathroutr")` allows to re-route paths when there are barriers
+`r pkg("adehabitatLT")`, `r github("calbertsen/argosTrack")`, `r pkg("bsam")`, 
+`r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("ctmcmove")`, `r pkg("mousetrap")`, and
+`r pkg("TrackReconstruction")`. 
+`r github("jmlondon/pathroutr")` allows to re-route paths when there are barriers
 (e.g. terrestrial land for marine species).
 
 #### Behavioral pattern identification
@@ -248,13 +251,14 @@ home range calculation and habitat selection.
 
 - **Home ranges:** Several packages allow the estimation of home ranges, such as
   `r pkg("adehabitatHR", priority = "core")`, `r pkg("amt")`, `r pkg("ctmm")`, 
-  `r pkg("move")`, and `r pkg("track2KBA")`. They provide a variety
-  of methods, from simple Minimum convex polygons to more complex probabilistic
-  Utilization distributions, potentially accounting for the temporal
-  autocorrelation in tracking data.
+  `r pkg("move")`, `r github("YuriNiella/RSP")`, and `r pkg("track2KBA")`. 
+  They provide a variety   of methods, from simple Minimum convex polygons to 
+  more complex probabilistic   Utilization distributions, potentially accounting
+  for the temporal autocorrelation in tracking data.
 - **Habitat use:** Several packages estimate the role of habitat features on
   animal space use or habitat selection, such as `r pkg("amt")` using step
-  selection functions and `r pkg("ctmcmove")` using functional movement modeling,.
+  selection functions, `r pkg("ctmcmove")` using functional movement modeling, 
+  and `r github("papayoun/Rhabit")` using Langevin models.
 - **Non-conventional approaches for space use:** Other non-conventional
   approaches for investigating space use from tracking data can be found in 
   `r pkg("recurse")`.
@@ -265,6 +269,7 @@ home range calculation and habitat selection.
 Tracking packages implementing trajectory simulation are mainly based on Hidden
 Markov models, correlated random walks, Brownian motions, Lévy walks or
 Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`, 
+`r github("calbertsen/argosTrack")`,
 `r pkg("bsam")`, `r pkg("crawl")`, 
 `r pkg("ctmm")`, `r pkg("momentuHMM")`, `r pkg("moveHMM")`, `r pkg("smam")`, 
 `r pkg("SiMRiv")` and `r pkg("trajr")`.
@@ -291,12 +296,18 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
 
 ### Dealing with movement but not tracking data
 
-- **Analysis of biologging data:** Packages to analyze time-depth recorder (TDR)
-  and accelerometer data from animals is `r pkg("diveMove")`. It allows
-  obtaining statistics of dive effort. Several packages focus on the analysis of
-  human accelerometry data, mainly to describe periodicity and levels of
-  activity: `r pkg("acc")`, `r pkg("accelerometry")`, `r pkg("GGIR")`, 
-  `r pkg("nparACT")`, `r pkg("pawacc")` and `r pkg("PhysicalActivity")`.
+- **Analysis of biologging data:** `r pkg("diveMove")` and `r pkg("tagtools")` 
+  were developed with a focus on aquatic movement. `r pkg("diveMove")` allows 
+  visualizing, filtering, and summarizing dive effort using time-depth recorder 
+  (TDR) data. `r pkg("tagtools")` allows for all the aforementioned operations, 
+  quality-check and event detection for TDR, accelerometer, magnetometer and 
+  gyroscope data. `r pkg("triact")` assists in analyzing the lying behavior of 
+  cows from accelerometer data, computing measures such as total lying duration, 
+  the number of lying bouts, and the mean duration of lying bouts. 
+  Several packages focus on the analysis of human accelerometry data, mainly to 
+  describe periodicity and levels of activity: `r pkg("acc")`, 
+  `r pkg("accelerometry")`, `r pkg("GGIR")`, `r pkg("nparACT")`, 
+  `r pkg("pawacc")` and `r pkg("PhysicalActivity")`.
 - **Non-biologging data:** When a camera can encompass an area large
   enough for an individual to move in, video and images can be used to record
   movement. A package related to these data is `r pkg("trackdem")` (for
@@ -304,9 +315,13 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   movement package is `r pkg("actel")` which deals with data from acoustic
   telemetry stations. It allows exploring time spend in each array, getting time
   series of transitions between arrays, among others. 
+  Another package, `r pkg("eyetrackingR")`, deals with eye fixation, and 
+  contains functions that turn gaze location values on the screen into whether 
+  or not these land in an area of interest.
   `r github("KiranLDA/migflow")`, on the other hand, allows using a series of 
   distances traveled and positions (lon, lat) of sites to calculate the maximum 
   flow of animals through a migratory network. 
+  
 
 
 ### Technical notes
