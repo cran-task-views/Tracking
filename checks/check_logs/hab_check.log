@@ -1,0 +1,244 @@
+* using log directory ‘/tmp/RtmpXMgjCE/hab.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘hab/DESCRIPTION’ ... OK
+* this is package ‘hab’ version ‘1.20.4’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘hab’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... NOTE
+File
+  LICENSE
+is not mentioned in the DESCRIPTION file.
+Non-standard file/directory found at top level:
+  ‘hab.pdf’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+'library' or 'require' call to ‘tkrplot’ in package code.
+  Please use :: or requireNamespace() instead.
+  See section 'Suggested packages' in the 'Writing R Extensions' manual.
+Namespace in Imports field not imported from: ‘adehabitatMA’
+  All declared Imports should be used.
+Unexported objects imported by ':::' calls:
+  ‘adehabitatHR:::.boundaryk’ ‘adehabitatHR:::.fbboun’
+  ‘adehabitatHR:::.kernelUDs’ ‘adehabitatHR:::.makegridUD’
+  ‘adehabitatLT:::.convtime’ ‘adehabitatLT:::.ltraj2traj’
+  ‘adehabitatLT:::.traj2df’
+  See the note in ?`:::` about the use of this operator.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+acf.test : <anonymous>: no visible global function definition for ‘acf’
+acf.test : <anonymous>: no visible global function definition for
+  ‘qnorm’
+kerneloverlap: no visible global function definition for ‘slot’
+kerneloverlap : <anonymous>: no visible global function definition for
+  ‘coordinates’
+kerneloverlap: no visible global function definition for
+  ‘gridparameters’
+kernelUD: no visible global function definition for ‘coordinates’
+kernelUD: no visible global function definition for ‘proj4string’
+kernelUD : <anonymous>: no visible global function definition for
+  ‘SpatialPoints’
+kernelUD : <anonymous>: no visible global function definition for ‘CRS’
+kernelUD : <anonymous>: no visible global function definition for
+  ‘coordinates’
+kernelUD : <anonymous>: no visible global function definition for
+  ‘slot’
+kernelUD : <anonymous>: no visible global function definition for
+  ‘slot<-’
+kernelUD : <anonymous>: no visible global function definition for
+  ‘gridparameters’
+kernelUD : <anonymous>: no visible global function definition for
+  ‘proj4string<-’
+kfold.coxph: no visible global function definition for ‘model.frame’
+kfold.coxph: no visible global function definition for ‘terms’
+kfold.coxph: no visible global function definition for ‘update’
+kfold.coxph: no visible binding for global variable ‘sets’
+kfold.coxph: no visible global function definition for ‘predict’
+kfold.coxph: no visible global function definition for ‘cor’
+lincircor: no visible global function definition for ‘cor’
+lincircor.test: no visible global function definition for ‘pf’
+ltraj2sldf: no visible global function definition for ‘CRS’
+ltraj2sldf : <anonymous>: no visible global function definition for
+  ‘Line’
+ltraj2sldf : <anonymous>: no visible binding for global variable ‘y’
+ltraj2sldf : <anonymous>: no visible global function definition for
+  ‘Lines’
+ltraj2sldf: no visible binding for global variable ‘dist’
+ltraj2sldf: no visible global function definition for
+  ‘SpatialLinesDataFrame’
+ltraj2sldf: no visible global function definition for ‘SpatialLines’
+ltraj2spdf: no visible global function definition for ‘CRS’
+ltraj2spdf: no visible binding for global variable ‘x’
+ltraj2spdf: no visible binding for global variable ‘y’
+ltraj2spdf: no visible global function definition for
+  ‘SpatialPointsDataFrame’
+plot.ltraj: no visible global function definition for ‘gray’
+plot.ltraj: no visible global function definition for ‘par’
+plot.ltraj: no visible global function definition for ‘n2mfrow’
+plot.ltraj: no visible binding for global variable ‘image’
+plot.ltraj: no visible binding for global variable ‘points’
+plot.ltraj: no visible binding for global variable ‘segments’
+plot.ltraj: no visible global function definition for ‘points’
+plot.ltraj: no visible global function definition for ‘title’
+plotltr: no visible global function definition for ‘n2mfrow’
+plotltr: no visible global function definition for ‘par’
+plotltr : <anonymous>: no visible binding for global variable ‘lines’
+plotNAltraj: no visible global function definition for ‘n2mfrow’
+plotNAltraj: no visible global function definition for ‘par’
+plotNAltraj : <anonymous>: no visible binding for global variable
+  ‘lines’
+print.summarySeq: no visible global function definition for ‘sd’
+rdSteps: no visible binding for global variable ‘dx’
+rdSteps: no visible binding for global variable ‘rel.angle’
+rdSteps: no visible binding for global variable ‘dist’
+rdSteps : rdStep: no visible global function definition for
+  ‘SpatialPoints’
+rdSteps : rdStep: no visible global function definition for ‘CRS’
+rdSteps : rdStep: no visible global function definition for
+  ‘proj4string’
+rdSteps : rdStep: no visible global function definition for ‘%over%’
+summary.kerneloverlap: no visible global function definition for
+  ‘combn’
+trajdyn : <anonymous>: no visible global function definition for
+  ‘setNames’
+trajdyn : replot: no visible global function definition for ‘par’
+trajdyn : replot: no visible global function definition for ‘tail’
+trajdyn : replot: no visible global function definition for
+  ‘scatterutil.sub’
+trajdyn : replot : <anonymous>: no visible global function definition
+  for ‘points’
+trajdyn : replot : <anonymous>: no visible global function definition
+  for ‘lines’
+trajdyn : replot: no visible binding for global variable ‘segments’
+trajdyn : replot: no visible binding for global variable ‘points’
+trajdyn : replot: no visible global function definition for ‘lines’
+trajdyn : replot: no visible global function definition for ‘points’
+trajdyn : replot: no visible global function definition for ‘arrows’
+trajdyn : mm.w: no visible global function definition for ‘lines’
+trajdyn : mm.w: no visible global function definition for ‘points’
+trajdyn : kb: no visible global function definition for ‘select.list’
+trajdyn: no visible global function definition for ‘getGraphicsEvent’
+Undefined global functions or variables:
+  %over% acf arrows combn coordinates cor CRS dist dx getGraphicsEvent
+  gray gridparameters image Line lines Lines model.frame n2mfrow par pf
+  points predict proj4string proj4string<- qnorm rel.angle
+  scatterutil.sub sd segments select.list setNames sets slot slot<-
+  SpatialLines SpatialLinesDataFrame SpatialPoints
+  SpatialPointsDataFrame tail terms title update x y
+Consider adding
+  importFrom("graphics", "arrows", "image", "lines", "par", "points",
+             "segments", "title")
+  importFrom("grDevices", "getGraphicsEvent", "gray", "n2mfrow")
+  importFrom("methods", "slot", "slot<-")
+  importFrom("stats", "acf", "cor", "dist", "model.frame", "pf",
+             "predict", "qnorm", "sd", "setNames", "terms", "update")
+  importFrom("utils", "combn", "select.list", "tail")
+to your NAMESPACE file (and ensure that your DESCRIPTION Imports field
+contains 'methods').
+
+Found if() conditions comparing class() to string:
+File ‘hab/R/kfold.r’: if (class(dt) == "try-error") ...
+Use inherits() (or maybe is()) instead.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... NOTE
+Unknown package ‘rgdal’ in Rd xrefs
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in Rd file 'as.ltraj.Rd'
+  ‘xy’ ‘date’ ‘id’ ‘burst’ ‘typeII’ ‘slsp’ ‘infolocs’
+
+Undocumented arguments in Rd file 'infolocs.Rd'
+  ‘ltraj’ ‘which’
+
+Undocumented arguments in Rd file 'kernelUD.Rd'
+  ‘xy’ ‘h’ ‘grid’ ‘same4all’ ‘hlim’ ‘kern’ ‘extent’ ‘boundary’
+
+Undocumented arguments in Rd file 'kerneloverlap.Rd'
+  ‘percent’ ‘conditional’ ‘...’
+
+Undocumented arguments in Rd file 'ld.Rd'
+  ‘x’ ‘ltraj’
+
+Undocumented arguments in Rd file 'ltraj2spdf.Rd'
+  ‘ltr’
+
+Undocumented arguments in Rd file 'makeSeq.Rd'
+  ‘...’
+Duplicated \argument entries in Rd file 'makeSeq.Rd':
+  ‘x’ ‘name’ ‘x’
+
+Undocumented arguments in Rd file 'plot.ltraj.Rd'
+  ‘x’ ‘id’ ‘burst’ ‘spixdf’ ‘spoldf’ ‘xlim’ ‘ylim’ ‘addpoints’
+  ‘addlines’ ‘final’ ‘...’
+
+Undocumented arguments in Rd file 'plotNAltraj.Rd'
+  ‘x’ ‘...’
+
+Undocumented arguments in Rd file 'plotltr.Rd'
+  ‘x’ ‘which’ ‘addlines’ ‘...’
+
+Undocumented arguments in Rd file 'rec.Rd'
+  ‘x’ ‘slsp’
+
+Undocumented arguments in Rd file 'setNA.Rd'
+  ‘ltraj’ ‘date.ref’ ‘dt’ ‘tol’ ‘units’ ‘...’
+
+Undocumented arguments in Rd file 'subset.ltraj.Rd'
+  ‘...’
+
+Undocumented arguments in Rd file 'trajdyn.Rd'
+  ‘x’ ‘burst’ ‘hscale’ ‘vscale’ ‘recycle’ ‘display’ ‘...’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+S3 methods shown with full name in Rd file 'plot.ltraj.Rd':
+  ‘plot.ltraj’
+
+The \usage entries for S3 methods should use the \method markup and not
+their full name.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 WARNING, 5 NOTEs

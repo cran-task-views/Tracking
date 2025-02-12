@@ -1,0 +1,142 @@
+* using log directory ‘/tmp/RtmpXMgjCE/nestR.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘nestR/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘nestR’ version ‘1.1.2’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘nestR’ can be installed ... OK
+* checking installed package size ... NOTE
+  installed size is 16.7Mb
+  sub-directories of 1Mb or more:
+    data   5.5Mb
+    doc   10.9Mb
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking ‘build’ directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... NOTE
+Non-standard file/directory found at top level:
+  ‘data-raw’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking whether startup messages can be suppressed ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+attempt_limits: no visible binding for global variable ‘attempt_start’
+compare_buffers: no visible binding for global variable ‘burst’
+compare_buffers: no visible binding for global variable ‘.’
+compare_buffers: no visible global function definition for ‘ymd’
+compare_buffers: no visible global function definition for ‘desc’
+compare_buffers : <anonymous>: no visible global function definition
+  for ‘complete.cases’
+discriminate_nests: no visible binding for global variable ‘nest’
+discriminate_nests: no visible global function definition for
+  ‘capture.output’
+discriminate_nests: no visible global function definition for ‘predict’
+dist_mat: no visible binding for global variable ‘loc_id’
+dist_mat: no visible binding for global variable ‘long’
+dist_mat: no visible binding for global variable ‘lat’
+dist_mat: no visible binding for global variable ‘dist’
+dist_mat: no visible binding for global variable ‘orig_lon’
+dist_mat: no visible binding for global variable ‘orig_lat’
+dist_mat: no visible binding for global variable ‘dest_lon’
+dist_mat: no visible binding for global variable ‘dest_lat’
+find_nests: no visible binding for global variable ‘.’
+find_nests: no visible binding for global variable ‘attempt_start’
+find_nests: no visible binding for global variable ‘attempt_end’
+format_attempts: no visible global function definition for ‘case_when’
+get_candidates: no visible global function definition for ‘desc’
+get_candidates_multi: no visible global function definition for ‘desc’
+get_explodata: no visible global function definition for ‘desc’
+plot_detection: no visible binding for global variable ‘quantile’
+plot_detection: no visible binding for global variable ‘p_mean’
+plot_detection: no visible binding for global variable ‘p_lwr’
+plot_detection: no visible binding for global variable ‘p_upr’
+plot_nest_surv: no visible binding for global variable ‘quantile’
+plot_nest_surv: no visible binding for global variable ‘z_mean’
+plot_survival: no visible binding for global variable ‘quantile’
+plot_survival: no visible binding for global variable ‘phi_mean’
+plot_survival: no visible binding for global variable ‘phi_lwr’
+plot_survival: no visible binding for global variable ‘phi_upr’
+revisit_stats: no visible global function definition for ‘n_distinct’
+revisit_stats: no visible binding for global variable ‘n_visits’
+summarize_outcomes: no visible binding for global variable ‘quantile’
+summarize_outcomes: no visible global function definition for
+  ‘quantile’
+Undefined global functions or variables:
+  . attempt_end attempt_start burst capture.output case_when
+  complete.cases desc dest_lat dest_lon dist lat loc_id long n_distinct
+  n_visits nest orig_lat orig_lon p_lwr p_mean p_upr phi_lwr phi_mean
+  phi_upr predict quantile ymd z_mean
+Consider adding
+  importFrom("stats", "complete.cases", "dist", "predict", "quantile")
+  importFrom("utils", "capture.output")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... WARNING
+Rd files with duplicated alias 'nestR':
+  ‘nestR-package.Rd’ ‘nestR.Rd’
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘explodata_ws’ ‘gulls’ ‘jax_known_nest’ ‘kestrels’ ‘lk_known_nests’
+  ‘lk_outcomes’ ‘lk_output_1’ ‘lk_output_2’ ‘mg_known_nests’
+  ‘mg_outcomes’ ‘mg_output_1’ ‘mg_output_2’ ‘woodstorks’ ‘ws_outcomes’
+  ‘ws_output_1’ ‘ws_output_2’ ‘ws_output_3’
+Undocumented data sets:
+  ‘explodata_ws’ ‘gulls’ ‘jax_known_nest’ ‘kestrels’ ‘lk_known_nests’
+  ‘lk_outcomes’ ‘lk_output_1’ ‘lk_output_2’ ‘mg_known_nests’
+  ‘mg_outcomes’ ‘mg_output_1’ ‘mg_output_2’ ‘woodstorks’ ‘ws_outcomes’
+  ‘ws_output_1’ ‘ws_output_2’ ‘ws_output_3’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... WARNING
+  LazyData DB of 5.5 MB without LazyDataCompression set
+  See §1.1.6 of 'Writing R Extensions'
+* checking data for ASCII and uncompressed saves ... OK
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... NONE
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes ... OK
+* checking re-building of vignette outputs ... OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 3 WARNINGs, 4 NOTEs

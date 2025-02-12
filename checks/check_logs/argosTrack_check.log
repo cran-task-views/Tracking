@@ -1,0 +1,294 @@
+* using log directory ‘/tmp/RtmpXMgjCE/argosTrack.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘argosTrack/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘argosTrack’ version ‘1.2.2-1’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘argosTrack’ can be installed ... [74s/74s] OK
+* used C++ compiler: ‘g++ (Debian 12.2.0-14) 12.2.0’
+* checking installed package size ... NOTE
+  installed size is 88.5Mb
+  sub-directories of 1Mb or more:
+    libs  87.4Mb
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking ‘build’ directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+Found if() conditions comparing class() to string:
+File ‘argosTrack/R/Animal.R’: if (class(observation) != "Observation") ...
+File ‘argosTrack/R/Animal.R’: if (class(measurement) != "Measurement") ...
+File ‘argosTrack/R/Measurement.R’: if (class(observation) != "Observation") ...
+File ‘argosTrack/R/simTrack.R’: if (!class(observation) == "Observation") ...
+Use inherits() (or maybe is()) instead.
+* checking Rd files ... NOTE
+checkRd: (-1) CSB.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta)}, \\eqn{\\gamma}}
+       |                                                 ^
+checkRd: (-1) CSB.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta)}, \\eqn{\\gamma}}
+       |                                                                     ^
+checkRd: (-1) CSB.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{S})}, \\eqn{log(\\sigma_{B})}}
+       |                                                             ^
+checkRd: (-1) CSB.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{S})}, \\eqn{log(\\sigma_{B})}}
+       |                                                                          ^
+checkRd: (-1) CSB.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{S})}, \\eqn{log(\\sigma_{B})}}
+       |                                                                                      ^
+checkRd: (-1) CSB.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{S})}, \\eqn{log(\\sigma_{B})}}
+       |                                                                                                   ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                 ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                             ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                           ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                       ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                     ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                              ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                                           ^
+checkRd: (-1) CTCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\beta_{lat})}, \\eqn{log(\\beta_{lon})}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                                                    ^
+checkRd: (-1) CTCRW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                             ^
+checkRd: (-1) CTCRW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                          ^
+checkRd: (-1) CTCRW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                        ^
+checkRd: (-1) CTCRW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                                     ^
+checkRd: (-1) DCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma)}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}}
+       |                                                 ^
+checkRd: (-1) DCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma)}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}}
+       |                                                        ^
+checkRd: (-1) DCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma)}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}}
+       |                                                                                ^
+checkRd: (-1) DCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma)}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}}
+       |                                                                                              ^
+checkRd: (-1) DCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma)}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}}
+       |                                                                                                     ^
+checkRd: (-1) DCRW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lat})}}
+       |                                                             ^
+checkRd: (-1) DCRW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lat})}}
+       |                                                                          ^
+checkRd: (-1) DCRW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lat})}}
+       |                                                                                        ^
+checkRd: (-1) DCRW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lat})}}
+       |                                                                                                     ^
+checkRd: (-1) DSBHN.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\rho)}}
+       |                                                 ^
+checkRd: (-1) DSBHN.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma)}}
+       |                                                             ^
+checkRd: (-1) DSBW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\rho)}, \\eqn{log(shape)}, \\eqn{log(scale)}}
+       |                                                 ^
+checkRd: (-1) DSBW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\rho)}, \\eqn{log(shape)}, \\eqn{log(scale)}}
+       |                                                                    ^
+checkRd: (-1) DSBW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{log(\\rho)}, \\eqn{log(shape)}, \\eqn{log(scale)}}
+       |                                                                                       ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                 ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                        ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                        ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                      ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                             ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                           ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                                         ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                                                       ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                                                              ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                                                                                     ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                                                                                           ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                                                                                                        ^
+checkRd: (-1) GDCRW.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{logit_{(0,1)}(\\gamma_{lat})}, \\eqn{logit_{(0,1)}(gamma_{lon})}, \\eqn{\\phi}, \\eqn{logit_{(-1,1)}(\\rho)}, \\eqn{\\mu_{lat}}, \\eqn{\\mu_{lon}}}
+       |                                                                                                                                                                                              ^
+checkRd: (-1) GDCRW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                             ^
+checkRd: (-1) GDCRW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                          ^
+checkRd: (-1) GDCRW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                        ^
+checkRd: (-1) GDCRW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                                     ^
+checkRd: (-1) OUL.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                 ^
+checkRd: (-1) OUL.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                    ^
+checkRd: (-1) OUL.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                 ^
+checkRd: (-1) OUL.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                    ^
+checkRd: (-1) OUL.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                 ^
+checkRd: (-1) OUL.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                    ^
+checkRd: (-1) OUL.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                 ^
+checkRd: (-1) OUL.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                    ^
+checkRd: (-1) OUL.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                                 ^
+checkRd: (-1) OUL.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                                          ^
+checkRd: (-1) OUL.Rd:13: Lost braces
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                                                       ^
+checkRd: (-1) OUL.Rd:13: Lost braces; missing escapes or markup?
+    13 | \item{pars}{Vector of movement parameters: \\eqn{B_{1,1}}, \\eqn{B_{2,1}}, \\eqn{B_{1,2}}, \\eqn{B_{2,2}}, \\eqn{\\gamma_{lat}}, \\eqn{\\gamma_{lon}}}
+       |                                                                                                                                                ^
+checkRd: (-1) OUL.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                             ^
+checkRd: (-1) OUL.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                          ^
+checkRd: (-1) OUL.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                        ^
+checkRd: (-1) OUL.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                                     ^
+checkRd: (-1) RW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                             ^
+checkRd: (-1) RW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                          ^
+checkRd: (-1) RW.Rd:15: Lost braces
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                        ^
+checkRd: (-1) RW.Rd:15: Lost braces; missing escapes or markup?
+    15 | \item{varPars}{Vector of movement variance parameters: \\eqn{log(\\sigma_{lat})}, \\eqn{log(\\sigma_{lon})}}
+       |                                                                                                     ^
+* checking Rd metadata ... NOTE
+Invalid package aliases in Rd file 'argosTrack-defunct.Rd':
+  ‘argosTrack-defunct-package’
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking pragmas in C/C++ headers and code ... OK
+* checking compilation flags used ... OK
+* checking compiled code ... OK
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... OK
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... OK
+  Running ‘test.R’
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes ... OK
+* checking re-building of vignette outputs ... [18s/18s] OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 5 NOTEs

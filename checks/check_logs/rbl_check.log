@@ -1,0 +1,235 @@
+* using log directory ‘/tmp/RtmpXMgjCE/rbl.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘rbl/DESCRIPTION’ ... OK
+* this is package ‘rbl’ version ‘0.1.30’
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+Vignette dependency required without any vignettes:: ‘knitr’
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘rbl’ can be installed ... [10s/10s] OK
+* checking installed package size ... NOTE
+  installed size is 72.5Mb
+  sub-directories of 1Mb or more:
+    data  72.1Mb
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... NOTE
+License stub is invalid DCF.
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Invalid citation information in ‘inst/CITATION’:
+  Error in eval(expr, envir = envir): object 'build_year' not found
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... WARNING
+'library' or 'require' calls not declared from:
+  ‘data.table’ ‘fields’ ‘RcppRoll’ ‘signal’ ‘sqldf’
+'library' or 'require' calls in package code:
+  ‘data.table’ ‘fields’ ‘RcppRoll’ ‘signal’ ‘sqldf’
+  Please use :: or requireNamespace() instead.
+  See section 'Suggested packages' in the 'Writing R Extensions' manual.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+as.bsm : .f: no visible global function definition for ‘na.omit’
+as.ses: no visible global function definition for ‘setNames’
+as.ses: no visible global function definition for ‘is’
+axisPOSIXct: no visible global function definition for ‘par’
+axisPOSIXct: no visible global function definition for ‘axis’
+axisPOSIXct: no visible global function definition for ‘abline’
+bottom_delim_halsey: no visible global function definition for
+  ‘xy.coords’
+bottom_delim_std: no visible global function definition for ‘setNames’
+bottom_delim_vspd: no visible global function definition for
+  ‘xy.coords’
+bottom_delim_vspd: no visible global function definition for ‘lm’
+bottom_delim_vspd: no visible global function definition for ‘predict’
+bottom_delim_vspd: no visible global function definition for ‘setNames’
+brokenstick.default: no visible global function definition for
+  ‘setNames’
+brokenstick.default: no visible global function definition for
+  ‘xy.coords’
+check_nomtch: no visible global function definition for ‘na.omit’
+correct_depth: no visible global function definition for ‘loess’
+correct_depth: no visible global function definition for ‘lines’
+correct_depth: no visible global function definition for ‘na.omit’
+correct_depth: no visible global function definition for ‘fitted’
+correct_depth: no visible global function definition for ‘predict’
+correct_duplicated_time: no visible global function definition for
+  ‘ave’
+correct_time: no visible binding for global variable ‘value’
+darker: no visible global function definition for ‘col2rgb’
+darker: no visible global function definition for ‘rgb’
+depth_range_index : <anonymous>: no visible global function definition
+  for ‘quantile’
+df_search: no visible global function definition for ‘is’
+df_search: no visible global function definition for ‘str’
+dive_delim.default: no visible global function definition for
+  ‘setNames’
+dive_zone_index: no visible global function definition for ‘update’
+dive_zone_index: no visible global function definition for ‘predict’
+dive_zone_index: no visible global function definition for ‘setNames’
+drift_stat: no visible binding for global variable ‘residuals’
+drift_stat : sd_residuals : <anonymous>: no visible global function
+  definition for ‘sd’
+dynamic_acc: no visible binding for global variable ‘time’
+eco.mem: no visible global function definition for ‘setNames’
+front: no visible global function definition for ‘data’
+front: no visible global function definition for ‘par’
+front: no visible global function definition for ‘lines’
+is.bsm: no visible global function definition for ‘is’
+is.injective: no visible global function definition for ‘xy.coords’
+is.POSIXct: no visible global function definition for ‘is’
+isobath: no visible global function definition for ‘data’
+isobath: no visible global function definition for ‘lines’
+lighter: no visible global function definition for ‘col2rgb’
+lighter: no visible global function definition for ‘rgb’
+max_residual: no visible global function definition for ‘update’
+max_residual: no visible global function definition for ‘resid’
+max_residual: no visible global function definition for ‘predict’
+no_interpreter: no visible global function definition for ‘is’
+optBrokenstick: no visible global function definition for ‘update’
+overall_DBA: no visible binding for global variable ‘tot’
+overall_DBA: no visible binding for global variable ‘axD’
+overall_DBA: no visible binding for global variable ‘ayD’
+overall_DBA: no visible binding for global variable ‘azD’
+plot.bsm: no visible global function definition for ‘predict’
+plot.bsm: no visible global function definition for ‘xy.coords’
+plot.bsm: no visible binding for global variable ‘points’
+plot.bsm: no visible global function definition for ‘lines’
+plot.bsm: no visible global function definition for ‘text’
+plot.dzi: no visible global function definition for ‘polygon’
+plot.dzi: no visible global function definition for ‘lines’
+plot.dzi: no visible global function definition for ‘title’
+plot.tdr: no visible global function definition for ‘grey’
+predict.bsm: no visible global function definition for ‘fitted’
+prey_catch_attempts : .f: no visible global function definition for
+  ‘kmeans’
+prey_catch_attempts: no visible binding for global variable ‘time’
+prof: no visible global function definition for ‘xy.coords’
+prof: no visible global function definition for ‘setNames’
+prof: no visible global function definition for ‘na.omit’
+read.wcih: no visible global function definition for ‘read.table’
+read.wcih: no visible binding for global variable ‘time’
+static_acc: no visible binding for global variable ‘time’
+summary.bsm: no visible global function definition for ‘var’
+summary.bsm: no visible global function definition for ‘resid’
+swimming_effort: no visible binding for global variable ‘time’
+tdrexpand: no visible global function definition for ‘as’
+tdrply: no visible global function definition for ‘setNames’
+tdrply: no visible global function definition for ‘is’
+time_at_depth.bsm: no visible global function definition for ‘predict’
+time_reso: no visible global function definition for ‘median’
+transp: no visible global function definition for ‘col2rgb’
+transp: no visible global function definition for ‘rgb’
+ty_delim: no visible global function definition for ‘setNames’
+ty_interpreter: no visible global function definition for
+  ‘getParseData’
+vectorial_DBA: no visible binding for global variable ‘tot’
+vectorial_DBA: no visible binding for global variable ‘axD’
+vectorial_DBA: no visible binding for global variable ‘ayD’
+vectorial_DBA: no visible binding for global variable ‘azD’
+which.row: no visible global function definition for ‘setNames’
+wiggles: no visible global function definition for ‘xy.coords’
+wiggles: no visible global function definition for ‘coef’
+wiggles: no visible global function definition for ‘setNames’
+wiggles: no visible global function definition for ‘na.omit’
+wiggles: no visible global function definition for ‘points’
+wiggles: no visible global function definition for ‘abline’
+wiggles: no visible global function definition for ‘legend’
+wiggles: no visible global function definition for ‘rnorm’
+wiggles: no visible global function definition for ‘segments’
+Undefined global functions or variables:
+  abline as ave axD axis ayD azD coef col2rgb data fitted getParseData
+  grey is kmeans legend lines lm loess median na.omit par points
+  polygon predict quantile read.table resid residuals rgb rnorm sd
+  segments setNames str text time title tot update value var xy.coords
+Consider adding
+  importFrom("graphics", "abline", "axis", "legend", "lines", "par",
+             "points", "polygon", "segments", "text", "title")
+  importFrom("grDevices", "col2rgb", "grey", "rgb", "xy.coords")
+  importFrom("methods", "as", "is")
+  importFrom("stats", "ave", "coef", "fitted", "kmeans", "lm", "loess",
+             "median", "na.omit", "predict", "quantile", "resid",
+             "residuals", "rnorm", "sd", "setNames", "time", "update",
+             "var")
+  importFrom("utils", "data", "getParseData", "read.table", "str")
+to your NAMESPACE file (and ensure that your DESCRIPTION Imports field
+contains 'methods').
+
+Found the following assignments to the global environment:
+File ‘rbl/R/utils_pkgtools.r’:
+  assign("cache", list(), envir = .GlobalEnv)
+* checking Rd files ... WARNING
+./man/prey_catch_attempts.Rd: non-ASCII input and no declared encoding
+problem found in ‘prey_catch_attempts.Rd’
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... NOTE
+Documented arguments not in \usage in Rd file 'bottom_delim_bsm.Rd':
+  ‘pts’
+
+Documented arguments not in \usage in Rd file 'ty_delim.Rd':
+  ‘...’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... WARNING
+  LazyData DB of 72.1 MB without LazyDataCompression set
+  See §1.1.6 of 'Writing R Extensions'
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... ERROR
+Running examples in ‘rbl-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: BioPIC
+> ### Title: BioPIC: bioluminescent event detection tool
+> ### Aliases: BioPIC
+> ### Keywords: light
+> 
+> ### ** Examples
+> 
+> data(exses)
+> dv <- tdrply(identity, no = 100, obj = exses)[[1]]
+Error in ty[order(token_priority, ty$parent), ] : 
+  incorrect number of dimensions
+Calls: tdrply -> ty_delim
+Execution halted
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 4 WARNINGs, 6 NOTEs

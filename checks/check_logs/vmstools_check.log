@@ -1,0 +1,863 @@
+* using log directory ‘/tmp/RtmpXMgjCE/vmstools.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘vmstools/DESCRIPTION’ ... OK
+* this is package ‘vmstools’ version ‘0.77’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘vmstools’ can be installed ... WARNING
+Found the following significant warnings:
+  Warning: /tmp/RtmpXMgjCE/vmstools.Rcheck/00_pkg_src/vmstools/man/europa.Rd:10: unexpected section header '\source'
+  Warning: /tmp/RtmpXMgjCE/vmstools.Rcheck/00_pkg_src/vmstools/man/europa.Rd:13: unexpected section header '\description'
+  Warning: /tmp/RtmpXMgjCE/vmstools.Rcheck/00_pkg_src/vmstools/man/europa.Rd:16: unexpected section header '\examples'
+  Warning: /tmp/RtmpXMgjCE/vmstools.Rcheck/00_pkg_src/vmstools/man/europa.Rd:22: unexpected section header '\keyword'
+  Warning: /tmp/RtmpXMgjCE/vmstools.Rcheck/00_pkg_src/vmstools/man/europa.Rd:23: unexpected END_OF_INPUT '
+  Warning: replacing previous import ‘data.table::wday’ by ‘lubridate::wday’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::second’ by ‘lubridate::second’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::isoweek’ by ‘lubridate::isoweek’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::yday’ by ‘lubridate::yday’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::hour’ by ‘lubridate::hour’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::year’ by ‘lubridate::year’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::month’ by ‘lubridate::month’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::week’ by ‘lubridate::week’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::minute’ by ‘lubridate::minute’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::mday’ by ‘lubridate::mday’ when loading ‘vmstools’
+  Warning: replacing previous import ‘data.table::quarter’ by ‘lubridate::quarter’ when loading ‘vmstools’
+See ‘/tmp/RtmpXMgjCE/vmstools.Rcheck/00install.out’ for details.
+* checking installed package size ... NOTE
+  installed size is 22.1Mb
+  sub-directories of 1Mb or more:
+    data  21.5Mb
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... WARNING
+'library' or 'require' calls not declared from:
+  ‘data.table’ ‘doBy’ ‘ggplot2’ ‘ggthemes’ ‘lubridate’ ‘mixtools’
+  ‘segmented’ ‘sf’
+'library' or 'require' calls in package code:
+  ‘data.table’ ‘doBy’ ‘ggplot2’ ‘ggthemes’ ‘lubridate’ ‘mixtools’
+  ‘segmented’ ‘sf’ ‘tcltk’
+  Please use :: or requireNamespace() instead.
+  See section 'Suggested packages' in the 'Writing R Extensions' manual.
+There are ::: calls to the package's namespace in its code. A package
+  almost never needs to use ::: for its own objects:
+  ‘st_over’
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+Found an obsolete/platform-specific call in the following function:
+  ‘activityTacsat’
+Found the platform-specific device:
+  ‘x11’
+dev.new() is the preferred way to open a new device, in the unlikely
+event one is needed.
+activityTacsat: no visible global function definition for ‘x11’
+activityTacsat: no visible binding for global variable ‘LE_GEAR’
+activityTacsat: no visible global function definition for ‘na.omit’
+activityTacsat: no visible binding for global variable ‘VE_REF’
+activityTacsat: no visible global function definition for ‘dnorm’
+activityTacsatAnalyse: no visible global function definition for
+  ‘na.omit’
+activityTacsatAnalyse: no visible global function definition for ‘hist’
+activityTacsatAnalyse: no visible global function definition for ‘axis’
+calculateCI: no visible global function definition for ‘par’
+calculateCI: no visible global function definition for ‘lines’
+calculateCI: no visible global function definition for ‘image’
+calculateCI: no visible global function definition for ‘heat.colors’
+calculateCI: no visible global function definition for ‘box’
+callNumberPeak: no visible global function definition for ‘tktoplevel’
+callNumberPeak: no visible global function definition for ‘tclVar’
+callNumberPeak: no visible global function definition for ‘tkframe’
+callNumberPeak: no visible global function definition for ‘tkpack’
+callNumberPeak: no visible global function definition for ‘tklabel’
+callNumberPeak: no visible global function definition for ‘tkentry’
+callNumberPeak: no visible global function definition for ‘tkbutton’
+callNumberPeak : <anonymous>: no visible global function definition for
+  ‘tkdestroy’
+callNumberPeak: no visible global function definition for
+  ‘tkwait.window’
+callNumberPeak: no visible global function definition for ‘tclvalue’
+callPeakValue: no visible global function definition for ‘tclVar’
+callPeakValue: no visible global function definition for ‘tktoplevel’
+callPeakValue: no visible global function definition for ‘tkwm.title’
+callPeakValue: no visible global function definition for ‘tkentry’
+callPeakValue: no visible global function definition for ‘tkgrid’
+callPeakValue: no visible global function definition for ‘tklabel’
+callPeakValue: no visible global function definition for ‘tkbutton’
+callPeakValue : <anonymous>: no visible global function definition for
+  ‘tclvalue<-’
+callPeakValue: no visible global function definition for ‘tkbind’
+callPeakValue: no visible global function definition for
+  ‘tkwait.variable’
+callPeakValue: no visible global function definition for ‘tclvalue’
+callPeakValue: no visible global function definition for ‘tkdestroy’
+clipObs2Tacsat: no visible binding for global variable ‘SI_LONG’
+clipObs2Tacsat: no visible binding for global variable ‘SI_LATI’
+clipObs2Tacsat: no visible binding for global variable ‘SI_DATIM’
+clipObs2Tacsat: no visible global function definition for ‘na.omit’
+countPings: no visible binding for global variable ‘SUM’
+diffInter: no visible global function definition for ‘sd’
+effort: no visible binding for global variable ‘FT_REF’
+effort: no visible global function definition for ‘data’
+effort: no visible binding for global variable ‘ICESareas’
+effort: no visible global function definition for ‘aggregate’
+estimateAggregation : funNB: no visible global function definition for
+  ‘dnbinom’
+estimateAggregation: no visible global function definition for ‘optim’
+estimatePropFishing: no visible global function definition for ‘data’
+estimatePropFishing: no visible binding for global variable ‘ICESareas’
+estimatePropFishing: no visible global function definition for
+  ‘aggregate’
+estimatePropFishing: no visible binding for global variable ‘SI_STATE’
+estimatePropFishing: no visible binding for global variable ‘FT_REF’
+findArea: no visible binding for global variable ‘L2’
+ICESrectangle2CSquare: no visible global function definition for ‘data’
+ICESrectangle2CSquare: no visible binding for global variable
+  ‘ICESareas’
+ICESrectangle2CSquare : <anonymous>: no visible binding for global
+  variable ‘ICESareas’
+interpolation2Tacsat: no visible global function definition for
+  ‘aggregate’
+matchAIS2Tacsat: no visible binding for global variable ‘VE_REF’
+matchAIS2Tacsat: no visible binding for global variable ‘jul’
+outsideMaxRange: no visible global function definition for
+  ‘coordinates’
+outsideMaxRange: no visible global function definition for
+  ‘point.in.polygon’
+plotTools: no visible global function definition for ‘heat.colors’
+plotTools: no visible global function definition for ‘data’
+plotTools: no visible binding for global variable ‘europa’
+plotTools: no visible global function definition for ‘theme_foundation’
+pointInHarbour: no visible global function definition for ‘write.table’
+predictAggDistri: no visible global function definition for ‘dnbinom’
+raiseTacsat: no visible global function definition for ‘data’
+raiseTacsat: no visible binding for global variable ‘ICESareas’
+raiseTacsat: no visible global function definition for ‘aggregate’
+readEflalo: no visible global function definition for ‘read.table’
+readTacsat: no visible global function definition for ‘read.table’
+segmentedTacsatSpeed: no visible binding for global variable ‘VE_REF’
+segmentedTacsatSpeed: no visible binding for global variable ‘LE_GEAR’
+segmentedTacsatSpeed: no visible binding for global variable
+  ‘VE_REF_LE_GEAR’
+segmentedTacsatSpeed: no visible global function definition for ‘hist’
+segmentedTacsatSpeed: no visible global function definition for ‘lm’
+segmentedTacsatSpeed: no visible global function definition for ‘runif’
+segmentedTacsatSpeed: no visible global function definition for
+  ‘confint’
+segmentedTacsatSpeed: no visible global function definition for
+  ‘write.csv’
+splitAmongPings: no visible binding for global variable ‘SI_STATE’
+splitAmongPings: no visible binding for global variable ‘FT_REF’
+splitAmongPings: no visible binding for global variable ‘VE_REF’
+splitAmongPings: no visible binding for global variable ‘ID.x’
+splitAmongPings: no visible binding for global variable ‘ID’
+Undefined global functions or variables:
+  aggregate axis box confint coordinates data dnbinom dnorm europa
+  FT_REF heat.colors hist ICESareas ID ID.x image jul L2 LE_GEAR lines
+  lm na.omit optim par point.in.polygon read.table runif sd SI_DATIM
+  SI_LATI SI_LONG SI_STATE SUM tclvalue tclvalue<- tclVar
+  theme_foundation tkbind tkbutton tkdestroy tkentry tkframe tkgrid
+  tklabel tkpack tktoplevel tkwait.variable tkwait.window tkwm.title
+  VE_REF VE_REF_LE_GEAR write.csv write.table x11
+Consider adding
+  importFrom("graphics", "axis", "box", "hist", "image", "lines", "par")
+  importFrom("grDevices", "heat.colors", "x11")
+  importFrom("stats", "aggregate", "confint", "dnbinom", "dnorm", "lm",
+             "na.omit", "optim", "runif", "sd")
+  importFrom("utils", "data", "read.table", "write.csv", "write.table")
+to your NAMESPACE file.
+
+Found the following calls to data() loading into the global environment:
+File ‘vmstools/R/effort.r’:
+  data(ICESareas)
+File ‘vmstools/R/estimatePropFishing.r’:
+  data(ICESareas)
+File ‘vmstools/R/ICESrectangle2CSquare.r’:
+  data(ICESareas)
+File ‘vmstools/R/plotTools.r’:
+  data(europa)
+File ‘vmstools/R/raiseTacsat.r’:
+  data(ICESareas)
+See section ‘Good practice’ in ‘?data’.
+
+Found if() conditions comparing class() to string:
+File ‘vmstools/R/activityTacsat.r’: if (!class(res[[iGr]]) == "try-error") ...
+File ‘vmstools/R/activityTacsat.r’: if (class(x) == "try-error") ...
+File ‘vmstools/R/activityTacsat.r’: if (class(shipFit[[iShip]]) != "try-error") ...
+File ‘vmstools/R/activityTacsat.r’: if (!class(res[[iGr]]) == "try-error") ...
+File ‘vmstools/R/activityTacsat.r’: if (!class(nonshipFit[[iShip]]) == "try-error") ...
+File ‘vmstools/R/activityTacsat.r’: if (!class(shipFit[[iShip]]) == "try-error") ...
+File ‘vmstools/R/activityTacsat.r’: if (!class(nonshipFit[[iShip]]) == "try-error") ...
+File ‘vmstools/R/c.listquote.r’: if (class(i) == "name" || (class(i) == "call" && i[[1]] != "list")) ...
+File ‘vmstools/R/c.listquote.r’: if (class(i) == "call" && i[[1]] == "list") ...
+File ‘vmstools/R/c.listquote.r’: if (class(i) == "character") ...
+File ‘vmstools/R/mergeEflalo2Tacsat.r’: if (class(eflalo2$VE_REF) != "character") ...
+File ‘vmstools/R/mergeEflalo2Tacsat.r’: if (class(tacsat$VE_REF) != "character") ...
+Use inherits() (or maybe is()) instead.
+* checking Rd files ... WARNING
+prepare_Rd: ./man/europa.Rd:10: unexpected section header '\source'
+prepare_Rd: ./man/europa.Rd:13: unexpected section header '\description'
+prepare_Rd: ./man/europa.Rd:16: unexpected section header '\examples'
+prepare_Rd: ./man/europa.Rd:22: unexpected section header '\keyword'
+prepare_Rd: ./man/europa.Rd:23: unexpected END_OF_INPUT '
+'
+checkRd: (-1) europa.Rd:10-12: Lost braces
+    10 | \source{
+       |        ^
+checkRd: (-1) europa.Rd:13-15: Lost braces
+    13 | \description{
+       |             ^
+checkRd: (-1) europa.Rd:16-21: Lost braces
+    16 | \examples{
+       |          ^
+checkRd: (-1) europa.Rd:22: Lost braces; missing escapes or markup?
+    22 | \keyword{datasets}
+       |         ^
+* checking Rd metadata ... NOTE
+Invalid package aliases in Rd file 'VMStools-package.Rd':
+  ‘VMStools-package’
+* checking Rd line widths ... NOTE
+Rd file 'activityTacsat.Rd':
+  \examples lines wider than 100 characters:
+                           format(SI_DATIM,"%Y") == 1801),units="year",analyse.by="LE_GEAR",identify="means")
+
+Rd file 'effort.Rd':
+  \examples lines wider than 100 characters:
+     a3 <- effort(eflalo,by=c("VE_REF","SI_MONTH"),unit="hours",weight=c(0.5,0.5),fill.na=TRUE); sum(a3$EFFORT)
+     a4 <- effort(eflalo,by=c("VE_REF","SI_QUARTER","LE_GEAR"),unit="hours",weight=c(0.5,0.5),fill.na=TRUE); sum(a4$EFFORT)
+     a6 <- effort(eflalo,by=c("SI_DAY","LE_GEAR"),unit="hours",weight=c(0.5,0.5),fill.na=TRUE); sum(a6$EFFORT)
+     b3 <- effort(tacsatp,by=c("VE_REF","SI_MONTH"),unit="hours",weight=c(0.5,0.5),fill.na=TRUE); sum(b3$EFFORT)
+     b4 <- effort(tacsatp,by=c("VE_REF","SI_QUARTER","LE_GEAR"),unit="hours",weight=c(0.5,0.5),fill.na=TRUE); sum(b4$EFFORT)
+     b5 <- effort(tacsatp,by=c("byRow"),unit="hours",weight=c(0.5,0.5),fill.na=TRUE); sum(b5$EFFORT,na.rm=T)
+
+Rd file 'findArea.Rd':
+  \examples lines wider than 100 characters:
+     points(st_coordinates(st_centroid(grd))[as.numeric(unlist(strsplit(res[selec,"idxs"]," "))),],col=2,lwd=3)
+
+These lines will be truncated in the PDF manual.
+* checking Rd cross-references ... WARNING
+Missing link or links in Rd file 'countPings.Rd':
+  ‘vmsGridCreate’
+
+Missing link or links in Rd file 'diffInter.Rd':
+  ‘distanceVMS’
+
+Missing link or links in Rd file 'eflalo2Pings.Rd':
+  ‘mergeEflalo2Pings’
+
+Missing link or links in Rd file 'eflaloHaul2Tacsat.Rd':
+  ‘eflalo2Relational’
+
+Missing link or links in Rd file 'interpolateTacsat.rd':
+  ‘plotInterpolation’
+
+Missing link or links in Rd file 'maxRangeCI.Rd':
+  ‘plotCIinterpolation’ ‘plotInterpolation’
+
+Missing link or links in Rd file 'outsideMaxRange.Rd':
+  ‘point.in.polygon’
+
+Missing link or links in Rd file 'plotTools.Rd':
+  ‘plotTreeMap’ ‘Grid2KLM’ ‘landingsMap2GIFanim’ ‘pings2EffortMaps’
+  ‘pings2LandingsMaps’
+
+Missing link or links in Rd file 'splitAmongPings.Rd':
+  ‘mergeEflalo2Pings’
+
+See section 'Cross-references' in the 'Writing R Extensions' manual.
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘estimateAggregation’ ‘estimateZeros’ ‘matchAIS2Tacsat’
+  ‘predictAggDistri’ ‘st_over’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... WARNING
+Codoc mismatches from Rd file 'calculateCI.rd':
+calculateCI
+  Code: function(int, tacint, params, grid, plot = FALSE)
+  Docs: function(int, tacint, params, grid, spatialGrid, plot = FALSE)
+  Argument names in docs not in code:
+    spatialGrid
+  Mismatches in argument names:
+    Position: 5 Code: plot Docs: spatialGrid
+
+Codoc mismatches from Rd file 'plotTools.Rd':
+plotTools
+  Code: function(x, level = "ICESrectangle", xlim, ylim, zlim = NULL,
+                 log = FALSE, gridcell = c(0.1, 0.05), color = NULL,
+                 control.tacsat = list(clm = NULL), control.eflalo =
+                 list(clm = NULL), returnRange = FALSE, las = 1,
+                 returnPlot = F)
+  Docs: function(x, level = "ICESrectangle", xlim, ylim, zlim = NULL,
+                 log = FALSE, gridcell = c(0.1, 0.05), color = NULL,
+                 control.tacsat = list(clm = NULL), control.eflalo =
+                 list(clm = NULL), returnRange = FALSE, las = 1)
+  Argument names in code not in docs:
+    returnPlot
+
+Data codoc mismatches from Rd file 'VMShf.rd':
+Variables in data frame 'VMShf'
+  Code: date declat declon heading ship speed
+  Docs: list("date") list("declat") list("declon") list("heading")
+        list("ship") list("speed")
+
+Data codoc mismatches from Rd file 'eflalo.Rd':
+Variables in data frame 'eflalo'
+  Code: FT_DCOU FT_DDAT FT_DHAR FT_DTIME FT_LCOU FT_LDAT FT_LHAR
+        FT_LTIME FT_REF LE_CDAT LE_DIV LE_EFF LE_EFF_VMS LE_ELAT
+        LE_ELON LE_ETIME LE_EURO_ANE LE_EURO_ANF LE_EURO_ARG
+        LE_EURO_BFT LE_EURO_BIB LE_EURO_BLL LE_EURO_BON LE_EURO_BRB
+        LE_EURO_BSS LE_EURO_CAT LE_EURO_CLB LE_EURO_COD LE_EURO_COE
+        LE_EURO_CRE LE_EURO_CSH LE_EURO_CTC LE_EURO_DAB LE_EURO_DEN
+        LE_EURO_DGS LE_EURO_ELE LE_EURO_ELP LE_EURO_FBM LE_EURO_FCP
+        LE_EURO_FLE LE_EURO_FPI LE_EURO_FPP LE_EURO_GAR LE_EURO_GUG
+        LE_EURO_GUR LE_EURO_GUU LE_EURO_HAD LE_EURO_HAL LE_EURO_HER
+        LE_EURO_HKE LE_EURO_JAX LE_EURO_JOD LE_EURO_LBE LE_EURO_LEM
+        LE_EURO_LEZ LE_EURO_LHT LE_EURO_LIN LE_EURO_LYY LE_EURO_MAC
+        LE_EURO_MAS LE_EURO_MUL LE_EURO_MUR LE_EURO_MZZ LE_EURO_NEP
+        LE_EURO_NOP LE_EURO_OCC LE_EURO_PIA LE_EURO_PIL LE_EURO_PLE
+        LE_EURO_POK LE_EURO_POL LE_EURO_POR LE_EURO_RAZ LE_EURO_RED
+        LE_EURO_SAA LE_EURO_SAL LE_EURO_SAN LE_EURO_SBR LE_EURO_SCE
+        LE_EURO_SME LE_EURO_SOL LE_EURO_SOS LE_EURO_SPR LE_EURO_SQU
+        LE_EURO_SRX LE_EURO_SWO LE_EURO_SYC LE_EURO_TSD LE_EURO_TUR
+        LE_EURO_WEX LE_EURO_WHB LE_EURO_WHE LE_EURO_WHG LE_EURO_WIT
+        LE_EURO_WRA LE_GEAR LE_ID LE_KG_ANE LE_KG_ANF LE_KG_ARG
+        LE_KG_BFT LE_KG_BIB LE_KG_BLL LE_KG_BON LE_KG_BRB LE_KG_BSS
+        LE_KG_CAT LE_KG_CLB LE_KG_COD LE_KG_COE LE_KG_CRE LE_KG_CSH
+        LE_KG_CTC LE_KG_DAB LE_KG_DEN LE_KG_DGS LE_KG_ELE LE_KG_ELP
+        LE_KG_FBM LE_KG_FCP LE_KG_FLE LE_KG_FPI LE_KG_FPP LE_KG_GAR
+        LE_KG_GUG LE_KG_GUR LE_KG_GUU LE_KG_HAD LE_KG_HAL LE_KG_HER
+        LE_KG_HKE LE_KG_JAX LE_KG_JOD LE_KG_LBE LE_KG_LEM LE_KG_LEZ
+        LE_KG_LHT LE_KG_LIN LE_KG_LYY LE_KG_MAC LE_KG_MAS LE_KG_MUL
+        LE_KG_MUR LE_KG_MZZ LE_KG_NEP LE_KG_NOP LE_KG_OCC LE_KG_PIA
+        LE_KG_PIL LE_KG_PLE LE_KG_POK LE_KG_POL LE_KG_POR LE_KG_RAZ
+        LE_KG_RED LE_KG_SAA LE_KG_SAL LE_KG_SAN LE_KG_SBR LE_KG_SCE
+        LE_KG_SME LE_KG_SOL LE_KG_SOS LE_KG_SPR LE_KG_SQU LE_KG_SRX
+        LE_KG_SWO LE_KG_SYC LE_KG_TSD LE_KG_TUR LE_KG_WEX LE_KG_WHB
+        LE_KG_WHE LE_KG_WHG LE_KG_WIT LE_KG_WRA LE_MET_level6 LE_MSZ
+        LE_RECT LE_SLAT LE_SLON LE_STIME LE_UNIT VE_COU VE_FLT VE_KW
+        VE_LEN VE_REF VE_TON
+  Docs: list("FT_DCOU") list("FT_DDAT") list("FT_DHAR")
+        list("FT_DTIME") list("FT_LCOU") list("FT_LDAT")
+        list("FT_LHAR") list("FT_LTIME") list("FT_REF") list("LE_CDAT")
+        list("LE_DIV") list("LE_ELAT") list("LE_ELON") list("LE_ETIME")
+        list("LE_EURO_SPEC") list("LE_GEAR") list("LE_ID")
+        list("LE_KG_SPEC") list("LE_MET_level6") list("LE_MSZ")
+        list("LE_RECT") list("LE_SLAT") list("LE_SLON")
+        list("LE_STIME") list("VE_COU") list("VE_FLT") list("VE_KW")
+        list("VE_LEN") list("VE_REF") list("VE_TON")
+
+Data codoc mismatches from Rd file 'tacsat.Rd':
+Variables in data frame 'tacsat'
+  Code: SI_DATE SI_HE SI_LATI SI_LONG SI_SP SI_TIME VE_COU VE_REF
+  Docs: list("SI_DATE") list("SI_HE") list("SI_LATI") list("SI_LONG")
+        list("SI_SP") list("SI_TIME") list("VE_COU") list("VE_REF")
+
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in Rd file 'ICESarea.Rd'
+  ‘st_crs’
+Documented arguments not in \usage in Rd file 'ICESarea.Rd':
+  ‘proj4string’
+
+Undocumented arguments in Rd file 'calculateCI.rd'
+  ‘spatialGrid’
+
+Undocumented arguments in Rd file 'countPings.Rd'
+  ‘by’
+
+Undocumented arguments in Rd file 'eflalo2Pings.Rd'
+  ‘by’
+
+Undocumented arguments in Rd file 'findEndTacsat.rd'
+  ‘SI_DATIM’ ‘startVMS’
+Documented arguments not in \usage in Rd file 'findEndTacsat.rd':
+  ‘tacsat’ ‘startTacsat’
+
+Undocumented arguments in Rd file 'lonLatRatio.Rd'
+  ‘x1’
+Documented arguments not in \usage in Rd file 'lonLatRatio.Rd':
+  ‘lon’
+
+Undocumented arguments in Rd file 'pointInHarbour.Rd'
+  ‘harbours’ ‘rowSize’
+Documented arguments not in \usage in Rd file 'pointInHarbour.Rd':
+  ‘harbour’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... NOTE
+Rd files without \description:
+  ‘europa.Rd’
+* checking for unstated dependencies in examples ... WARNING
+'library' or 'require' calls not declared from:
+  ‘mapdata’ ‘maps’ ‘sp’
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... WARNING
+  Warning: found non-ASCII strings
+  '<c5>BENR<c5>' in object 'harbours'
+  'Aber Wrac h (Land<e9>da)' in object 'harbours'
+  '<c6>R<d8>SK<d8>BING' in object 'harbours'
+  'AGER<d8>' in object 'harbours'
+  'AGERS<d8>' in object 'harbours'
+  '<c5>LB<c6>K' in object 'harbours'
+  '<c5>LBORG' in object 'harbours'
+  'ALCAL<c1>' in object 'harbours'
+  'ALR<d8>' in object 'harbours'
+  '<c5>LSG<c5>RDE' in object 'harbours'
+  'APPEN<c6>S' in object 'harbours'
+  'Ar<e8>s' in object 'harbours'
+  '<c5>RGAB' in object 'harbours'
+  '<c5>RHUS' in object 'harbours'
+  '<c5>R<d8>' in object 'harbours'
+  '<c5>R<d8>SUND' in object 'harbours'
+  'ARRESKOV S<d8>' in object 'harbours'
+  'ARRES<d8>' in object 'harbours'
+  'Ars-en-R<e9>' in object 'harbours'
+  '<c5>RSDALE' in object 'harbours'
+  'AS<c5>' in object 'harbours'
+  'ASK<d8>' in object 'harbours'
+  'ASN<c6>S' in object 'harbours'
+  'AVERNAK<d8>' in object 'harbours'
+  'Bagg<f6>' in object 'harbours'
+  'B<c5>G<d8>' in object 'harbours'
+  'BALLEN (SAMS<d8>)' in object 'harbours'
+  'BA<d1>UGUES' in object 'harbours'
+  'B<c5>RING' in object 'harbours'
+  'BASN<c6>S' in object 'harbours'
+  'BASTRUP S<d8>' in object 'harbours'
+  'BAVELSE S<d8>' in object 'harbours'
+  'Belle-<ce>le-en-Mer (ens. de communes)' in object 'harbours'
+  'B<e9>nodet' in object 'harbours'
+  'Berg<f6>' in object 'harbours'
+  'Berni<e8>res-sur-Mer' in object 'harbours'
+  'Bestr<e9>e (Plogoff)' in object 'harbours'
+  'BIRKS<d8>' in object 'harbours'
+  'BJERREG<c5>RD' in object 'harbours'
+  'BJ<d8>RN<d8>' in object 'harbours'
+  'BL<c5>VAND' in object 'harbours'
+  'B<d8>GESKOVEN' in object 'harbours'
+  'BOG<d8>' in object 'harbours'
+  'B<d8>JDEN' in object 'harbours'
+  'B<d8>LSHAVN' in object 'harbours'
+  'B<d8>NNERUP' in object 'harbours'
+  'BOVENSE MOSE (<d8>STFYN)' in object 'harbours'
+  'B<d8>VLING HAVN = B<d8>VLINGBJERG' in object 'harbours'
+  'B<d8>VLINGBJERG' in object 'harbours'
+  'Boyardville (Saint-Georges-d Ol<e9>ron)' in object 'harbours'
+  'BREGN<d8>R' in object 'harbours'
+  'Br<e9>hec (plusieurs communes)' in object 'harbours'
+  'Br<e9>zellec (Plogoff)' in object 'harbours'
+  'Brigneau (Mo<eb>lan-sur-Mer)' in object 'harbours'
+  'Bugu<e9>l<e8>s (Penv<e9>nan)' in object 'harbours'
+  'BURES<d8>' in object 'harbours'
+  'Calvi / L <ce>le-Rousse' in object 'harbours'
+  'CAMARI<d1>AS' in object 'harbours'
+  'Camo<eb>l' in object 'harbours'
+  'Cap-Ferret (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Carg<e8>se' in object 'harbours'
+  'Cari<f1>o' in object 'harbours'
+  'CARREIRA-AGUI<d1>O' in object 'harbours'
+  'CHRISTIANS<d8>' in object 'harbours'
+  'Claouey (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Cl<e9>der' in object 'harbours'
+  'Collioure / Argel<e8>s-sur-Mer' in object 'harbours'
+  'Cou<eb>ron' in object 'harbours'
+  'DAGEL<d8>KKE' in object 'harbours'
+  'Dahou<eb>t (Pl<e9>neuf-Val-Andr<e9>)' in object 'harbours'
+  'DALSG<c5>RD' in object 'harbours'
+  'Di<e9>lette (Flamanville)' in object 'harbours'
+  'Do<eb>lan (Clohars-Carno<eb>t)' in object 'harbours'
+  'DRAG<d8>R' in object 'harbours'
+  'DREJ<d8>' in object 'harbours'
+  'DYBS<d8>' in object 'harbours'
+  'Dziwn<f3>w' in object 'harbours'
+  'El<e4>visluoto' in object 'harbours'
+  'ESPERG<c6>RDE' in object 'harbours'
+  'ESRUM S<d8>' in object 'harbours'
+  'Etang du Pr<e9>vost (ens. de communes)' in object 'harbours'
+  '<c9>taples' in object 'harbours'
+  '<c9>tretat' in object 'harbours'
+  'F<c5>BORG' in object 'harbours'
+  'F<c6>N<d8>' in object 'harbours'
+  'F<e9>camp' in object 'harbours'
+  'FEJ<d8>' in object 'harbours'
+  'FEM<d8>' in object 'harbours'
+  'FISKERIHAVNEN/K<d8>BENHAVN' in object 'harbours'
+  'FJ<c6>LLEBROEN' in object 'harbours'
+  'FLADE S<d8>' in object 'harbours'
+  'FLYNDERS<d8>' in object 'harbours'
+  'F<d8>NSSKOV' in object 'harbours'
+  'F<d8>RBY S<d8>' in object 'harbours'
+  'FREDERIKSV<c6>RK' in object 'harbours'
+  'FURES<d8>' in object 'harbours'
+  'G<c5>BENSE' in object 'harbours'
+  'GAMMEL <c5>LBO' in object 'harbours'
+  'G<e2>vres' in object 'harbours'
+  'Gen<ea>ts' in object 'harbours'
+  'GERSH<d8>J' in object 'harbours'
+  'GERS<d8> HUSE' in object 'harbours'
+  'Giens / Porquerolles (Hy<e8>res)' in object 'harbours'
+  'GJ<d8>L' in object 'harbours'
+  'GL<c6>N<d8>' in object 'harbours'
+  'GLENSTRUP S<d8>' in object 'harbours'
+  'GLYNG<d8>RE' in object 'harbours'
+  'G<f3>rki Wschodnie' in object 'harbours'
+  'G<f3>rki Zachodnie' in object 'harbours'
+  'Grand Piquey (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'GR<c5>STEN' in object 'harbours'
+  'GREN<c5>' in object 'harbours'
+  'GR<d8>NSUND' in object 'harbours'
+  'GUDS<d8>' in object 'harbours'
+  'Gu<e9>thary / Bidart / Biarritz' in object 'harbours'
+  'GUNDS<d8>MAGLE S<d8>' in object 'harbours'
+  'GURRE S<d8>' in object 'harbours'
+  'GYRSTINGE S<d8>' in object 'harbours'
+  'H<c5>RB<d8>LLEBRO' in object 'harbours'
+  'HARBO<d8>RE' in object 'harbours'
+  'HARDESH<d8>J' in object 'harbours'
+  'HASSEL<d8>' in object 'harbours'
+  'HAVNS<d8>' in object 'harbours'
+  'HELN<c6>S' in object 'harbours'
+  'HELSING<d8>R' in object 'harbours'
+  'HESN<c6>S' in object 'harbours'
+  'HJARB<c6>K' in object 'harbours'
+  'H<d8>JER' in object 'harbours'
+  'HOLB<c6>K' in object 'harbours'
+  'H<d8>LKERUP' in object 'harbours'
+  'H<d8>RBY' in object 'harbours'
+  'HORNB<c6>K' in object 'harbours'
+  'H<d8>RUPHAV' in object 'harbours'
+  'HOV (<d8>STJYLLAND)' in object 'harbours'
+  'H<d8>V<c6>NGE' in object 'harbours'
+  'HOVS<d8>R' in object 'harbours'
+  'HUMLEB<c6>K' in object 'harbours'
+  'HVIDKILDE S<d8> (V. SVENDBORG)' in object 'harbours'
+  'Ile-de-Br<e9>hat' in object 'harbours'
+  'ILLEB<d8>LLE' in object 'harbours'
+  'Ing<e5> Fiskehamn' in object 'harbours'
+  'J<c6>GERSPRIS' in object 'harbours'
+  'JEGIND<d8>' in object 'harbours'
+  'JULS<d8>' in object 'harbours'
+  'K<e4>ldinge' in object 'harbours'
+  'KALV<d8>' in object 'harbours'
+  'KARREB<c6>KSMINDE' in object 'harbours'
+  'Kask<f6>' in object 'harbours'
+  'Kasn<e4>s' in object 'harbours'
+  'Keih<e4>ssalmi' in object 'harbours'
+  'K<e9>rascou<eb>t (H<f4>pital-Camfrout)' in object 'harbours'
+  'Kerdruc (N<e9>vez)' in object 'harbours'
+  'K<e9>rity (Penmarch)' in object 'harbours'
+  'KLITG<c5>RDS FISKERLEJE' in object 'harbours'
+  'KLITM<d8>LLER' in object 'harbours'
+  'KNUDS<d8>' in object 'harbours'
+  'K<d8>BENHAVN' in object 'harbours'
+  'K<d8>GE' in object 'harbours'
+  'K<d8>GE S<d8>NAKKE' in object 'harbours'
+  'KOLBY K<c5>S' in object 'harbours'
+  'KONGSG<c5>RDE' in object 'harbours'
+  'K<f5>rgessaare' in object 'harbours'
+  'KORSHAVN (V. AVERNAK<d8>)' in object 'harbours'
+  'KORS<d8>R' in object 'harbours'
+  'KRAGEN<c6>S' in object 'harbours'
+  'KV<c6>STHUSBROEN' in object 'harbours'
+  'L Arcou<eb>st / Cornec (Ploubazlanec)' in object 'harbours'
+  'L Herbaudi<e8>re (Noirmoutier-en-l <ce>le)' in object 'harbours'
+  'L Herbe (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'La Barboti<e8>re (Gujan-Mestras)' in object 'harbours'
+  'La Coru<f1>a' in object 'harbours'
+  'La Cotini<e8>re (Saint-Pierre-d Ol<e9>ron)' in object 'harbours'
+  'La Flotte-en-R<e9> (La Flotte)' in object 'harbours'
+  'La For<ea>t-Fouesnant' in object 'harbours'
+  'La Fosse (Barb<e2>tre)' in object 'harbours'
+  'La Martini<e8>re (Le Pellerin)' in object 'harbours'
+  'La Puebla Del Carami<f1>al' in object 'harbours'
+  'La Trinit<e9>-sur-Mer' in object 'harbours'
+  'La Vigne (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Lamarque (Saint-Yzans-de-M<e9>doc)' in object 'harbours'
+  'Land<e9>da' in object 'harbours'
+  'Land<e9>vennec' in object 'harbours'
+  'LANG<d8>' in object 'harbours'
+  'LANG<d8>R' in object 'harbours'
+  'Le Barcar<e8>s' in object 'harbours'
+  'Le Bonhomme (La Gu<e9>rini<e8>re)' in object 'harbours'
+  'Le Canon (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Le Ch<e2>teau-d Ol<e9>ron' in object 'harbours'
+  'Le Douhet (Saint-Denis-d Ol<e9>ron)' in object 'harbours'
+  'Le Fr<ea>t (Crozon)' in object 'harbours'
+  'Le Morin  (La Gu<e9>rini<e8>re)' in object 'harbours'
+  'Le Pouldu (Clohars-Carno<eb>t)' in object 'harbours'
+  'Le Tr<e9>port' in object 'harbours'
+  'L<e8>ge (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Les Boucholeurs (Ch<e2>telaillon-Plage)' in object 'harbours'
+  'Les Jacquets (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'L<e9>zardrieux' in object 'harbours'
+  'Locmiqu<e9>lic' in object 'harbours'
+  'Locqu<e9>meau (Tr<e9>drez-Locqu<e9>meau)' in object 'harbours'
+  'L<d8>GST<d8>R' in object 'harbours'
+  'L<d8>KKEN' in object 'harbours'
+  'L<d8>NSTRUP' in object 'harbours'
+  'LUMS<c5>S' in object 'harbours'
+  'LUNDEH<d8>JE' in object 'harbours'
+  'LUND<d8>' in object 'harbours'
+  'LYN<c6>S' in object 'harbours'
+  'LY<d8>' in object 'harbours'
+  'MADES<d8>' in object 'harbours'
+  'Malpica de Berganti<f1>os' in object 'harbours'
+  'MARB<c6>K' in object 'harbours'
+  'M<c5>RUP HAVN' in object 'harbours'
+  'MASNED<d8>' in object 'harbours'
+  'Merrien (Mo<eb>lan-sur-Mer)' in object 'harbours'
+  'M<e8>ze' in object 'harbours'
+  'MI<d1>O' in object 'harbours'
+  'Moa<f1>a' in object 'harbours'
+  'Mol<e8>ne (Ile-Mol<e8>ne)' in object 'harbours'
+  'M<f5>ntu' in object 'harbours'
+  'M<d8>RKHOLT' in object 'harbours'
+  'MOSS<d8>' in object 'harbours'
+  'N<c6>STVED' in object 'harbours'
+  'Narva-J<f5>esuu' in object 'harbours'
+  'NEDER DR<c5>BY' in object 'harbours'
+  'NEKSEL<d8>' in object 'harbours'
+  'NEX<d8>' in object 'harbours'
+  'NIV<c5>' in object 'harbours'
+  'Noirmoutier-en-l <ce>le' in object 'harbours'
+  'N<d8>RRE BORK (BORK HAVN)' in object 'harbours'
+  'N<d8>RRE LYNGBY' in object 'harbours'
+  'N<d8>RRE LYNGVIG' in object 'harbours'
+  'N<d8>RRE NISSUM (LIMFJORD)' in object 'harbours'
+  'N<d8>RRE VEDBY' in object 'harbours'
+  'N<d8>RRE VORUP<d8>R' in object 'harbours'
+  'N<d8>RREBY' in object 'harbours'
+  'N<d8>RRESUNDBY' in object 'harbours'
+  'NORS S<d8>' in object 'harbours'
+  'NYB<d8>L' in object 'harbours'
+  'NYK<d8>BING F' in object 'harbours'
+  'NYK<d8>BING M' in object 'harbours'
+  'NYK<d8>BING S' in object 'harbours'
+  '<d8>LSTED' in object 'harbours'
+  'OM<d8>' in object 'harbours'
+  '<d8>RBYHAGE' in object 'harbours'
+  'OR<d8> HAVN' in object 'harbours'
+  '<d8>RODDE' in object 'harbours'
+  '<d8>RSLEVKLOSTER S<d8>' in object 'harbours'
+  '<d8>RUM S<d8>' in object 'harbours'
+  '<d6>skata/N<e4>mpn<e4>s' in object 'harbours'
+  '<d8>STER HURUP' in object 'harbours'
+  '<d8>STERBY' in object 'harbours'
+  '<d8>STERHUSE (LANGELAND)' in object 'harbours'
+  '<d8>STERSKOV STRAND (SYDLANGELAND)' in object 'harbours'
+  '<d8>STSKOV' in object 'harbours'
+  'OVES<d8>' in object 'harbours'
+  'OVI<d1>ANA' in object 'harbours'
+  'Paldiski L<f5>unasadam' in object 'harbours'
+  'Paldiski P<f5>hjasadam' in object 'harbours'
+  'PAMHULE S<d8>' in object 'harbours'
+  'P<e4>rnu' in object 'harbours'
+  'Pempoul (Saint-Pol-de-L<e9>on)' in object 'harbours'
+  'PE<d1>ISCOLA' in object 'harbours'
+  'PETERV<c6>RFT' in object 'harbours'
+  'Petit Piquey (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Piraillan (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Port-Blanc (Tr<e9>vou-Tr<e9>guignec)' in object 'harbours'
+  'Port-Lazo (Plou<e9>zec)' in object 'harbours'
+  'Port-Saint-Louis-du-Rh<f4>ne' in object 'harbours'
+  'Port de Goul<e9>e (Valeyrac)' in object 'harbours'
+  'Port le Four (L<e8>ge-Cap-Ferret)' in object 'harbours'
+  'Port Manec h (N<e9>vez)' in object 'harbours'
+  'PR<c6>ST<d8>' in object 'harbours'
+  'Pr<e9>failles' in object 'harbours'
+  'PUERTITO DE G<dc>IMAR' in object 'harbours'
+  'Ragu<e9>n<e8>s (N<e9>vez)' in object 'harbours'
+  'REB<c6>K' in object 'harbours'
+  'REERS<d8>' in object 'harbours'
+  'REFS<d8>RE' in object 'harbours'
+  'Regn<e9>ville-sur-Mer' in object 'harbours'
+  'RINGK<d8>BING' in object 'harbours'
+  'R<d8>DBY HAVN' in object 'harbours'
+  'RODDENBJERG S<d8>' in object 'harbours'
+  'R<d8>DHUS' in object 'harbours'
+  'R<d8>DS<d8>' in object 'harbours'
+  'R<d8>DVIG' in object 'harbours'
+  'Rohuk<fc>la' in object 'harbours'
+  'R<d8>NBJERG' in object 'harbours'
+  'R<d8>NNE' in object 'harbours'
+  'R<d8>NNERHAVN' in object 'harbours'
+  'R<d8>RVIG' in object 'harbours'
+  'R<d8>SN<c6>S' in object 'harbours'
+  'RUDK<d8>BING' in object 'harbours'
+  'RYDSB<c6>K' in object 'harbours'
+  'S<c6>BY' in object 'harbours'
+  'S<c6>NE' in object 'harbours'
+  'Saint-Andr<e9>-de-Cubzac' in object 'harbours'
+  'Saint-Christoly-M<e9>doc' in object 'harbours'
+  'Saint-Est<e8>phe' in object 'harbours'
+  'Saint-Gu<e9>nol<e9> (Penmarch)' in object 'harbours'
+  'Saint-Martin-de-R<e9>' in object 'harbours'
+  'Saint-Rapha<eb>l' in object 'harbours'
+  'Saint-Vivien-de-M<e9>doc' in object 'harbours'
+  'SAKSK<d8>BING' in object 'harbours'
+  'Salins d Hy<e8>res (Hy<e8>res)' in object 'harbours'
+  'SALTB<c6>K VIG' in object 'harbours'
+  'SALTEN LANGS<d8>' in object 'harbours'
+  'SAN SEBASTI<c1>N DE LA GOMERA' in object 'harbours'
+  'SANDVIG (SYDSJ<c6>LLAND)' in object 'harbours'
+  'SANTA<d1>Y' in object 'harbours'
+  'SANTO<d1>A' in object 'harbours'
+  'Sein (<ce>le-de-Sein)' in object 'harbours'
+  'SEJER<d8>' in object 'harbours'
+  'S<e9>n<e9>' in object 'harbours'
+  'S<e8>te' in object 'harbours'
+  'SEVED<d8>' in object 'harbours'
+  'SILKEBORG LANGS<d8>' in object 'harbours'
+  'Sillam<e4>e' in object 'harbours'
+  'SJ<c6>LS<d8>' in object 'harbours'
+  'SK<c6>LSK<d8>R' in object 'harbours'
+  'SK<c6>RB<c6>K' in object 'harbours'
+  'SK<c6>RING' in object 'harbours'
+  'SKAL<d8>' in object 'harbours'
+  'SKANDERBORG S<d8>' in object 'harbours'
+  'SKAR<d8>' in object 'harbours'
+  'SKARRES<d8>' in object 'harbours'
+  'SK<c5>RUP<d8>RE' in object 'harbours'
+  'SK<d8>DSHOVED STRAND' in object 'harbours'
+  'SKUDEHAVNEN/K<d8>BENHAVN' in object 'harbours'
+  'SN<c6>BUM S<d8>' in object 'harbours'
+  'SN<d8>DE HESSELBJERG' in object 'harbours'
+  'SNOGEB<c6>K' in object 'harbours'
+  'SNOGH<d8>J' in object 'harbours'
+  'S<d8>BY' in object 'harbours'
+  'S<d8>LAGER' in object 'harbours'
+  'SOLR<d8>D' in object 'harbours'
+  'S<d8>MARKEN' in object 'harbours'
+  'S<d8>NDER <c5>BY' in object 'harbours'
+  'S<d8>NDER LYNGVIG' in object 'harbours'
+  'S<d8>NDER NISSUM (NISSUM FJORD)' in object 'harbours'
+  'S<d8>NDER THISE' in object 'harbours'
+  'S<d8>NDERBALLE STRAND' in object 'harbours'
+  'S<d8>NDERBORG' in object 'harbours'
+  'S<d8>NDERHAV' in object 'harbours'
+  'S<d8>NDERSKOV (<d8>ST FOR SK<c6>RB<c6>K)' in object 'harbours'
+  'S<d8>NDERSKOV HUSE' in object 'harbours'
+  'S<d8>NDERS<d8> (VED MARIBO)' in object 'harbours'
+  'S<d8>NDERVIG' in object 'harbours'
+  'SOR<d8> S<d8>' in object 'harbours'
+  'SORTS<d8>' in object 'harbours'
+  'S<f5>ru' in object 'harbours'
+  'STAVREBY (SYDSJ<c6>LLAND)' in object 'harbours'
+  'STIGSN<c6>S' in object 'harbours'
+  'STILLING SOLBJERG S<d8>' in object 'harbours'
+  'STORE KATTINGE S<d8>' in object 'harbours'
+  'STORE SN<d8>DE' in object 'harbours'
+  'STR<d8>BY LADEPLADS' in object 'harbours'
+  'STRYN<d8>' in object 'harbours'
+  'STUBBE S<d8>' in object 'harbours'
+  'STUBBEK<d8>BING' in object 'harbours'
+  'SUNDS<d8>RE' in object 'harbours'
+  'SVIN<d8>' in object 'harbours'
+  'SVOGERSLEV S<d8>' in object 'harbours'
+  'Swinoujscie-Karsib<f3>r' in object 'harbours'
+  'Swinoujscie-Przyt<f3>r' in object 'harbours'
+  'TANGE S<d8>' in object 'harbours'
+  'T<c5>RB<c6>K' in object 'harbours'
+  'T<c5>RS' in object 'harbours'
+  'TEGLK<c5>S' in object 'harbours'
+  'T<e9>renez (Plougasnou)' in object 'harbours'
+  'THUR<d8>' in object 'harbours'
+  'THYBOR<d8>N' in object 'harbours'
+  'TJELE LANGS<d8>' in object 'harbours'
+  'T<d8>MMERBY FJORD' in object 'harbours'
+  'TOR<d8> HUSE' in object 'harbours'
+  'Tr<e9>beurden' in object 'harbours'
+  'Tr<e9>boul (Douarnenez)' in object 'harbours'
+  'Tr<e9>gastel' in object 'harbours'
+  'Tr<e9>guier' in object 'harbours'
+  'Tr<e9>higuier-en-P<e9>nestin (P<e9>nestin)' in object 'harbours'
+  'Tr<e9>l<e9>vern' in object 'harbours'
+  'Tr<e9>mazan (Portsall)' in object 'harbours'
+  'Tr<e9>vignon (Tr<e9>gunc)' in object 'harbours'
+  'Tudy (<ce>le-Tudy)' in object 'harbours'
+  'TUN<d8>' in object 'harbours'
+  'TYSTRUP S<d8>' in object 'harbours'
+  'UDBYH<d8>J NORD' in object 'harbours'
+  'UDBYH<d8>J SYD' in object 'harbours'
+  'ULSE S<d8>' in object 'harbours'
+  'VANDET S<d8>' in object 'harbours'
+  'Varess<e4>ikk<e4>' in object 'harbours'
+  'VEDB<c6>K' in object 'harbours'
+  'VEDERS<d8>' in object 'harbours'
+  'VEMMEN<c6>S' in object 'harbours'
+  'VEN<d8>' in object 'harbours'
+  'VESTERBORG S<d8>' in object 'harbours'
+  'VESTER<d8>' in object 'harbours'
+  'VIBORG S<d8>' in object 'harbours'
+  'VILSUND <d8>ST' in object 'harbours'
+  'VOERS<c5>' in object 'harbours'
+  'VON<c5>' in object 'harbours'
+  'hav<f8>ysund' in object 'harbours'
+* checking data for ASCII and uncompressed saves ... WARNING
+  
+  Note: significantly better compression could be obtained
+        by using R CMD build --resave-data
+                  old_size new_size compress
+  eflalo.RData       505Kb    415Kb       xz
+  europa.RData       1.2Mb    869Kb       xz
+  harbours.RData     104Kb     58Kb       xz
+  ICESareas.RData   17.9Mb    8.8Mb       xz
+  tacsat.RData       1.8Mb    1.3Mb       xz
+* checking examples ... ERROR
+Running examples in ‘vmstools-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: ICESareas
+> ### Title: sf dataset of ICESareas
+> ### Aliases: ICESareas
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> 
+> require(sp)
+Loading required package: sp
+Warning in library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called ‘sp’
+> data(ICESareas)
+> plot(st_geometry(ICESareas))
+Error in st_geometry(ICESareas) : could not find function "st_geometry"
+Calls: plot
+Execution halted
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 10 WARNINGs, 6 NOTEs

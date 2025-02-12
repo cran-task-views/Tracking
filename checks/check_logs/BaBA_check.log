@@ -1,0 +1,233 @@
+* using log directory ‘/tmp/RtmpXMgjCE/BaBA.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘BaBA/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘BaBA’ version ‘2.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘BaBA’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... NOTE
+License components which are templates and need '+ file LICENSE':
+  MIT
+* checking top-level files ... NOTE
+File
+  LICENSE
+is not mentioned in the DESCRIPTION file.
+Non-standard files/directories found at top level:
+  ‘BaBA_Catogories.png’ ‘Flowchart.png’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+BaBA: no visible binding for global variable ‘Animal.ID’
+BaBA: no visible binding for global variable ‘timediff’
+BaBA: no visible binding for global variable ‘ptsID’
+BaBA: no visible binding for global variable ‘continuousID’
+BaBA: no visible binding for global variable ‘n’
+BaBA: no visible binding for global variable ‘burstID’
+BaBA: no visible binding for global variable ‘eventTYPE’
+BaRanking: no visible binding for global variable ‘eventTYPE’
+BaRanking: no visible binding for global variable ‘.’
+BaRanking: no visible binding for global variable ‘AnimalID’
+BaRanking: no visible binding for global variable ‘Bounce’
+BaRanking: no visible binding for global variable ‘Quick_Cross’
+BaRanking: no visible binding for global variable ‘Average_Movement’
+BaRanking: no visible binding for global variable ‘Back_n_forth’
+BaRanking: no visible binding for global variable ‘Trace’
+BaRanking: no visible binding for global variable ‘unknown’
+BaRanking: no visible binding for global variable ‘Trapped’
+BaRanking: no visible binding for global variable ‘total_enc’
+BaRanking: no visible binding for global variable ‘calc_expr’
+Undefined global functions or variables:
+  . Animal.ID AnimalID Average_Movement Back_n_forth Bounce burstID
+  calc_expr continuousID eventTYPE n ptsID Quick_Cross timediff
+  total_enc Trace Trapped unknown
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... NOTE
+Rd file 'BaRanking.Rd':
+  \usage lines wider than 90 characters:
+     index_fun = expression(((Bounce + Back_n_forth + Trace + Trapped)/total_enc) * unique_ind),
+
+These lines will be truncated in the PDF manual.
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘fences’ ‘muleDeer’ ‘pronghorn’
+Undocumented data sets:
+  ‘fences’ ‘muleDeer’ ‘pronghorn’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... WARNING
+  Warning: found non-ASCII strings
+  'PROJCRS["WGS 84 / UTM zone 12N",
+      BASEGEOGCRS["WGS 84",
+          DATUM["World Geodetic System 1984",
+              ELLIPSOID["WGS 84",6378137,298.257223563,
+                  LENGTHUNIT["metre",1]]],
+          PRIMEM["Greenwich",0,
+              ANGLEUNIT["degree",0.0174532925199433]],
+          ID["EPSG",4326]],
+      CONVERSION["UTM zone 12N",
+          METHOD["Transverse Mercator",
+              ID["EPSG",9807]],
+          PARAMETER["Latitude of natural origin",0,
+              ANGLEUNIT["degree",0.0174532925199433],
+              ID["EPSG",8801]],
+          PARAMETER["Longitude of natural origin",-111,
+              ANGLEUNIT["degree",0.0174532925199433],
+              ID["EPSG",8802]],
+          PARAMETER["Scale factor at natural origin",0.9996,
+              SCALEUNIT["unity",1],
+              ID["EPSG",8805]],
+          PARAMETER["False easting",500000,
+              LENGTHUNIT["metre",1],
+              ID["EPSG",8806]],
+          PARAMETER["False northing",0,
+              LENGTHUNIT["metre",1],
+              ID["EPSG",8807]],
+          ID["EPSG",16012]],
+      CS[Cartesian,2],
+          AXIS["(E)",east,
+              ORDER[1],
+              LENGTHUNIT["metre",1,
+                  ID["EPSG",9001]]],
+          AXIS["(N)",north,
+              ORDER[2],
+              LENGTHUNIT["metre",1,
+                  ID["EPSG",9001]]],
+      USAGE[
+          SCOPE["unknown"],
+          AREA["World - N hemisphere - 114<c3><82><c2><b0>W to 108<c3><82><c2><b0>W - by country"],
+          BBOX[0,-114,84,-108]]]' in object 'fences'
+  'PROJCRS["WGS 84 / UTM zone 12N",
+      BASEGEOGCRS["WGS 84",
+          DATUM["World Geodetic System 1984",
+              ELLIPSOID["WGS 84",6378137,298.257223563,
+                  LENGTHUNIT["metre",1]]],
+          PRIMEM["Greenwich",0,
+              ANGLEUNIT["degree",0.0174532925199433]],
+          ID["EPSG",4326]],
+      CONVERSION["UTM zone 12N",
+          METHOD["Transverse Mercator",
+              ID["EPSG",9807]],
+          PARAMETER["Latitude of natural origin",0,
+              ANGLEUNIT["degree",0.0174532925199433],
+              ID["EPSG",8801]],
+          PARAMETER["Longitude of natural origin",-111,
+              ANGLEUNIT["degree",0.0174532925199433],
+              ID["EPSG",8802]],
+          PARAMETER["Scale factor at natural origin",0.9996,
+              SCALEUNIT["unity",1],
+              ID["EPSG",8805]],
+          PARAMETER["False easting",500000,
+              LENGTHUNIT["metre",1],
+              ID["EPSG",8806]],
+          PARAMETER["False northing",0,
+              LENGTHUNIT["metre",1],
+              ID["EPSG",8807]],
+          ID["EPSG",16012]],
+      CS[Cartesian,2],
+          AXIS["(E)",east,
+              ORDER[1],
+              LENGTHUNIT["metre",1,
+                  ID["EPSG",9001]]],
+          AXIS["(N)",north,
+              ORDER[2],
+              LENGTHUNIT["metre",1,
+                  ID["EPSG",9001]]],
+      USAGE[
+          SCOPE["unknown"],
+          AREA["World - N hemisphere - 114<c3><82><c2><b0>W to 108<c3><82><c2><b0>W - by country"],
+          BBOX[0,-114,84,-108]]]' in object 'muleDeer'
+  'PROJCRS["WGS 84 / UTM zone 12N",
+      BASEGEOGCRS["WGS 84",
+          DATUM["World Geodetic System 1984",
+              ELLIPSOID["WGS 84",6378137,298.257223563,
+                  LENGTHUNIT["metre",1]]],
+          PRIMEM["Greenwich",0,
+              ANGLEUNIT["degree",0.0174532925199433]],
+          ID["EPSG",4326]],
+      CONVERSION["UTM zone 12N",
+          METHOD["Transverse Mercator",
+              ID["EPSG",9807]],
+          PARAMETER["Latitude of natural origin",0,
+              ANGLEUNIT["degree",0.0174532925199433],
+              ID["EPSG",8801]],
+          PARAMETER["Longitude of natural origin",-111,
+              ANGLEUNIT["degree",0.0174532925199433],
+              ID["EPSG",8802]],
+          PARAMETER["Scale factor at natural origin",0.9996,
+              SCALEUNIT["unity",1],
+              ID["EPSG",8805]],
+          PARAMETER["False easting",500000,
+              LENGTHUNIT["metre",1],
+              ID["EPSG",8806]],
+          PARAMETER["False northing",0,
+              LENGTHUNIT["metre",1],
+              ID["EPSG",8807]],
+          ID["EPSG",16012]],
+      CS[Cartesian,2],
+          AXIS["(E)",east,
+              ORDER[1],
+              LENGTHUNIT["metre",1,
+                  ID["EPSG",9001]]],
+          AXIS["(N)",north,
+              ORDER[2],
+              LENGTHUNIT["metre",1,
+                  ID["EPSG",9001]]],
+      USAGE[
+          SCOPE["unknown"],
+          AREA["World - N hemisphere - 114<c3><82><c2><b0>W to 108<c3><82><c2><b0>W - by country"],
+          BBOX[0,-114,84,-108]]]' in object 'pronghorn'
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... [92s/92s] OK
+Examples with CPU (user + system) or elapsed time > 5s
+            user system elapsed
+BaBA      62.675  0.104  62.772
+BaRanking 29.266  0.024  29.292
+* checking for non-standard things in the check directory ... NOTE
+Found the following files/directories:
+  ‘encountersPRONG.dbf’ ‘encountersPRONG.prj’ ‘encountersPRONG.shp’
+  ‘encountersPRONG.shx’ ‘event_imgs’
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 2 WARNINGs, 6 NOTEs

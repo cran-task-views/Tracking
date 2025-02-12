@@ -1,0 +1,192 @@
+* using log directory ‘/tmp/RtmpXMgjCE/stmove.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘stmove/DESCRIPTION’ ... OK
+* this is package ‘stmove’ version ‘0.0.9000’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+Package suggested but not available for checking: ‘tlocoh’
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘stmove’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking ‘build’ directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespace in Imports field not imported from: ‘tidyr’
+  All declared Imports should be used.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking R/sysdata.rda ... OK
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... ERROR
+Running examples in ‘stmove-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: interval_stats
+> ### Title: Interval Summary Statistics
+> ### Aliases: interval_stats
+> 
+> ### ** Examples
+> 
+> # diurnal is default
+> interval_stats(AG195)
+# A tibble: 730 × 9
+# Groups:   interval_start [730]
+   interval_start      TOD    mean_dist sd_dist acf_dist mean_ang sd_ang acf_ang
+   <dttm>              <chr>      <dbl>   <dbl>    <dbl>    <dbl>  <dbl>   <dbl>
+ 1 2010-01-01 00:00:00 0:00-…      88.0   114.    0.515   -0.0457  1.37  -0.399 
+ 2 2010-01-01 12:00:00 12:00…     146.    181.    0.570   -0.290   1.19   0.0298
+ 3 2010-01-02 00:00:00 0:00-…     147.    177.    0.591    0.493   1.31  -0.201 
+ 4 2010-01-02 12:00:00 12:00…     157.    154.    0.612   -0.0942  0.923 -0.412 
+ 5 2010-01-03 00:00:00 0:00-…      87.2   125.    0.436    0.0130  0.902  0.0815
+ 6 2010-01-03 12:00:00 12:00…      43.5    64.3   0.452    0.257   1.33   0.0269
+ 7 2010-01-04 00:00:00 0:00-…      70.6    96.2   0.595   -0.314   1.54   0.123 
+ 8 2010-01-04 12:00:00 12:00…      42.5    33.8   0.143   -0.0764  1.45  -0.0202
+ 9 2010-01-05 00:00:00 0:00-…      95.2   111.    0.473   -0.0782  1.37  -0.102 
+10 2010-01-05 12:00:00 12:00…      63.3    42.6   0.0695   0.0619  1.02   0.0658
+# ℹ 720 more rows
+# ℹ 1 more variable: ccf <dbl>
+> interval_stats(AG195, type = "lunar")
+# A tibble: 25 × 9
+# Groups:   interval_start [25]
+   interval_start phase      mean_dist sd_dist acf_dist mean_ang sd_ang  acf_ang
+   <fct>          <chr>          <dbl>   <dbl>    <dbl>    <dbl>  <dbl>    <dbl>
+ 1 2010-01-01     Full-Wani…      99.8    126.    0.571 -5.92e-4   1.31 -0.0351 
+ 2 2010-01-12     New-Waxing     118.     122.    0.517  1.52e-2   1.22 -0.0611 
+ 3 2010-01-26     Full-Wani…     181.     239.    0.686 -3.61e-2   1.32  0.0199 
+ 4 2010-02-10     New-Waxing     244.     284.    0.710  6.39e-2   1.30  0.0235 
+ 5 2010-02-25     Full-Wani…     210.     254.    0.674  6.49e-2   1.37  0.0434 
+ 6 2010-03-12     New-Waxing     192.     261.    0.700  1.24e-2   1.37 -0.0126 
+ 7 2010-03-27     Full-Wani…     105.     152.    0.709  5.35e-2   1.28 -0.00154
+ 8 2010-04-10     New-Waxing     184.     246.    0.751 -2.38e-2   1.21 -0.00632
+ 9 2010-04-25     Full-Wani…     119.     161.    0.539  4.81e-2   1.23 -0.119  
+10 2010-05-10     New-Waxing     115.     169.    0.612  4.37e-2   1.19 -0.0617 
+# ℹ 15 more rows
+# ℹ 1 more variable: ccf <dbl>
+> # for seasonal, include y-m-d formatted `seas` vector
+> interval_stats(AG195, type = "seasonal", seas = c("2010-03-01", "2010-06-01", "2010-9-01"))
+Error in `tibble()`:
+! Column name `interval_start` must not be duplicated.
+Use `.name_repair` to specify repair.
+Caused by error in `repaired_names()`:
+! Names must be unique.
+✖ These names are duplicated:
+  * "interval_start" at locations 1 and 2.
+Backtrace:
+     ▆
+  1. ├─stmove::interval_stats(...)
+  2. │ └─traj %>% group_by(.data$interval_start, !!quocol) %>% ...
+  3. ├─dplyr::summarise(...)
+  4. ├─dplyr::group_by(., .data$interval_start, !!quocol)
+  5. └─dplyr:::group_by.data.frame(., .data$interval_start, !!quocol)
+  6.   └─dplyr::grouped_df(groups$data, groups$group_names, .drop)
+  7.     └─dplyr:::compute_groups(data, vars, drop = drop)
+  8.       └─tibble::tibble(!!!old_keys, `:=`(".rows", old_rows))
+  9.         └─tibble:::tibble_quos(xs, .rows, .name_repair)
+ 10.           └─tibble:::set_repaired_names(...)
+ 11.             └─tibble:::repaired_names(...)
+ 12.               ├─tibble:::subclass_name_repair_errors(...)
+ 13.               │ └─base::withCallingHandlers(...)
+ 14.               └─vctrs::vec_as_names(...)
+ 15.                 └─vctrs (local) `<fn>`()
+ 16.                   └─vctrs:::validate_unique(names = names, arg = arg, call = call)
+ 17.                     └─vctrs:::stop_names_must_be_unique(names, arg, call = call)
+ 18.                       └─vctrs:::stop_names(...)
+ 19.                         └─vctrs:::stop_vctrs(...)
+ 20.                           └─rlang::abort(message, class = c(class, "vctrs_error"), ..., call = call)
+Execution halted
+* checking examples with --run-donttest ... ERROR
+Running examples in ‘stmove-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: build_report
+> ### Title: Build a report with basic spatio-temporal movement computations
+> ### Aliases: build_report
+> 
+> ### ** Examples
+> 
+> ## No test: 
+> build_report(AG195, proj4 = "+proj=utm +zone=33 +south +datum=WGS84 +units=m +no_defs")
+
+
+processing file: report.Rmd
+Error:
+! F used instead of FALSE
+
+Quitting from lines 17-35 [setup] (report.Rmd)
+Execution halted
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... ERROR
+  Running ‘testthat.R’
+Running the tests in ‘tests/testthat.R’ failed.
+Last 13 lines of output:
+    'test-population.R:17:3'
+  
+  ══ Failed tests ════════════════════════════════════════════════════════════════
+  ── Error ('test-stats.R:74:3'): season intervals work ──────────────────────────
+  <tibble_error_column_names_must_be_unique/tibble_error/rlang_error/error/condition>
+  Error in `tibble(!!!old_keys, `:=`(".rows", old_rows))`: Column name `interval_start` must not be duplicated.
+  Use `.name_repair` to specify repair.
+  Caused by error in `repaired_names()`:
+  ! Names must be unique.
+  ✖ These names are duplicated:
+    * "interval_start" at locations 1 and 2.
+  
+  [ FAIL 1 | WARN 2 | SKIP 7 | PASS 25 ]
+  Error: Test failures
+  Execution halted
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes ... NOTE
+Package vignette with placeholder title ‘Vignette Title’:
+  ‘stmove_vignette.Rmd’
+* checking re-building of vignette outputs ... OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 3 ERRORs, 4 NOTEs

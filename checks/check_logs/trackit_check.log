@@ -1,0 +1,296 @@
+* using log directory ‘/tmp/RtmpXMgjCE/trackit.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘trackit/DESCRIPTION’ ... OK
+* this is package ‘trackit’ version ‘0.2-6’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘trackit’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... NOTE
+Deprecated license: BSD
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... WARNING
+'library' or 'require' call not declared from: ‘ncdf4’
+'library' or 'require' call to ‘date’ which was already attached by Depends.
+  Please remove these calls from your code.
+'library' or 'require' call to ‘ncdf4’ in package code.
+  Please use :: or requireNamespace() instead.
+  See section 'Suggested packages' in the 'Writing R Extensions' manual.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... WARNING
+Found an obsolete/platform-specific call in the following function:
+  ‘light.simulator’
+Found the defunct/removed function:
+  ‘.path.package’
+
+In addition to the above warning(s), found the following notes:
+
+NB: .First.lib is obsolete and will not be used in R >= 3.0.0
+File ‘trackit/R/all.R’:
+  .First.lib calls:
+    cat("\n")
+    cat(paste(rep("=", options()$width), collapse = ""), "\n\n")
+    cat("Welcome to trackit\n")
+    cat("\n")
+    cat("WINDOWS USERS: Please press (Ctrl+W) or use the menu \n")
+    cat("(Misc->Buffered output) to switch the delayed output off.\n")
+    cat("\n")
+    cat(paste(rep("=", options()$width), collapse = ""), "\n\n")
+
+Package startup functions should use ‘packageStartupMessage’ to
+  generate messages.
+See section ‘Good practice’ in '?.onAttach'.
+
+print.trackit: warning in formatC(abs(x$max.grad.comp), dig = 4, wid =
+  6, format = "f"): partial argument match of 'dig' to 'digits'
+print.trackit: warning in formatC(abs(x$max.grad.comp), dig = 4, wid =
+  6, format = "f"): partial argument match of 'wid' to 'width'
+.First.lib: no visible global function definition for ‘data’
+.First.lib: no visible binding for global variable ‘angle2light’
+.First.lib: no visible binding for global variable ‘gmt3’
+.trimit: no visible global function definition for ‘locator’
+.trimit: no visible global function definition for ‘points’
+approxDeltaT: no visible global function definition for ‘approx’
+fitmap: no visible global function definition for ‘par’
+fitmap : .CI.reg: no visible global function definition for ‘par’
+fitmap : .CI.reg: no visible global function definition for ‘qchisq’
+fitmap : .CI.reg: no visible global function definition for ‘polygon’
+fitmap: no visible global function definition for ‘lines’
+fitmap: no visible global function definition for ‘points’
+get.avhrr.sst: no visible global function definition for
+  ‘download.file’
+get.avhrr.sst: no visible global function definition for ‘write.table’
+get.avhrr.sst: no visible global function definition for
+  ‘complete.cases’
+get.avhrr.sst: no visible binding for '<<-' assignment to
+  ‘.sstFileVector’
+get.sst.from.server: no visible global function definition for
+  ‘download.file’
+get.sst.from.server: no visible global function definition for
+  ‘nc_open’
+get.sst.from.server: no visible global function definition for
+  ‘ncvar_get’
+get.sst.from.server: no visible global function definition for
+  ‘nc_close’
+get.sst.from.server: no visible global function definition for
+  ‘ncvar_def’
+get.sst.from.server: no visible global function definition for
+  ‘ncvar_add’
+get.sst.from.server: no visible global function definition for
+  ‘ncvar_put’
+get.sst.from.server: no visible global function definition for
+  ‘nc_sync’
+get.sst.from.server: no visible global function definition for
+  ‘na.omit’
+get.sst.from.server: no visible global function definition for
+  ‘write.table’
+get.sst.from.server: no visible binding for '<<-' assignment to
+  ‘.sstFileVector’
+JD: no visible binding for global variable ‘deltat’
+light.simulator: no visible binding for global variable ‘angle2light’
+light.simulator : addCorrNoise: no visible global function definition
+  for ‘write.table’
+light.simulator: no visible global function definition for ‘rnorm’
+light.simulator: no visible binding for '<<-' assignment to
+  ‘.sstFileVector’
+light.simulator: no visible binding for global variable
+  ‘.sstFileVector’
+light.simulator: no visible global function definition for ‘approx’
+light.simulator: no visible global function definition for
+  ‘write.table’
+light.simulator: no visible global function definition for
+  ‘.path.package’
+light.simulator: no visible global function definition for ‘read.table’
+light.simulator: no visible global function definition for ‘approxfun’
+plot.trackit: no visible global function definition for ‘par’
+plotbasemap: no visible binding for global variable ‘gmt3’
+plotbasemap: no visible global function definition for ‘par’
+plotbasemap: no visible global function definition for ‘plot.new’
+plotbasemap: no visible global function definition for ‘rect’
+plotbasemap: no visible global function definition for ‘axis’
+plotbasemap: no visible global function definition for ‘polygon’
+plotbasemap: no visible global function definition for ‘mtext’
+plotbasemap: no visible global function definition for ‘locator’
+plotlat: no visible global function definition for ‘axis’
+plotlat: no visible global function definition for ‘mtext’
+plotlat: no visible global function definition for ‘box’
+plotlat: no visible global function definition for ‘polygon’
+plotlat: no visible global function definition for ‘lines’
+plotlat: no visible global function definition for ‘points’
+plotlon: no visible global function definition for ‘axis’
+plotlon: no visible global function definition for ‘mtext’
+plotlon: no visible global function definition for ‘box’
+plotlon: no visible global function definition for ‘polygon’
+plotlon: no visible global function definition for ‘lines’
+plotlon: no visible global function definition for ‘points’
+plotsst: no visible global function definition for ‘axis’
+plotsst: no visible global function definition for ‘mtext’
+plotsst: no visible global function definition for ‘box’
+plotsst: no visible global function definition for ‘lines’
+plotsst: no visible global function definition for ‘points’
+prepit: no visible global function definition for ‘write.table’
+prepit: no visible binding for '<<-' assignment to ‘.sstFileVector’
+prepit: no visible binding for global variable ‘.sstFileVector’
+prepit: no visible global function definition for ‘filepath’
+print.trackit: no visible global function definition for
+  ‘packageDescription’
+scroll: no visible global function definition for ‘par’
+trackit: no visible global function definition for ‘write.table’
+trackit: no visible global function definition for ‘read.table’
+two.layer.depth.corr: no visible global function definition for
+  ‘complete.cases’
+Undefined global functions or variables:
+  .path.package .sstFileVector angle2light approx approxfun axis box
+  complete.cases data deltat download.file filepath gmt3 lines locator
+  mtext na.omit nc_close nc_open nc_sync ncvar_add ncvar_def ncvar_get
+  ncvar_put packageDescription par plot.new points polygon qchisq
+  read.table rect rnorm write.table
+Consider adding
+  importFrom("graphics", "axis", "box", "lines", "locator", "mtext",
+             "par", "plot.new", "points", "polygon", "rect")
+  importFrom("stats", "approx", "approxfun", "complete.cases", "deltat",
+             "na.omit", "qchisq", "rnorm")
+  importFrom("utils", "data", "download.file", "packageDescription",
+             "read.table", "write.table")
+to your NAMESPACE file.
+* checking Rd files ... NOTE
+prepare_Rd: get.avhrr.sst.Rd:33-34: Dropping empty section \details
+prepare_Rd: get.blended.sst.Rd:28-29: Dropping empty section \details
+* checking Rd metadata ... OK
+* checking Rd line widths ... NOTE
+Rd file 'get.avhrr.sst.Rd':
+  \usage lines wider than 90 characters:
+                   server = "http://coastwatch.pfeg.noaa.gov/coastwatch/CWBrowserWW360.jsp?get=gridData&dataSet=",
+
+Rd file 'get.blended.sst.Rd':
+  \usage lines wider than 90 characters:
+       server = "http://coastwatch.pfeg.noaa.gov/coastwatch/CWBrowserWW360.jsp?get=gridData&dataSet=", 
+
+Rd file 'light.simulator.Rd':
+  \usage lines wider than 90 characters:
+     light.simulator(u = 0, v = 0, D = 100, ss1 = 80, ss2 = 15, ss3 = 2.5, rho = 0.05, bsst=0, sssst=0.5, rad=80, sundata = angle2light, sst ... [TRUNCATED]
+
+These lines will be truncated in the PDF manual.
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... WARNING
+Codoc mismatches from Rd file 'get.sst.from.server.Rd':
+get.sst.from.server
+  Code: function(track, lonlow, lonhigh, latlow, lathigh, folder =
+                 tempdir(), removeland = TRUE, minus180 = FALSE,
+                 offsetx = 0, offset.cutoff = 360, ftpurl =
+                 "downloads.psl.noaa.gov")
+  Docs: function(track, folder = tempdir(), removeland = TRUE, save =
+                 F)
+  Argument names in code not in docs:
+    lonlow lonhigh latlow lathigh minus180 offsetx offset.cutoff ftpurl
+  Argument names in docs not in code:
+    save
+  Mismatches in argument names:
+    Position: 2 Code: lonlow Docs: folder
+    Position: 3 Code: lonhigh Docs: removeland
+    Position: 4 Code: latlow Docs: save
+
+Data codoc mismatches from Rd file 'deltat.Rd':
+Variables in data frame 'deltat'
+  Code: day DTminusUT month year
+  Docs: day DTminusUT JDE month year
+
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in Rd file 'get.sst.from.server.Rd'
+  ‘removeland’ ‘save’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+S3 methods shown with full name in Rd file 'plot.trackit.Rd':
+  ‘plot.trackit’
+
+S3 methods shown with full name in Rd file 'print.trackit.Rd':
+  ‘print.trackit’
+
+The \usage entries for S3 methods should use the \method markup and not
+their full name.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... NOTE
+File 'data/datalist' is out-of-date:
+  Data files in 'data' directory not in 'datalist':
+    driftergps driftersst
+  Data objects in 'data' directory not in 'datalist':
+    driftergps driftersst
+Please re-create using tools::add_datalist(force = TRUE).
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... WARNING
+  
+  Note: significantly better compression could be obtained
+        by using R CMD build --resave-data
+             old_size new_size compress
+  gmt3.RData    2.2Mb    1.4Mb       xz
+* checking line endings in Makefiles ... OK
+* checking for GNU extensions in Makefiles ... OK
+* checking include directives in Makefiles ... OK
+* checking examples ... ERROR
+Running examples in ‘trackit-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: drifter
+> ### Title: drifter
+> ### Aliases: drifter
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+>   data(drifter)
+>   prep.track<-prepit(drifter, fix.first=c(360-161.45,22.85,2002,9,10,0,0,0), 
++                               fix.last=c(360-159.87,21.95,2003,5,21,0,0,0), scan=FALSE)
+Writing to temp files ... Done.
+chmod: cannot access 'prepro': No such file or directory
+sh: 1: ./prepro: not found
+Warning in system(cmd) : error in running command
+Warning in file(con, "r") :
+  cannot open file 'ukf.dat': No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: prepit -> readLines -> file
+Execution halted
+* checking for non-standard things in the check directory ... NOTE
+Found the following files/directories:
+  ‘input.dat’
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 5 WARNINGs, 6 NOTEs

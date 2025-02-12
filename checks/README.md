@@ -66,16 +66,15 @@ and is only intended for the Tracking CTV Maintainers:
   * **owner** (if `source == "github"`): The owner (GitHub username) of the
     repository.
   * **repository** (if `source == "github"`): The repository name on GitHub.
+  * **branch** (if `source == "github"`): The branch name of the repository, if
+    not `"master"` (by default if left empty).
   * **sub** (if `source == "github"`; optional): The sub folder name of the
     package. Some developers will insert their package into a subfolder of the
     repository with the same name as the repository (ex `migrateR` package is at
     GitHub address `dbspitz/migrateR/migrateR`). Or the repository is not just
     for the package but instead the package exists within a sub folder of the
     repository. (ex. packages `trackit` and `ukfsst` are in separate sub folders
-    at GitHub address `positioning/kalmanfilter`). We do not currently have any
-    protocols in place for where packages exist on non-master branches. If this
-    is the case, please provide a detailed response for why it is not on master
-    and we'll consider its addition.
+    at GitHub address `positioning/kalmanfilter`). 
   * **date_added_to_list**: The `yyyy-mm-dd` date of when the entry was added to
     the table.
   * **skip** (T/F/NA): Whether to skip checks on the package. This is for
@@ -118,7 +117,9 @@ from each source.
 
 ### CRAN
 
-As CRAN checks are required to pass to be allowed on CRAN, we do not run checks on CRAN packages. We do check if the package is still active. To do this we cross reference the package name with the `tools::cran_package_DB()` table.
+As CRAN checks are required to pass to be allowed on CRAN, we do not run checks
+on CRAN packages. We do check if the package is still active. To do this we
+cross reference the package name with the `tools::cran_package_DB()` table.
 
 
 ### GitHub
@@ -223,7 +224,7 @@ that lead to the failed check:
     this is set automatically to TRUE as checks can not pass unless the vignette
     can also be built.
   * **vignette_error**: `TRUE`/`FALSE` describes whether there was an error
-    while building the vignette. As this comes first in the process CRAN checks
+    while building the vignette. As this comes first in the process, CRAN checks
     are not run on the package if there is a vignette error. In this scenario no
     `check.log` will be created either. If you would like to see these errors
     the best way is to run `devtools::build_vignette()` and check the error

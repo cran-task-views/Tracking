@@ -1,0 +1,132 @@
+* using log directory ‘/tmp/RtmpXMgjCE/aniMotum.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘aniMotum/DESCRIPTION’ ... OK
+* this is package ‘aniMotum’ version ‘1.2-08’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘aniMotum’ can be installed ... [58s/58s] OK
+* used C++ compiler: ‘g++ (Debian 12.2.0-14) 12.2.0’
+* checking installed package size ... NOTE
+  installed size is 77.9Mb
+  sub-directories of 1Mb or more:
+    doc      10.8Mb
+    extdata   1.8Mb
+    help      1.1Mb
+    libs     63.8Mb
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking ‘build’ directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking whether startup messages can be suppressed ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... [15s/15s] NOTE
+sim_fit: no visible binding for global variable ‘fit’
+Undefined global functions or variables:
+  fit
+* checking Rd files ... NOTE
+checkRd: (-1) emf.Rd:29: Lost braces
+    29 | \code{emf.x} {emf values for the \code{x} direction}
+       |              ^
+checkRd: (-1) emf.Rd:31: Lost braces
+    31 | \code{emf.y} {emf values for \code{y} direction}
+       |              ^
+checkRd: (-1) emf.Rd:33: Lost braces; missing escapes or markup?
+    33 | \code{lc} {location class designations}
+       |           ^
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... NOTE
+Documented arguments not in \usage in Rd file 'mpfilter.Rd':
+  ‘verbose’ ‘optim’ ‘optMeth’ ‘lpsi’
+
+Documented arguments not in \usage in Rd file 'mpmf.Rd':
+  ‘verbose’ ‘optim’ ‘optMeth’
+
+Documented arguments not in \usage in Rd file 'sfilter.Rd':
+  ‘verbose’ ‘optim’ ‘optMeth’ ‘lpsi’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking line endings in Makefiles ... OK
+* checking compilation flags in Makevars ... OK
+* checking for GNU extensions in Makefiles ... OK
+* checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
+* checking use of PKG_*FLAGS in Makefiles ... OK
+* checking use of SHLIB_OPENMP_*FLAGS in Makefiles ... OK
+* checking pragmas in C/C++ headers and code ... OK
+* checking compilation flags used ... OK
+* checking compiled code ... OK
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... [18s/18s] OK
+* checking examples with --run-donttest ... [19s/19s] OK
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... ERROR
+  Running ‘testthat.R’
+Running the tests in ‘tests/testthat.R’ failed.
+Last 13 lines of output:
+    'test-osar.R:23:3', 'test-osar.R:28:3', 'test-osar.R:33:3',
+    'test-osar.R:38:3', 'test-plot_sim_fit.R:2:1'
+  
+  ══ Failed tests ════════════════════════════════════════════════════════════════
+  ── Error ('test-sim_fit.R:11:1'): (code run outside of `test_that()`) ──────────
+  Error in `sim_fit(xs, what = "fitted", reps = 2)`: object 'fit' not found
+  Backtrace:
+      ▆
+   1. └─aniMotum::sim_fit(xs, what = "fitted", reps = 2) at test-sim_fit.R:11:1
+   2.   └─base::sapply(fit$ssm, function(x) x$pm)
+   3.     └─base::lapply(X = X, FUN = FUN, ...)
+  
+  [ FAIL 1 | WARN 0 | SKIP 30 | PASS 48 ]
+  Error: Test failures
+  Execution halted
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes ... OK
+* checking re-building of vignette outputs ... [23s/23s] OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 5 NOTEs

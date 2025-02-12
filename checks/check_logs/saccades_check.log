@@ -1,0 +1,91 @@
+* using log directory ‘/tmp/RtmpXMgjCE/saccades.Rcheck’
+* using R version 4.4.2 (2024-10-31)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Debian 12.2.0-14) 12.2.0
+    GNU Fortran (Debian 12.2.0-14) 12.2.0
+* running under: Debian GNU/Linux 12 (bookworm)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘saccades/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘saccades’ version ‘0.2-1’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘saccades’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... WARNING
+Variables with usage in Rd file 'fixations.Rd' but not in code:
+  ‘fixations’
+
+Variables with usage in Rd file 'samples.Rd' but not in code:
+  ‘samples’
+
+Codoc mismatches from Rd file 'detect.fixations.Rd':
+detect.fixations
+  Code: function(samples, lambda = 6, smooth.coordinates = FALSE,
+                 smooth.saccades = TRUE)
+  Docs: function(samples, lambda = 15, smooth.coordinates = FALSE,
+                 smooth.saccades = TRUE)
+  Mismatches in argument default values:
+    Name: 'lambda' Code: 6 Docs: 15
+
+Codoc mismatches from Rd file 'diagnostic.plot.Rd':
+diagnostic.plot
+  Code: function(samples, fixations, start.event = 1, start.time =
+                 NULL, duration = 2000, interactive = TRUE, ...)
+  Docs: function(samples, fixations, start.event = 1, start.time =
+                 NULL, duration = 2000, interactive = TRUE)
+  Argument names in code not in docs:
+    ...
+
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... WARNING
+  
+  Note: significantly better compression could be obtained
+        by using R CMD build --resave-data
+                old_size new_size compress
+  fixations.rda     47Kb     36Kb       xz
+  samples.rda      665Kb    349Kb       xz
+* checking examples ... OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 2 WARNINGs, 1 NOTE

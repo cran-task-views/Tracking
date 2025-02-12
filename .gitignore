@@ -1,3 +1,4 @@
+.Rprofile
 .Rproj.user
 .Rhistory
 .RData
@@ -5,7 +6,6 @@
 Tracking.Rproj
 Tracking.html
 README.html
-packrat/
-check_logs/
-downloads/
-packrat/lib*/
+renv/
+renv.lock
+checks/downloads/
