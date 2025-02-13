@@ -338,7 +338,7 @@ number of mentions (`Depends`, `Imports`, `Suggests`) from other tracking
 packages; the cutpoint is estimated using the `maxstat_test` function in the
 `coin` package. 
 
-**Last checked version on:** `r readLines("https://raw.githubusercontent.com/cran-task-views/Tracking/main/LAST_RUN")`
+**Last checked version on:** `r readLines("https://raw.githubusercontent.com/cran-task-views/Tracking/main/checks/LAST_RUN")`
 
 
 ### Citing and acknowledgments
