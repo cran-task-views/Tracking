@@ -137,7 +137,7 @@ GTFS (General Transit Feed Specification) data.
 ### Formal classes
 
 Several packages offer formal classes to store and handle tracking data, with
-both a space and time structures for the data: `r pkg("adehabitatLT")`, 
+both a space and a time structure for the data: `r pkg("adehabitatLT")`, 
 `r pkg("move2")` (replacing `r pkg("move")`), `r pkg("sftrack")`, 
 `r pkg("trip")`, `r pkg("trajectories")`. Formal classes can benefit both users 
 to manipulate tracking data and developers to rely on such classes for their own 
@@ -150,8 +150,8 @@ cleaning (e.g. identification of outliers or errors), compressing (i.e. reducing
 data resolution which is sometimes called resampling) and computation of metrics
 based on tracking data, which are useful for posterior analyses.
 
-- **Import from online repositories**: `r pkg("move2")` (replacing `r
-  pkg("move")`) allows to import data from [Movebank](https://movebank.org).
+- **Import from online repositories**: `r pkg("move2")` (replacing 
+  `r pkg("move")`) allows to import data from [Movebank](https://movebank.org).
 - **Data cleaning:** `r pkg("argosfilter")` and 
   `r pkg("SDLfilter")` implement functions to filter implausible platform
   terminal transmitter (PTT) locations. `r pkg("SDLfilter")` is also adapted to
