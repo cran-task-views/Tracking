@@ -15,6 +15,10 @@
       check other sections that need clarification (it's OK to have several aims
       for 1 package, 1 aim for several packages, but not several aims for
       several packages).
+- [ ] Follow the development of [Biosignal
+      CTV](https://github.com/cran-task-views/ctv/issues/68) and see how this
+      might interact with the Tracking CTV (notably the subsection "Dealing with
+      movement but not tracking data" > "Analysis of biologging data").
 
 ## Dev
 
@@ -36,4 +40,6 @@
       [here](https://github.com/r-lib/actions) for relevant examples.
 - [ ] **Implement automatic CRAN package search** in our workflow, for instance
       with `pkgsearch::pkg_search()`, fixing some search terms (#33), or with
-      `CTVsuggest::CTVsuggest()`.
+      `CTVsuggest::CTVsuggest()`, or with package `cranly`. See
+      [here](https://github.com/walkabilly/pa_task_view/blob/master/package-finder.md)
+      for one example.
