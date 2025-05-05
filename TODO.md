@@ -15,6 +15,15 @@
       check other sections that need clarification (it's OK to have several aims
       for 1 package, 1 aim for several packages, but not several aims for
       several packages).
+  - Add "Some methods in Data compression can be useful in that context, such as
+    rediscretization, blablabla (check packages in the section above)."
+- [ ] Be specific about **inclusion criteria**:
+  - inclusion criteria: scope ("tracking" package) + technical criteria:
+  - CRAN or BioConductor packages go straight up
+  - Non CRAN or Bioconductor packages are accepted if only if:
+    - They depend (in a broad sense) on CRAN/Bioconductor packages only
+    - They CRAN check (in the sense or R CMD CHECK)
+    - Source is available on GitHub/r-forge or directly available as .tar.gz
 - [ ] Follow the development of [Biosignal
       CTV](https://github.com/cran-task-views/ctv/issues/68) and see how this
       might interact with the Tracking CTV (notably the subsection "Dealing with
