@@ -12,7 +12,7 @@
 * **The trigger event of a new rolling release is typically a new package
   submission or a package being archived.**
 
-### New package submission
+## New package submission
 
 To-do list:
 
@@ -39,7 +39,7 @@ To-do list:
 ## Packages that have been archived on CRAN
 
 **Open issues for packages that have been archived on CRAN can be found
-[here](https://github.com/cran-task-views/Tracking/issues?q=is%3Aissue+label%3Acran-archived+is%3Aopen).**
+[here](https://github.com/cran-task-views/Tracking/issues?q=is%3Aissue+label%3Aarchived+is%3Aopen).**
 
 When a package gets archived on CRAN, it is flagged as "Archived" in the CTVs,
 and does not get installed automatically with the task view anymore.  When the

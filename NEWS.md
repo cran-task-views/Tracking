@@ -1,3 +1,14 @@
+# Tracking CTV rolling release
+
+## Packages removed from the tracking CTV
+
+1 package removed because they were archived or did not pass CRAN checks
+anymore:
+
+- [`nparACT`](https://github.com/cran-task-views/Tracking/issues/91): Archived on 2025-06-17 as issues were not corrected despite reminders.
+
+Check the links to the submission threads to find details for each package.
+
 # Tracking CTV 2025-02-12
 
 This is a long due update of the Tracking CTV. 7 packages were submitted this

@@ -293,18 +293,17 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
 
 ### Dealing with movement but not tracking data
 
-- **Analysis of biologging data:** `r pkg("diveMove")` and `r pkg("tagtools")` 
-  were developed with a focus on aquatic movement. `r pkg("diveMove")` allows 
-  visualizing, filtering, and summarizing dive effort using time-depth recorder 
-  (TDR) data. `r pkg("tagtools")` allows for all the aforementioned operations, 
-  quality-check and event detection for TDR, accelerometer, magnetometer and 
-  gyroscope data. `r pkg("triact")` assists in analyzing the lying behavior of 
-  cows from accelerometer data, computing measures such as total lying duration, 
-  the number of lying bouts, and the mean duration of lying bouts. 
-  Several packages focus on the analysis of human accelerometry data, mainly to 
-  describe periodicity and levels of activity: `r pkg("acc")`, 
-  `r pkg("accelerometry")`, `r pkg("GGIR")`, `r pkg("nparACT")`, 
-  `r pkg("pawacc")` and `r pkg("PhysicalActivity")`.
+- **Analysis of biologging data:** `r pkg("diveMove")` and `r pkg("tagtools")`
+  were developed with a focus on aquatic movement. `r pkg("diveMove")` allows
+  visualizing, filtering, and summarizing dive effort using time-depth recorder
+  (TDR) data. `r pkg("tagtools")` allows for all the aforementioned operations,
+  quality-check and event detection for TDR, accelerometer, magnetometer and
+  gyroscope data. `r pkg("triact")` assists in analyzing the lying behavior of
+  cows from accelerometer data, computing measures such as total lying duration,
+  the number of lying bouts, and the mean duration of lying bouts.  Several
+  packages focus on the analysis of human accelerometry data, mainly to describe
+  periodicity and levels of activity: `r pkg("acc")`, `r pkg("accelerometry")`,
+  `r pkg("GGIR")`, `r pkg("pawacc")` and `r pkg("PhysicalActivity")`.
 - **Non-biologging data:** When a camera can encompass an area large
   enough for an individual to move in, video and images can be used to record
   movement. A package related to these data is `r pkg("trackdem")` (for
