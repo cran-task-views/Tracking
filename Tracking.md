@@ -208,7 +208,7 @@ step-selection modeling.
 Whether it is for the purposes of correcting for sampling errors, or obtaining
 finer data resolutions or regular time steps, path reconstruction is a common
 goal in movement analysis. Packages available for path reconstruction are 
-`r pkg("adehabitatLT")`, `r github("calbertsen/argosTrack")`, `r pkg("bsam")`, 
+`r pkg("adehabitatLT")`, `r github("calbertsen/argosTrack")`, 
 `r pkg("crawl")`, `r pkg("ctmm")`, `r pkg("ctmcmove")`, `r pkg("mousetrap")`, and
 `r pkg("TrackReconstruction")`. 
 `r github("jmlondon/pathroutr")` allows to re-route paths when there are barriers
@@ -237,7 +237,7 @@ clustering techniques, 2) segmentation methods and 3) hidden Markov models.
 - **Hidden Markov models:** They are centered upon a hidden state Markovian
   process (representing the sequence of non-observed behaviors) that conditions
   the observed movement patterns. The packages implementing these methods are 
-  `r pkg("bsam")`, `r pkg("moveHMM")` and `r pkg("momentuHMM")`.
+  `r pkg("moveHMM")` and `r pkg("momentuHMM")`.
 
 
 #### Space and habitat use characterization
@@ -268,7 +268,7 @@ Tracking packages implementing trajectory simulation are mainly based on Hidden
 Markov models, correlated random walks, Brownian motions, Lévy walks or
 Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`, 
 `r github("calbertsen/argosTrack")`,
-`r pkg("bsam")`, `r pkg("crawl")`, 
+`r pkg("crawl")`, 
 `r pkg("ctmm")`, `r pkg("momentuHMM")`, `r pkg("moveHMM")`, `r pkg("smam")`, 
 `r pkg("SiMRiv")` and `r pkg("trajr")`.
 
@@ -302,7 +302,7 @@ Ornstein-Uhlenbeck processes: `r pkg("adehabitatLT")`,
   cows from accelerometer data, computing measures such as total lying duration,
   the number of lying bouts, and the mean duration of lying bouts.  Several
   packages focus on the analysis of human accelerometry data, mainly to describe
-  periodicity and levels of activity: `r pkg("acc")`, `r pkg("accelerometry")`,
+  periodicity and levels of activity: `r pkg("acc")`,
   `r pkg("GGIR")`, `r pkg("pawacc")` and `r pkg("PhysicalActivity")`.
 - **Non-biologging data:** When a camera can encompass an area large
   enough for an individual to move in, video and images can be used to record

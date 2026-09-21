@@ -2,10 +2,15 @@
 
 ## Packages removed from the tracking CTV
 
-1 package removed because they were archived or did not pass CRAN checks
+3 packages removed because they were archived or did not pass CRAN checks
 anymore:
 
-- [`nparACT`](https://github.com/cran-task-views/Tracking/issues/91): Archived on 2025-06-17 as issues were not corrected despite reminders.
+- [`nparACT`](https://github.com/cran-task-views/Tracking/issues/91): Archived
+  on 2025-06-17 as issues were not corrected despite reminders.
+- [`bsam`](https://github.com/cran-task-views/Tracking/issues/95): Archived on
+  2026-06-11.
+- [`accelerometry`](https://github.com/cran-task-views/Tracking/issues/96):
+  Archived on 2026-06-11.
 
 Check the links to the submission threads to find details for each package.
 
